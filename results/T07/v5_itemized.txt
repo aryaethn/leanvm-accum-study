@@ -1,0 +1,9 @@
+  +2728.0  A transcript kept (fold rounds, squeezes, OOD point/value reads, level roots, nonce absorb, final-message read)
+           e3:OOD@L1 +167.0; e3:sumcheck rounds@L1 +297.0; e:level roots@L1 +53.0; eq:query grinding@L1 +11.0; eq:query sampling@L1 +236.0; e3:OOD@L2 +139.0; e3:sumcheck rounds@L2 +297.0; e:level roots@L2 +53.0; eq:query grinding@L2 +11.0; eq:query sampling@L2 +150.0; e3:OOD@L3 +111.0; e3:sumcheck rounds@L3 +297.0; e:level roots@L3 +53.0; eq:query grinding@L3 +11.0; eq:query sampling@L3 +150.0; e3:sumcheck rounds@L4 +297.0; e4:final message@L4 +110.0; eq:query sampling@L4 +109.0; e3:sumcheck rounds@tail +176.0
+   +468.0  B non-transcript work kept by design (point rotation, L1 row eq weights, level batching arithmetic, L1 advice windows)
+           e2:row eq weights@L1 +39.0; e3:level batching@L1 +33.0; eq:query decode@L1 +210.0; e3:level batching@L2 +31.0; e3:level batching@L3 +31.0; e3:level batching@L4 +19.0; e3:point rotation@tail +105.0
+    +80.0  C V5 gating: branch tests, join cells, xc plumbing
+           e3:open dispatch@- -38.0; e3:placement+config certify@- +40.0; outside verify_sub: main@- +2.0; v5:gating@L1 +14.0; e2:query rows@L2 +2.0; v5:gating@L2 +13.0; e2:query rows@L3 +2.0; v5:gating@L3 +13.0; e2:query rows@L4 +2.0; v5:gating@L4 +13.0; e3:OOD@tail +9.0; v5:gating@tail +8.0
+    +42.5  D realised-query-position noise (different leaf proofs) and +-1 residual cells
+           e1:Merkle cap@L0 +18.0; e1:Merkle leaf+path@L0 +10.0; e1:Merkle cap@L1 +5.0; e1:Merkle leaf+path@L1 -2.0; e2:residual (query weights)@L1 +1.0; e1:Merkle cap@L2 +3.5; e1:Merkle leaf+path@L2 -1.5; e2:residual (query weights)@L2 +1.0; e1:Merkle cap@L3 +4.5; e1:Merkle leaf+path@L3 +3.5; e2:residual (query weights)@L3 +1.0; e1:Merkle cap@L4 -0.5; e1:Merkle leaf+path@L4 -2.0; e2:row eq weights@L4 +1.0
+  +3318.5  total = expected 33381.5 - measured 30063 = +3318.5

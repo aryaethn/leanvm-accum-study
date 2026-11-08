@@ -1,0 +1,293 @@
+### swap_start: vm.swapusage: total = 3072.00M  used = 1468.19M  free = 1603.81M  (encrypted)
+### therm_start: Note: No thermal warning level has been recorded | Note: No performance warning level has been recorded | Note: No CPU power status has been recorded
+### cmd: DBG_TABLES=1 upstream/leanMultisig/target-d3v6/release/leanvm recursion --n 4 --xmss-per-leaf 250 --leaf-log-inv-rate 2 --log-inv-rate 2 --repeat 3 --tracing
+DBG_TABLES kind=leaf cycles=220100 mu=25 n_lanes=35 committed_len=18350080 placed=18022400 log_placed=24.103288 log_mem=21 mem_used=1563717 code_len=499653 prog_len=524288
+DBG_TABLES kind=leaf shared=MEM_LO n_vars=21 contrib=2097152
+DBG_TABLES kind=leaf shared=MEM_HI n_vars=21 contrib=2097152
+DBG_TABLES kind=leaf shared=MEM_TOP n_vars=21 contrib=2097152
+DBG_TABLES kind=leaf shared=MFCNT n_vars=21 contrib=2097152
+DBG_TABLES kind=leaf shared=BFCNT n_vars=19 contrib=524288
+DBG_TABLES kind=leaf shared=QKECCAK n_vars=22 contrib=4194304
+DBG_TABLES kind=leaf table=XOR rows=46920 tau=16 padded=65536 columns=15 width=15 contrib=983040
+DBG_TABLES kind=leaf table=MUL rows=42664 tau=16 padded=65536 columns=15 width=15 contrib=983040
+DBG_TABLES kind=leaf table=SET rows=44321 tau=16 padded=65536 columns=8 width=8 contrib=524288
+DBG_TABLES kind=leaf table=DEREF rows=29242 tau=15 padded=32768 columns=15 width=15 contrib=491520
+DBG_TABLES kind=leaf table=JUMP rows=10328 tau=14 padded=16384 columns=14 width=14 contrib=229376
+DBG_TABLES kind=leaf table=KECCAK rows=46625 tau=16 padded=65536 columns=90 width=26 contrib=1703936
+DBG_TABLES kind=leaf sum_contrib=18022400 placed_minus_sum=0
+DBG_TABLES kind=leaf cycles=220097 mu=25 n_lanes=35 committed_len=18350080 placed=18022400 log_placed=24.103288 log_mem=21 mem_used=1563717 code_len=499653 prog_len=524288
+DBG_TABLES kind=leaf shared=MEM_LO n_vars=21 contrib=2097152
+DBG_TABLES kind=leaf shared=MEM_HI n_vars=21 contrib=2097152
+DBG_TABLES kind=leaf shared=MEM_TOP n_vars=21 contrib=2097152
+DBG_TABLES kind=leaf shared=MFCNT n_vars=21 contrib=2097152
+DBG_TABLES kind=leaf shared=BFCNT n_vars=19 contrib=524288
+DBG_TABLES kind=leaf shared=QKECCAK n_vars=22 contrib=4194304
+DBG_TABLES kind=leaf table=XOR rows=46924 tau=16 padded=65536 columns=15 width=15 contrib=983040
+DBG_TABLES kind=leaf table=MUL rows=42660 tau=16 padded=65536 columns=15 width=15 contrib=983040
+DBG_TABLES kind=leaf table=SET rows=44318 tau=16 padded=65536 columns=8 width=8 contrib=524288
+DBG_TABLES kind=leaf table=DEREF rows=29242 tau=15 padded=32768 columns=15 width=15 contrib=491520
+DBG_TABLES kind=leaf table=JUMP rows=10328 tau=14 padded=16384 columns=14 width=14 contrib=229376
+DBG_TABLES kind=leaf table=KECCAK rows=46625 tau=16 padded=65536 columns=90 width=26 contrib=1703936
+DBG_TABLES kind=leaf sum_contrib=18022400 placed_minus_sum=0
+DBG_TABLES kind=leaf cycles=220104 mu=25 n_lanes=35 committed_len=18350080 placed=18022400 log_placed=24.103288 log_mem=21 mem_used=1563717 code_len=499653 prog_len=524288
+DBG_TABLES kind=leaf shared=MEM_LO n_vars=21 contrib=2097152
+DBG_TABLES kind=leaf shared=MEM_HI n_vars=21 contrib=2097152
+DBG_TABLES kind=leaf shared=MEM_TOP n_vars=21 contrib=2097152
+DBG_TABLES kind=leaf shared=MFCNT n_vars=21 contrib=2097152
+DBG_TABLES kind=leaf shared=BFCNT n_vars=19 contrib=524288
+DBG_TABLES kind=leaf shared=QKECCAK n_vars=22 contrib=4194304
+DBG_TABLES kind=leaf table=XOR rows=46924 tau=16 padded=65536 columns=15 width=15 contrib=983040
+DBG_TABLES kind=leaf table=MUL rows=42661 tau=16 padded=65536 columns=15 width=15 contrib=983040
+DBG_TABLES kind=leaf table=SET rows=44324 tau=16 padded=65536 columns=8 width=8 contrib=524288
+DBG_TABLES kind=leaf table=DEREF rows=29242 tau=15 padded=32768 columns=15 width=15 contrib=491520
+DBG_TABLES kind=leaf table=JUMP rows=10328 tau=14 padded=16384 columns=14 width=14 contrib=229376
+DBG_TABLES kind=leaf table=KECCAK rows=46625 tau=16 padded=65536 columns=90 width=26 contrib=1703936
+DBG_TABLES kind=leaf sum_contrib=18022400 placed_minus_sum=0
+DBG_TABLES kind=leaf cycles=220104 mu=25 n_lanes=35 committed_len=18350080 placed=18022400 log_placed=24.103288 log_mem=21 mem_used=1563717 code_len=499653 prog_len=524288
+DBG_TABLES kind=leaf shared=MEM_LO n_vars=21 contrib=2097152
+DBG_TABLES kind=leaf shared=MEM_HI n_vars=21 contrib=2097152
+DBG_TABLES kind=leaf shared=MEM_TOP n_vars=21 contrib=2097152
+DBG_TABLES kind=leaf shared=MFCNT n_vars=21 contrib=2097152
+DBG_TABLES kind=leaf shared=BFCNT n_vars=19 contrib=524288
+DBG_TABLES kind=leaf shared=QKECCAK n_vars=22 contrib=4194304
+DBG_TABLES kind=leaf table=XOR rows=46930 tau=16 padded=65536 columns=15 width=15 contrib=983040
+DBG_TABLES kind=leaf table=MUL rows=42654 tau=16 padded=65536 columns=15 width=15 contrib=983040
+DBG_TABLES kind=leaf table=SET rows=44325 tau=16 padded=65536 columns=8 width=8 contrib=524288
+DBG_TABLES kind=leaf table=DEREF rows=29242 tau=15 padded=32768 columns=15 width=15 contrib=491520
+DBG_TABLES kind=leaf table=JUMP rows=10328 tau=14 padded=16384 columns=14 width=14 contrib=229376
+DBG_TABLES kind=leaf table=KECCAK rows=46625 tau=16 padded=65536 columns=90 width=26 contrib=1703936
+DBG_TABLES kind=leaf sum_contrib=18022400 placed_minus_sum=0
+DBG_TABLES kind=node cycles=668803 mu=25 n_lanes=45 committed_len=23592960 placed=23134208 log_placed=24.463524 log_mem=21 mem_used=1241769 code_len=499653 prog_len=524288
+DBG_TABLES kind=node shared=MEM_LO n_vars=21 contrib=2097152
+DBG_TABLES kind=node shared=MEM_HI n_vars=21 contrib=2097152
+DBG_TABLES kind=node shared=MEM_TOP n_vars=21 contrib=2097152
+DBG_TABLES kind=node shared=MFCNT n_vars=21 contrib=2097152
+DBG_TABLES kind=node shared=BFCNT n_vars=19 contrib=524288
+DBG_TABLES kind=node shared=QKECCAK n_vars=21 contrib=2097152
+DBG_TABLES kind=node table=XOR rows=184078 tau=18 padded=262144 columns=15 width=15 contrib=3932160
+DBG_TABLES kind=node table=MUL rows=251258 tau=18 padded=262144 columns=15 width=15 contrib=3932160
+DBG_TABLES kind=node table=SET rows=51529 tau=16 padded=65536 columns=8 width=8 contrib=524288
+DBG_TABLES kind=node table=DEREF rows=121343 tau=17 padded=131072 columns=15 width=15 contrib=1966080
+DBG_TABLES kind=node table=JUMP rows=43410 tau=16 padded=65536 columns=14 width=14 contrib=917504
+DBG_TABLES kind=node table=KECCAK rows=17185 tau=15 padded=32768 columns=90 width=26 contrib=851968
+DBG_TABLES kind=node sum_contrib=23134208 placed_minus_sum=0
+DBG_TABLES kind=node cycles=668803 mu=25 n_lanes=45 committed_len=23592960 placed=23134208 log_placed=24.463524 log_mem=21 mem_used=1241769 code_len=499653 prog_len=524288
+DBG_TABLES kind=node shared=MEM_LO n_vars=21 contrib=2097152
+DBG_TABLES kind=node shared=MEM_HI n_vars=21 contrib=2097152
+DBG_TABLES kind=node shared=MEM_TOP n_vars=21 contrib=2097152
+DBG_TABLES kind=node shared=MFCNT n_vars=21 contrib=2097152
+DBG_TABLES kind=node shared=BFCNT n_vars=19 contrib=524288
+DBG_TABLES kind=node shared=QKECCAK n_vars=21 contrib=2097152
+DBG_TABLES kind=node table=XOR rows=184078 tau=18 padded=262144 columns=15 width=15 contrib=3932160
+DBG_TABLES kind=node table=MUL rows=251258 tau=18 padded=262144 columns=15 width=15 contrib=3932160
+DBG_TABLES kind=node table=SET rows=51529 tau=16 padded=65536 columns=8 width=8 contrib=524288
+DBG_TABLES kind=node table=DEREF rows=121343 tau=17 padded=131072 columns=15 width=15 contrib=1966080
+DBG_TABLES kind=node table=JUMP rows=43410 tau=16 padded=65536 columns=14 width=14 contrib=917504
+DBG_TABLES kind=node table=KECCAK rows=17185 tau=15 padded=32768 columns=90 width=26 contrib=851968
+DBG_TABLES kind=node sum_contrib=23134208 placed_minus_sum=0
+  passes                      : 0.947 sDBG_TABLES kind=node cycles=668803 mu=25 n_lanes=45 committed_len=23592960 placed=23134208 log_placed=24.463524 log_mem=21 mem_used=1241769 code_len=499653 prog_len=524288
+DBG_TABLES kind=node shared=MEM_LO n_vars=21 contrib=2097152
+DBG_TABLES kind=node shared=MEM_HI n_vars=21 contrib=2097152
+DBG_TABLES kind=node shared=MEM_TOP n_vars=21 contrib=2097152
+DBG_TABLES kind=node shared=MFCNT n_vars=21 contrib=2097152
+DBG_TABLES kind=node shared=BFCNT n_vars=19 contrib=524288
+DBG_TABLES kind=node shared=QKECCAK n_vars=21 contrib=2097152
+DBG_TABLES kind=node table=XOR rows=184078 tau=18 padded=262144 columns=15 width=15 contrib=3932160
+DBG_TABLES kind=node table=MUL rows=251258 tau=18 padded=262144 columns=15 width=15 contrib=3932160
+DBG_TABLES kind=node table=SET rows=51529 tau=16 padded=65536 columns=8 width=8 contrib=524288
+DBG_TABLES kind=node table=DEREF rows=121343 tau=17 padded=131072 columns=15 width=15 contrib=1966080
+DBG_TABLES kind=node table=JUMP rows=43410 tau=16 padded=65536 columns=14 width=14 contrib=917504
+DBG_TABLES kind=node table=KECCAK rows=17185 tau=15 padded=32768 columns=90 width=26 contrib=851968
+DBG_TABLES kind=node sum_contrib=23134208 placed_minus_sum=0
+  0.936 s[1;32mINFO    [0m Replay children [ 19.1ms | 100% ]
+[1;32mINFO    [0m Build witness [ 10.7ms | 100% ]
+[1;32mINFO    [0m ┕━ Bytecode sums [ 7.17ms | 66.984% ]
+[1;32mINFO    [0m Batch deferred claims [ 1.82ms | 100% ]
+[1;32mINFO    [0m ┕━ Bytecode batch [ 1.79ms | 98.248% ] [2;37mvars[0m: 23
+DBG_TABLES kind=node cycles=668803 mu=25 n_lanes=45 committed_len=23592960 placed=23134208 log_placed=24.463524 log_mem=21 mem_used=1241769 code_len=499653 prog_len=524288
+DBG_TABLES kind=node shared=MEM_LO n_vars=21 contrib=2097152
+DBG_TABLES kind=node shared=MEM_HI n_vars=21 contrib=2097152
+DBG_TABLES kind=node shared=MEM_TOP n_vars=21 contrib=2097152
+DBG_TABLES kind=node shared=MFCNT n_vars=21 contrib=2097152
+DBG_TABLES kind=node shared=BFCNT n_vars=19 contrib=524288
+DBG_TABLES kind=node shared=QKECCAK n_vars=21 contrib=2097152
+DBG_TABLES kind=node table=XOR rows=184078 tau=18 padded=262144 columns=15 width=15 contrib=3932160
+DBG_TABLES kind=node table=MUL rows=251258 tau=18 padded=262144 columns=15 width=15 contrib=3932160
+DBG_TABLES kind=node table=SET rows=51529 tau=16 padded=65536 columns=8 width=8 contrib=524288
+DBG_TABLES kind=node table=DEREF rows=121343 tau=17 padded=131072 columns=15 width=15 contrib=1966080
+DBG_TABLES kind=node table=JUMP rows=43410 tau=16 padded=65536 columns=14 width=14 contrib=917504
+DBG_TABLES kind=node table=KECCAK rows=17185 tau=15 padded=32768 columns=90 width=26 contrib=851968
+DBG_TABLES kind=node sum_contrib=23134208 placed_minus_sum=0
+[1;32mINFO    [0m Prove [ 878ms | 100% ]
+[1;32mINFO    [0m ┝━ Execute program [ 32.9ms | 3.751% ]
+[1;32mINFO    [0m ┝━ Build witness [ 10.5ms | 1.197% ]
+[1;32mINFO    [0m │  ┝━ Fill columns [ 9.68ms | 92.096% ]
+[1;32mINFO    [0m │  ┕━ Build q_keccak [ 729µs | 6.935% ]
+[1;32mINFO    [0m ┝━ Commit [ 310ms | 35.31% ]
+[1;32mINFO    [0m │  ┝━ NTT [ 310ms | 99.963% ] [2;37mkind[0m: "base encode" | [2;37mlog_domain[0m: 21 | [2;37mlanes[0m: 48
+[1;32mINFO    [0m │  ┕━ Merkle [ 750ns | 0.000242% ]
+[1;32mINFO    [0m ┝━ Prove bus [ 99.3ms | 11.313% ]
+[1;32mINFO    [0m │  ┝━ Bus leaves [ 33.7ms | 33.892% ]
+[1;32mINFO    [0m │  ┝━ Bus GKR [ 59.0ms | 59.444% ]
+[1;32mINFO    [0m │  ┝━ Bus decompose [ 2.45ms | 2.464% ]
+[1;32mINFO    [0m │  ┕━ Bus tables [ 4.15ms | 4.175% ]
+[1;32mINFO    [0m ┝━ Prove constraints [ 20.4ms | 2.325% ]
+[1;32mINFO    [0m │  ┕━ Constraint evals [ 2.13ms | 10.42% ]
+[1;32mINFO    [0m ┝━ Keccak reduction [ 114ms | 12.961% ]
+[1;32mINFO    [0m │  ┝━ Witness [ 3.05ms | 2.684% ]
+[1;32mINFO    [0m │  ┝━ Outputs [ 303µs | 0.266% ]
+[1;32mINFO    [0m │  ┝━ Layer [ 8.84ms | 7.766% ] [2;37mstep[0m: 0
+[1;32mINFO    [0m │  │  ┝━ Product [ 4.09ms | 46.25% ]
+[1;32mINFO    [0m │  │  ┝━ Skip [ 2.31ms | 26.156% ]
+[1;32mINFO    [0m │  │  ┝━ Tables [ 853µs | 9.651% ]
+[1;32mINFO    [0m │  │  ┕━ Tail [ 990µs | 11.206% ]
+[1;32mINFO    [0m │  ┝━ Layer [ 8.93ms | 7.847% ] [2;37mstep[0m: 1
+[1;32mINFO    [0m │  │  ┝━ Product [ 4.17ms | 46.688% ]
+[1;32mINFO    [0m │  │  ┝━ Skip [ 2.28ms | 25.561% ]
+[1;32mINFO    [0m │  │  ┝━ Tables [ 850µs | 9.519% ]
+[1;32mINFO    [0m │  │  ┕━ Tail [ 1.05ms | 11.748% ]
+[1;32mINFO    [0m │  ┝━ Layer [ 8.95ms | 7.862% ] [2;37mstep[0m: 2
+[1;32mINFO    [0m │  │  ┝━ Product [ 4.14ms | 46.272% ]
+[1;32mINFO    [0m │  │  ┝━ Skip [ 2.27ms | 25.35% ]
+[1;32mINFO    [0m │  │  ┝━ Tables [ 926µs | 10.35% ]
+[1;32mINFO    [0m │  │  ┕━ Tail [ 1.03ms | 11.53% ]
+[1;32mINFO    [0m │  ┝━ Layer [ 8.92ms | 7.837% ] [2;37mstep[0m: 3
+[1;32mINFO    [0m │  │  ┝━ Product [ 4.22ms | 47.303% ]
+[1;32mINFO    [0m │  │  ┝━ Skip [ 2.21ms | 24.792% ]
+[1;32mINFO    [0m │  │  ┝━ Tables [ 859µs | 9.63% ]
+[1;32mINFO    [0m │  │  ┕━ Tail [ 1.05ms | 11.782% ]
+[1;32mINFO    [0m │  ┝━ Layer [ 9.07ms | 7.972% ] [2;37mstep[0m: 4
+[1;32mINFO    [0m │  │  ┝━ Product [ 4.39ms | 48.432% ]
+[1;32mINFO    [0m │  │  ┝━ Skip [ 2.22ms | 24.445% ]
+[1;32mINFO    [0m │  │  ┝━ Tables [ 856µs | 9.435% ]
+[1;32mINFO    [0m │  │  ┕━ Tail [ 1.02ms | 11.197% ]
+[1;32mINFO    [0m │  ┝━ Layer [ 8.96ms | 7.87% ] [2;37mstep[0m: 5
+[1;32mINFO    [0m │  │  ┝━ Product [ 4.26ms | 47.595% ]
+[1;32mINFO    [0m │  │  ┝━ Skip [ 2.20ms | 24.582% ]
+[1;32mINFO    [0m │  │  ┝━ Tables [ 887µs | 9.902% ]
+[1;32mINFO    [0m │  │  ┕━ Tail [ 1.04ms | 11.59% ]
+[1;32mINFO    [0m │  ┝━ Layer [ 8.86ms | 7.785% ] [2;37mstep[0m: 6
+[1;32mINFO    [0m │  │  ┝━ Product [ 4.23ms | 47.739% ]
+[1;32mINFO    [0m │  │  ┝━ Skip [ 2.21ms | 24.907% ]
+[1;32mINFO    [0m │  │  ┝━ Tables [ 865µs | 9.761% ]
+[1;32mINFO    [0m │  │  ┕━ Tail [ 982µs | 11.086% ]
+[1;32mINFO    [0m │  ┝━ Layer [ 8.89ms | 7.814% ] [2;37mstep[0m: 7
+[1;32mINFO    [0m │  │  ┝━ Product [ 4.31ms | 48.431% ]
+[1;32mINFO    [0m │  │  ┝━ Skip [ 2.19ms | 24.677% ]
+[1;32mINFO    [0m │  │  ┝━ Tables [ 861µs | 9.68% ]
+[1;32mINFO    [0m │  │  ┕━ Tail [ 950µs | 10.686% ]
+[1;32mINFO    [0m │  ┝━ Layer [ 8.93ms | 7.846% ] [2;37mstep[0m: 8
+[1;32mINFO    [0m │  │  ┝━ Product [ 4.30ms | 48.139% ]
+[1;32mINFO    [0m │  │  ┝━ Skip [ 2.20ms | 24.623% ]
+[1;32mINFO    [0m │  │  ┝━ Tables [ 863µs | 9.661% ]
+[1;32mINFO    [0m │  │  ┕━ Tail [ 994µs | 11.135% ]
+[1;32mINFO    [0m │  ┝━ Layer [ 8.76ms | 7.694% ] [2;37mstep[0m: 9
+[1;32mINFO    [0m │  │  ┝━ Product [ 4.12ms | 47.008% ]
+[1;32mINFO    [0m │  │  ┝━ Skip [ 2.26ms | 25.846% ]
+[1;32mINFO    [0m │  │  ┝━ Tables [ 852µs | 9.729% ]
+[1;32mINFO    [0m │  │  ┕━ Tail [ 975µs | 11.133% ]
+[1;32mINFO    [0m │  ┝━ Layer [ 9.05ms | 7.952% ] [2;37mstep[0m: 10
+[1;32mINFO    [0m │  │  ┝━ Product [ 4.33ms | 47.878% ]
+[1;32mINFO    [0m │  │  ┝━ Skip [ 2.21ms | 24.438% ]
+[1;32mINFO    [0m │  │  ┝━ Tables [ 932µs | 10.298% ]
+[1;32mINFO    [0m │  │  ┕━ Tail [ 1.00ms | 11.084% ]
+[1;32mINFO    [0m │  ┝━ Layer [ 8.94ms | 7.856% ] [2;37mstep[0m: 11
+[1;32mINFO    [0m │  │  ┝━ Product [ 4.18ms | 46.701% ]
+[1;32mINFO    [0m │  │  ┝━ Skip [ 2.21ms | 24.721% ]
+[1;32mINFO    [0m │  │  ┝━ Tables [ 933µs | 10.441% ]
+[1;32mINFO    [0m │  │  ┕━ Tail [ 1.04ms | 11.656% ]
+[1;32mINFO    [0m │  ┕━ Openings [ 3.32ms | 2.918% ]
+[1;32mINFO    [0m ┕━ PCS open [ 290ms | 33.079% ]
+[1;32mINFO    [0m    ┝━ Ring switch [ 99.8µs | 0.0344% ]
+[1;32mINFO    [0m    ┝━ Basis [ 46.0ms | 15.829% ]
+[1;32mINFO    [0m    ┝━ Sumcheck [ 8.15ms | 2.804% ]
+[1;32mINFO    [0m    │  ┝━ Sumcheck round [ 38.2µs | 0.469% ] [2;37mround[0m: 0 | [2;37mlog_size[0m: 24
+[1;32mINFO    [0m    │  ┝━ Sumcheck round [ 62.0µs | 0.761% ] [2;37mround[0m: 1 | [2;37mlog_size[0m: 13
+[1;32mINFO    [0m    │  ┝━ Sumcheck round [ 31.4µs | 0.385% ] [2;37mround[0m: 2 | [2;37mlog_size[0m: 12
+[1;32mINFO    [0m    │  ┝━ Sumcheck round [ 19.8µs | 0.243% ] [2;37mround[0m: 3 | [2;37mlog_size[0m: 11
+[1;32mINFO    [0m    │  ┝━ Sumcheck round [ 8.79µs | 0.108% ] [2;37mround[0m: 4 | [2;37mlog_size[0m: 10
+[1;32mINFO    [0m    │  ┝━ Sumcheck round [ 6.00µs | 0.0737% ] [2;37mround[0m: 5 | [2;37mlog_size[0m: 9
+[1;32mINFO    [0m    │  ┕━ Sumcheck round [ 7.97ms | 97.88% ] [2;37mround[0m: 6 | [2;37mlog_size[0m: 9
+[1;32mINFO    [0m    ┝━ Commit [ 124ms | 42.748% ] [2;37mlevel[0m: 1
+[1;32mINFO    [0m    │  ┝━ NTT [ 124ms | 99.906% ] [2;37mkind[0m: "extension encode" | [2;37mlog_domain[0m: 20 | [2;37mlanes[0m: 16
+[1;32mINFO    [0m    │  ┕━ Merkle [ 791ns | 0.000637% ]
+[1;32mINFO    [0m    ┝━ Open [ 787µs | 0.271% ] [2;37mlevel[0m: 0
+[1;32mINFO    [0m    ┝━ Induce [ 4.25ms | 1.463% ] [2;37mlevel[0m: 0
+[1;32mINFO    [0m    │  ┕━ NTT [ 4.14ms | 97.557% ] [2;37mkind[0m: "transpose induce" | [2;37mlog_domain[0m: 21 | [2;37mnonzero[0m: 112
+[1;32mINFO    [0m    ┝━ Introduce [ 1.30ms | 0.449% ] [2;37mlevel[0m: 0
+[1;32mINFO    [0m    ┝━ Sumcheck [ 1.26ms | 0.433% ]
+[1;32mINFO    [0m    │  ┝━ Sumcheck round [ 702µs | 55.811% ] [2;37mround[0m: 7 | [2;37mlog_size[0m: 19
+[1;32mINFO    [0m    │  ┝━ Sumcheck round [ 316µs | 25.117% ] [2;37mround[0m: 8 | [2;37mlog_size[0m: 18
+[1;32mINFO    [0m    │  ┝━ Sumcheck round [ 148µs | 11.761% ] [2;37mround[0m: 9 | [2;37mlog_size[0m: 17
+[1;32mINFO    [0m    │  ┕━ Sumcheck round [ 88.4µs | 7.032% ] [2;37mround[0m: 10 | [2;37mlog_size[0m: 16
+[1;32mINFO    [0m    ┝━ Commit [ 53.1ms | 18.267% ] [2;37mlevel[0m: 2
+[1;32mINFO    [0m    │  ┝━ NTT [ 53.0ms | 99.886% ] [2;37mkind[0m: "extension encode" | [2;37mlog_domain[0m: 19 | [2;37mlanes[0m: 16
+[1;32mINFO    [0m    │  ┕━ Merkle [ 958ns | 0.00181% ]
+[1;32mINFO    [0m    ┝━ Open [ 271µs | 0.0934% ] [2;37mlevel[0m: 1
+[1;32mINFO    [0m    ┝━ Induce [ 215µs | 0.074% ] [2;37mlevel[0m: 1
+[1;32mINFO    [0m    ┝━ Introduce [ 72.7µs | 0.025% ] [2;37mlevel[0m: 1
+[1;32mINFO    [0m    ┝━ Sumcheck [ 102µs | 0.035% ]
+[1;32mINFO    [0m    │  ┝━ Sumcheck round [ 46.8µs | 46.002% ] [2;37mround[0m: 11 | [2;37mlog_size[0m: 15
+[1;32mINFO    [0m    │  ┝━ Sumcheck round [ 19.6µs | 19.27% ] [2;37mround[0m: 12 | [2;37mlog_size[0m: 14
+[1;32mINFO    [0m    │  ┝━ Sumcheck round [ 16.5µs | 16.277% ] [2;37mround[0m: 13 | [2;37mlog_size[0m: 13
+[1;32mINFO    [0m    │  ┕━ Sumcheck round [ 16.6µs | 16.318% ] [2;37mround[0m: 14 | [2;37mlog_size[0m: 12
+[1;32mINFO    [0m    ┝━ Commit [ 22.3ms | 7.672% ] [2;37mlevel[0m: 3
+[1;32mINFO    [0m    │  ┝━ NTT [ 22.2ms | 99.621% ] [2;37mkind[0m: "extension encode" | [2;37mlog_domain[0m: 18 | [2;37mlanes[0m: 16
+[1;32mINFO    [0m    │  ┕━ Merkle [ 625ns | 0.0028% ]
+[1;32mINFO    [0m    ┝━ Open [ 172µs | 0.0593% ] [2;37mlevel[0m: 2
+[1;32mINFO    [0m    ┝━ Induce [ 33.7µs | 0.0116% ] [2;37mlevel[0m: 2
+[1;32mINFO    [0m    ┝━ Introduce [ 16.2µs | 0.00557% ] [2;37mlevel[0m: 2
+[1;32mINFO    [0m    ┝━ Sumcheck [ 29.5µs | 0.0101% ]
+[1;32mINFO    [0m    │  ┝━ Sumcheck round [ 8.46µs | 28.711% ] [2;37mround[0m: 15 | [2;37mlog_size[0m: 11
+[1;32mINFO    [0m    │  ┝━ Sumcheck round [ 4.17µs | 14.145% ] [2;37mround[0m: 16 | [2;37mlog_size[0m: 10
+[1;32mINFO    [0m    │  ┝━ Sumcheck round [ 3.00µs | 10.184% ] [2;37mround[0m: 17 | [2;37mlog_size[0m: 9
+[1;32mINFO    [0m    │  ┕━ Sumcheck round [ 1.38µs | 4.668% ] [2;37mround[0m: 18 | [2;37mlog_size[0m: 8
+[1;32mINFO    [0m    ┝━ Commit [ 9.71ms | 3.343% ] [2;37mlevel[0m: 4
+[1;32mINFO    [0m    │  ┝━ NTT [ 9.67ms | 99.535% ] [2;37mkind[0m: "extension encode" | [2;37mlog_domain[0m: 17 | [2;37mlanes[0m: 16
+[1;32mINFO    [0m    │  ┕━ Merkle [ 291ns | 0.003% ]
+[1;32mINFO    [0m    ┝━ Open [ 130µs | 0.0448% ] [2;37mlevel[0m: 3
+[1;32mINFO    [0m    ┝━ Induce [ 18.8µs | 0.00647% ] [2;37mlevel[0m: 3
+[1;32mINFO    [0m    ┝━ Introduce [ 3.00µs | 0.00103% ] [2;37mlevel[0m: 3
+[1;32mINFO    [0m    ┝━ Sumcheck [ 5.50µs | 0.00189% ]
+[1;32mINFO    [0m    │  ┝━ Sumcheck round [ 1.38µs | 25% ] [2;37mround[0m: 19 | [2;37mlog_size[0m: 7
+[1;32mINFO    [0m    │  ┝━ Sumcheck round [ 667ns | 12.127% ] [2;37mround[0m: 20 | [2;37mlog_size[0m: 6
+[1;32mINFO    [0m    │  ┝━ Sumcheck round [ 542ns | 9.855% ] [2;37mround[0m: 21 | [2;37mlog_size[0m: 5
+[1;32mINFO    [0m    │  ┕━ Sumcheck round [ 458ns | 8.327% ] [2;37mround[0m: 22 | [2;37mlog_size[0m: 4
+[1;32mINFO    [0m    ┕━ Final level [ 113µs | 0.0391% ]
+[1;32mINFO    [0m       ┝━ Sumcheck round [ 542ns | 0.478% ] [2;37mround[0m: 23 | [2;37mlog_size[0m: 3
+[1;32mINFO    [0m       ┝━ Sumcheck round [ 584ns | 0.515% ] [2;37mround[0m: 24 | [2;37mlog_size[0m: 2
+[1;32mINFO    [0m       ┕━ Sumcheck round [ 333ns | 0.294% ] [2;37mround[0m: 25 | [2;37mlog_size[0m: 1
+  0.915 s
+[1;32mINFO    [0m Recompute deferred claims [ 3.62ms | 100% ]
+[1;32mINFO    [0m ┕━ bytecode mle [ 3.62ms | 99.979% ]
+[1;32mINFO    [0m Statement digest [ 121µs | 100% ]
+aggregation bytecode: 499,653 instructions (2^19 padded), compiled in 0.761 s
+
+recursion 4→1, over leaves of 250 leanXMSS signatures
+  cycles (VM steps)           : 668,803 = 2^19.351
+    details                   : MUL 2^17.939 (37.6%)  XOR 2^17.49 (27.5%)  DEREF 2^16.889 (18.1%)  SET 2^15.653 (7.7%)  JUMP 2^15.406 (6.5%)  KECCAK 2^14.069 (2.6%)  MEMORY 2^20.244  BYTECODE 2^18.931  TOTAL_COMMITTED 2^24.464
+  proof size                  : 228.4 KiB
+  proving time                : 0.933 s ± 3.8%      peak memory 1.999 GiB
+  verifying                   : 14.315 ms
+       16.32 real        47.57 user         2.17 sys
+          2145894400  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              403983  page reclaims
+                 193  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  21  voluntary context switches
+               79378  involuntary context switches
+        234440722076  instructions retired
+         68801745054  cycles elapsed
+          2175649784  peak memory footprint
+
+### exit: 0 wall: 16.3s
+### swap_end: vm.swapusage: total = 3072.00M  used = 1468.19M  free = 1603.81M  (encrypted)
+### therm_end: Note: No thermal warning level has been recorded | Note: No performance warning level has been recorded | Note: No CPU power status has been recorded

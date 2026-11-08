@@ -1,0 +1,206 @@
+leaf_T00       L0                       basis                                                        38.200 ms
+leaf_T00       L0                       sumcheck rounds 0-6                                           7.760 ms
+leaf_T00       L0                       open                                                          0.771 ms
+leaf_T00       L0                       induce                                                        4.140 ms
+leaf_T00       L0                       introduce                                                     1.310 ms
+leaf_T00       L0                       commit (base encode, outside PCS open)                      269.000 ms
+leaf_T00       L1                       commit                                                      124.000 ms
+leaf_T00       L1                       sumcheck rounds 7-10                                          1.290 ms
+leaf_T00       L1                       open                                                          0.265 ms
+leaf_T00       L1                       induce                                                        0.215 ms
+leaf_T00       L1                       introduce                                                     0.084 ms
+leaf_T00       L2                       commit                                                       54.400 ms
+leaf_T00       L2                       sumcheck rounds 11-14                                         0.105 ms
+leaf_T00       L2                       open                                                          0.169 ms
+leaf_T00       L2                       induce                                                        0.043 ms
+leaf_T00       L2                       introduce                                                     0.014 ms
+leaf_T00       L3                       commit                                                       24.000 ms
+leaf_T00       L3                       sumcheck rounds 15-18                                         0.022 ms
+leaf_T00       L3                       open                                                          0.131 ms
+leaf_T00       L3                       induce                                                        0.019 ms
+leaf_T00       L3                       introduce                                                     0.003 ms
+leaf_T00       L4                       commit                                                       10.000 ms
+leaf_T00       L4                       sumcheck rounds 19-22                                         0.005 ms
+leaf_T00       L4                       final level (L4 open+induce+introduce, tail rounds)           0.124 ms
+leaf_T00       -                        Ring switch                                                   0.107 ms
+leaf_T00       -                        untraced remainder (PoW x5, query sampling, OOD)             12.823 ms
+leaf_T00       PCS open total                                                                       280.000 ms
+leaf_T00       L0 commit (base encode)  kind: "base encode" | log_domain: 21 | lanes: 40            269.000 ms
+leaf_T01drift  L0                       basis                                                        38.600 ms
+leaf_T01drift  L0                       sumcheck rounds 0-6                                           7.250 ms
+leaf_T01drift  L0                       open                                                          0.695 ms
+leaf_T01drift  L0                       induce                                                        4.180 ms
+leaf_T01drift  L0                       introduce                                                     1.350 ms
+leaf_T01drift  L0                       commit (base encode, outside PCS open)                      258.000 ms
+leaf_T01drift  L1                       commit                                                      130.000 ms
+leaf_T01drift  L1                       sumcheck rounds 7-10                                          1.250 ms
+leaf_T01drift  L1                       open                                                          0.361 ms
+leaf_T01drift  L1                       induce                                                        0.234 ms
+leaf_T01drift  L1                       introduce                                                     0.077 ms
+leaf_T01drift  L2                       commit                                                       57.900 ms
+leaf_T01drift  L2                       sumcheck rounds 11-14                                         0.105 ms
+leaf_T01drift  L2                       open                                                          0.184 ms
+leaf_T01drift  L2                       induce                                                        0.043 ms
+leaf_T01drift  L2                       introduce                                                     0.015 ms
+leaf_T01drift  L3                       commit                                                       24.000 ms
+leaf_T01drift  L3                       sumcheck rounds 15-18                                         0.021 ms
+leaf_T01drift  L3                       open                                                          0.140 ms
+leaf_T01drift  L3                       induce                                                        0.021 ms
+leaf_T01drift  L3                       introduce                                                     0.004 ms
+leaf_T01drift  L4                       commit                                                       10.500 ms
+leaf_T01drift  L4                       sumcheck rounds 19-22                                         0.007 ms
+leaf_T01drift  L4                       final level (L4 open+induce+introduce, tail rounds)           0.121 ms
+leaf_T01drift  -                        Ring switch                                                   0.097 ms
+leaf_T01drift  -                        untraced remainder (PoW x5, query sampling, OOD)             12.846 ms
+leaf_T01drift  PCS open total                                                                       290.000 ms
+leaf_T01drift  L0 commit (base encode)  kind: "base encode" | log_domain: 21 | lanes: 40            258.000 ms
+node2_T01      L0                       basis                                                        30.600 ms
+node2_T01      L0                       sumcheck rounds 0-6                                           5.890 ms
+node2_T01      L0                       open                                                          0.788 ms
+node2_T01      L0                       induce                                                        2.180 ms
+node2_T01      L0                       introduce                                                     0.572 ms
+node2_T01      L0                       commit (base encode, outside PCS open)                      187.000 ms
+node2_T01      L1                       commit                                                       56.600 ms
+node2_T01      L1                       sumcheck rounds 7-10                                          0.604 ms
+node2_T01      L1                       open                                                          0.266 ms
+node2_T01      L1                       induce                                                        0.118 ms
+node2_T01      L1                       introduce                                                     0.043 ms
+node2_T01      L2                       commit                                                       25.200 ms
+node2_T01      L2                       sumcheck rounds 11-14                                         0.063 ms
+node2_T01      L2                       open                                                          0.173 ms
+node2_T01      L2                       induce                                                        0.030 ms
+node2_T01      L2                       introduce                                                     0.008 ms
+node2_T01      L3                       commit                                                       11.200 ms
+node2_T01      L3                       sumcheck rounds 15-18                                         0.012 ms
+node2_T01      L3                       open                                                          0.128 ms
+node2_T01      L3                       induce                                                        0.020 ms
+node2_T01      L3                       introduce                                                     0.002 ms
+node2_T01      L4                       commit                                                        5.350 ms
+node2_T01      L4                       sumcheck rounds 19-22                                         0.005 ms
+node2_T01      L4                       final level (L4 open+induce+introduce, tail rounds)           0.120 ms
+node2_T01      -                        Ring switch                                                   0.101 ms
+node2_T01      -                        untraced remainder (PoW x5, query sampling, OOD)             11.928 ms
+node2_T01      PCS open total                                                                       152.000 ms
+node2_T01      L0 commit (base encode)  kind: "base encode" | log_domain: 20 | lanes: 64            187.000 ms
+node2_T03r1    L0                       basis                                                        31.300 ms
+node2_T03r1    L0                       sumcheck rounds 0-6                                           6.340 ms
+node2_T03r1    L0                       open                                                          0.964 ms
+node2_T03r1    L0                       induce                                                        3.260 ms
+node2_T03r1    L0                       introduce                                                     0.805 ms
+node2_T03r1    L0                       commit (base encode, outside PCS open)                      233.000 ms
+node2_T03r1    L1                       commit                                                       65.600 ms
+node2_T03r1    L1                       sumcheck rounds 7-10                                          0.684 ms
+node2_T03r1    L1                       open                                                          0.268 ms
+node2_T03r1    L1                       induce                                                        0.132 ms
+node2_T03r1    L1                       introduce                                                     0.044 ms
+node2_T03r1    L2                       commit                                                       26.900 ms
+node2_T03r1    L2                       sumcheck rounds 11-14                                         0.089 ms
+node2_T03r1    L2                       open                                                          0.183 ms
+node2_T03r1    L2                       induce                                                        0.088 ms
+node2_T03r1    L2                       introduce                                                     0.021 ms
+node2_T03r1    L3                       commit                                                       11.200 ms
+node2_T03r1    L3                       sumcheck rounds 15-18                                         0.012 ms
+node2_T03r1    L3                       open                                                          0.127 ms
+node2_T03r1    L3                       induce                                                        0.024 ms
+node2_T03r1    L3                       introduce                                                     0.001 ms
+node2_T03r1    L4                       commit                                                        5.030 ms
+node2_T03r1    L4                       sumcheck rounds 19-22                                         0.005 ms
+node2_T03r1    L4                       final level (L4 open+induce+introduce, tail rounds)           0.130 ms
+node2_T03r1    -                        Ring switch                                                   0.093 ms
+node2_T03r1    -                        untraced remainder (PoW x5, query sampling, OOD)             11.700 ms
+node2_T03r1    PCS open total                                                                       165.000 ms
+node2_T03r1    L0 commit (base encode)  kind: "base encode" | log_domain: 20 | lanes: 64            233.000 ms
+node2_T03r2    L0                       basis                                                        30.300 ms
+node2_T03r2    L0                       sumcheck rounds 0-6                                           5.820 ms
+node2_T03r2    L0                       open                                                          0.797 ms
+node2_T03r2    L0                       induce                                                        2.090 ms
+node2_T03r2    L0                       introduce                                                     0.588 ms
+node2_T03r2    L0                       commit (base encode, outside PCS open)                      176.000 ms
+node2_T03r2    L1                       commit                                                       58.900 ms
+node2_T03r2    L1                       sumcheck rounds 7-10                                          0.606 ms
+node2_T03r2    L1                       open                                                          0.269 ms
+node2_T03r2    L1                       induce                                                        0.125 ms
+node2_T03r2    L1                       introduce                                                     0.042 ms
+node2_T03r2    L2                       commit                                                       25.800 ms
+node2_T03r2    L2                       sumcheck rounds 11-14                                         0.089 ms
+node2_T03r2    L2                       open                                                          0.165 ms
+node2_T03r2    L2                       induce                                                        0.036 ms
+node2_T03r2    L2                       introduce                                                     0.006 ms
+node2_T03r2    L3                       commit                                                       11.000 ms
+node2_T03r2    L3                       sumcheck rounds 15-18                                         0.011 ms
+node2_T03r2    L3                       open                                                          0.129 ms
+node2_T03r2    L3                       induce                                                        0.019 ms
+node2_T03r2    L3                       introduce                                                     0.001 ms
+node2_T03r2    L4                       commit                                                        4.870 ms
+node2_T03r2    L4                       sumcheck rounds 19-22                                         0.004 ms
+node2_T03r2    L4                       final level (L4 open+induce+introduce, tail rounds)           0.116 ms
+node2_T03r2    -                        Ring switch                                                   0.096 ms
+node2_T03r2    -                        untraced remainder (PoW x5, query sampling, OOD)             12.119 ms
+node2_T03r2    PCS open total                                                                       154.000 ms
+node2_T03r2    L0 commit (base encode)  kind: "base encode" | log_domain: 20 | lanes: 64            176.000 ms
+node2_T05r1    L0                       basis                                                        30.200 ms
+node2_T05r1    L0                       sumcheck rounds 0-6                                           5.640 ms
+node2_T05r1    L0                       open                                                          0.824 ms
+node2_T05r1    L0                       induce                                                        2.190 ms
+node2_T05r1    L0                       introduce                                                     0.571 ms
+node2_T05r1    L0                       commit (base encode, outside PCS open)                      278.000 ms
+node2_T05r1    L1                       commit                                                       57.600 ms
+node2_T05r1    L1                       sumcheck rounds 7-10                                          0.587 ms
+node2_T05r1    L1                       open                                                          0.274 ms
+node2_T05r1    L1                       induce                                                        0.133 ms
+node2_T05r1    L1                       introduce                                                     0.043 ms
+node2_T05r1    L2                       commit                                                       25.700 ms
+node2_T05r1    L2                       sumcheck rounds 11-14                                         0.064 ms
+node2_T05r1    L2                       open                                                          0.169 ms
+node2_T05r1    L2                       induce                                                        0.028 ms
+node2_T05r1    L2                       introduce                                                     0.008 ms
+node2_T05r1    L3                       commit                                                       11.200 ms
+node2_T05r1    L3                       sumcheck rounds 15-18                                         0.011 ms
+node2_T05r1    L3                       open                                                          0.121 ms
+node2_T05r1    L3                       induce                                                        0.019 ms
+node2_T05r1    L3                       introduce                                                     0.001 ms
+node2_T05r1    L4                       commit                                                        4.860 ms
+node2_T05r1    L4                       sumcheck rounds 19-22                                         0.011 ms
+node2_T05r1    L4                       final level (L4 open+induce+introduce, tail rounds)           0.115 ms
+node2_T05r1    -                        Ring switch                                                   0.099 ms
+node2_T05r1    -                        untraced remainder (PoW x5, query sampling, OOD)             12.532 ms
+node2_T05r1    PCS open total                                                                       153.000 ms
+node2_T05r1    L0 commit (base encode)  kind: "base encode" | log_domain: 20 | lanes: 64            278.000 ms
+node2_T05r2    L0                       basis                                                        30.300 ms
+node2_T05r2    L0                       sumcheck rounds 0-6                                           5.460 ms
+node2_T05r2    L0                       open                                                          0.826 ms
+node2_T05r2    L0                       induce                                                        2.080 ms
+node2_T05r2    L0                       introduce                                                     0.558 ms
+node2_T05r2    L0                       commit (base encode, outside PCS open)                      177.000 ms
+node2_T05r2    L1                       commit                                                       57.500 ms
+node2_T05r2    L1                       sumcheck rounds 7-10                                          0.569 ms
+node2_T05r2    L1                       open                                                          0.276 ms
+node2_T05r2    L1                       induce                                                        0.116 ms
+node2_T05r2    L1                       introduce                                                     0.044 ms
+node2_T05r2    L2                       commit                                                       25.900 ms
+node2_T05r2    L2                       sumcheck rounds 11-14                                         0.063 ms
+node2_T05r2    L2                       open                                                          0.173 ms
+node2_T05r2    L2                       induce                                                        0.040 ms
+node2_T05r2    L2                       introduce                                                     0.006 ms
+node2_T05r2    L3                       commit                                                       11.100 ms
+node2_T05r2    L3                       sumcheck rounds 15-18                                         0.011 ms
+node2_T05r2    L3                       open                                                          0.128 ms
+node2_T05r2    L3                       induce                                                        0.026 ms
+node2_T05r2    L3                       introduce                                                     0.001 ms
+node2_T05r2    L4                       commit                                                        4.840 ms
+node2_T05r2    L4                       sumcheck rounds 19-22                                         0.004 ms
+node2_T05r2    L4                       final level (L4 open+induce+introduce, tail rounds)           0.126 ms
+node2_T05r2    -                        Ring switch                                                   0.107 ms
+node2_T05r2    -                        untraced remainder (PoW x5, query sampling, OOD)             11.746 ms
+node2_T05r2    PCS open total                                                                       152.000 ms
+node2_T05r2    L0 commit (base encode)  kind: "base encode" | log_domain: 20 | lanes: 64            177.000 ms
+
+leaf_T00 {'L0 in PCS open ms': 52.181, 'L0 commit ms': 269.0, 'L0 non-commit ms': 52.181, 'L1 in PCS open ms': 125.854, 'L1 commit ms': 124.0, 'L1 non-commit ms': 1.854, 'L2 in PCS open ms': 54.731, 'L2 commit ms': 54.4, 'L2 non-commit ms': 0.331, 'L3 in PCS open ms': 24.175, 'L3 commit ms': 24.0, 'L3 non-commit ms': 0.175, 'L4 in PCS open ms': 10.13, 'L4 commit ms': 10.0, 'L4 non-commit ms': 0.13, '- in PCS open ms': 12.93, '- commit ms': 0, '- non-commit ms': 12.93, 'PCS open total ms': 280.0, 'L0 base commit ms (outside PCS open)': 269.0}
+leaf_T01drift {'L0 in PCS open ms': 52.075, 'L0 commit ms': 258.0, 'L0 non-commit ms': 52.075, 'L1 in PCS open ms': 131.922, 'L1 commit ms': 130.0, 'L1 non-commit ms': 1.922, 'L2 in PCS open ms': 58.247, 'L2 commit ms': 57.9, 'L2 non-commit ms': 0.347, 'L3 in PCS open ms': 24.186, 'L3 commit ms': 24.0, 'L3 non-commit ms': 0.186, 'L4 in PCS open ms': 10.628, 'L4 commit ms': 10.5, 'L4 non-commit ms': 0.128, '- in PCS open ms': 12.943, '- commit ms': 0, '- non-commit ms': 12.943, 'PCS open total ms': 290.0, 'L0 base commit ms (outside PCS open)': 258.0}
+node2_T01 {'L0 in PCS open ms': 40.03, 'L0 commit ms': 187.0, 'L0 non-commit ms': 40.03, 'L1 in PCS open ms': 57.632, 'L1 commit ms': 56.6, 'L1 non-commit ms': 1.032, 'L2 in PCS open ms': 25.473, 'L2 commit ms': 25.2, 'L2 non-commit ms': 0.273, 'L3 in PCS open ms': 11.361, 'L3 commit ms': 11.2, 'L3 non-commit ms': 0.161, 'L4 in PCS open ms': 5.475, 'L4 commit ms': 5.35, 'L4 non-commit ms': 0.125, '- in PCS open ms': 12.029, '- commit ms': 0, '- non-commit ms': 12.029, 'PCS open total ms': 152.0, 'L0 base commit ms (outside PCS open)': 187.0}
+node2_T03r1 {'L0 in PCS open ms': 42.669, 'L0 commit ms': 233.0, 'L0 non-commit ms': 42.669, 'L1 in PCS open ms': 66.728, 'L1 commit ms': 65.6, 'L1 non-commit ms': 1.128, 'L2 in PCS open ms': 27.281, 'L2 commit ms': 26.9, 'L2 non-commit ms': 0.381, 'L3 in PCS open ms': 11.364, 'L3 commit ms': 11.2, 'L3 non-commit ms': 0.164, 'L4 in PCS open ms': 5.165, 'L4 commit ms': 5.03, 'L4 non-commit ms': 0.135, '- in PCS open ms': 11.793, '- commit ms': 0, '- non-commit ms': 11.793, 'PCS open total ms': 165.0, 'L0 base commit ms (outside PCS open)': 233.0}
+node2_T03r2 {'L0 in PCS open ms': 39.595, 'L0 commit ms': 176.0, 'L0 non-commit ms': 39.595, 'L1 in PCS open ms': 59.942, 'L1 commit ms': 58.9, 'L1 non-commit ms': 1.042, 'L2 in PCS open ms': 26.096, 'L2 commit ms': 25.8, 'L2 non-commit ms': 0.296, 'L3 in PCS open ms': 11.161, 'L3 commit ms': 11.0, 'L3 non-commit ms': 0.161, 'L4 in PCS open ms': 4.99, 'L4 commit ms': 4.87, 'L4 non-commit ms': 0.121, '- in PCS open ms': 12.215, '- commit ms': 0, '- non-commit ms': 12.215, 'PCS open total ms': 154.0, 'L0 base commit ms (outside PCS open)': 176.0}
+node2_T05r1 {'L0 in PCS open ms': 39.425, 'L0 commit ms': 278.0, 'L0 non-commit ms': 39.425, 'L1 in PCS open ms': 58.638, 'L1 commit ms': 57.6, 'L1 non-commit ms': 1.038, 'L2 in PCS open ms': 25.968, 'L2 commit ms': 25.7, 'L2 non-commit ms': 0.268, 'L3 in PCS open ms': 11.352, 'L3 commit ms': 11.2, 'L3 non-commit ms': 0.152, 'L4 in PCS open ms': 4.986, 'L4 commit ms': 4.86, 'L4 non-commit ms': 0.126, '- in PCS open ms': 12.631, '- commit ms': 0, '- non-commit ms': 12.631, 'PCS open total ms': 153.0, 'L0 base commit ms (outside PCS open)': 278.0}
+node2_T05r2 {'L0 in PCS open ms': 39.224, 'L0 commit ms': 177.0, 'L0 non-commit ms': 39.224, 'L1 in PCS open ms': 58.505, 'L1 commit ms': 57.5, 'L1 non-commit ms': 1.005, 'L2 in PCS open ms': 26.182, 'L2 commit ms': 25.9, 'L2 non-commit ms': 0.282, 'L3 in PCS open ms': 11.266, 'L3 commit ms': 11.1, 'L3 non-commit ms': 0.166, 'L4 in PCS open ms': 4.97, 'L4 commit ms': 4.84, 'L4 non-commit ms': 0.13, '- in PCS open ms': 11.853, '- commit ms': 0, '- non-commit ms': 11.853, 'PCS open total ms': 152.0, 'L0 base commit ms (outside PCS open)': 177.0}
+leaf MEAN of 2 {'L0 in PCS open ms': 52.128, 'L0 commit ms': 263.5, 'L0 non-commit ms': 52.128, 'L1 in PCS open ms': 128.888, 'L1 commit ms': 127.0, 'L1 non-commit ms': 1.888, 'L2 in PCS open ms': 56.489, 'L2 commit ms': 56.15, 'L2 non-commit ms': 0.339, 'L3 in PCS open ms': 24.181, 'L3 commit ms': 24.0, 'L3 non-commit ms': 0.18, 'L4 in PCS open ms': 10.379, 'L4 commit ms': 10.25, 'L4 non-commit ms': 0.129, '- in PCS open ms': 12.936, '- commit ms': 0.0, '- non-commit ms': 12.936, 'PCS open total ms': 285.0, 'L0 base commit ms (outside PCS open)': 263.5}
+node2 MEAN of 5 {'L0 in PCS open ms': 40.189, 'L0 commit ms': 210.2, 'L0 non-commit ms': 40.189, 'L1 in PCS open ms': 60.289, 'L1 commit ms': 59.24, 'L1 non-commit ms': 1.049, 'L2 in PCS open ms': 26.2, 'L2 commit ms': 25.9, 'L2 non-commit ms': 0.3, 'L3 in PCS open ms': 11.301, 'L3 commit ms': 11.14, 'L3 non-commit ms': 0.161, 'L4 in PCS open ms': 5.117, 'L4 commit ms': 4.99, 'L4 non-commit ms': 0.127, '- in PCS open ms': 12.104, '- commit ms': 0.0, '- non-commit ms': 12.104, 'PCS open total ms': 155.2, 'L0 base commit ms (outside PCS open)': 210.2}

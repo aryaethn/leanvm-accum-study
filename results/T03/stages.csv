@@ -1,0 +1,67 @@
+log,stage,secs,pct,pass_total_s,note
+runs/base_n2,execute,0.0228,3.281,0.695,
+runs/base_n2,witness build,0.02141,3.081,0.695,
+runs/base_n2,commit,0.233,33.525,0.695,
+runs/base_n2,bus GKR,0.122,17.554,0.695,
+runs/base_n2,constraint sumcheck,0.0212,3.05,0.695,
+runs/base_n2,Keccak GKR/reduction,0.0818,11.77,0.695,
+runs/base_n2,PCS open,0.165,23.741,0.695,
+runs/base_n2,replay children,0.0198,2.849,0.695,
+runs/base_n2,other,0.00799,1.15,0.695,Batch deferred claims 1.85 ms; Prove residual (not in a child span) -0.10 ms; Recompute deferred claims 3.41 ms; Statement digest 0.07 ms; untraced gap vs printed pass time 2.76 ms
+runs/base_n2,commit:NTT,0.233,33.525,0.695,sub-stage of commit (not additive)
+runs/base_n2,commit:Merkle,2e-06,0.0,0.695,sub-stage of commit (not additive)
+runs/v1_n2,execute,0.0189,3.259,0.58,
+runs/v1_n2,witness build,0.02336,4.028,0.58,
+runs/v1_n2,commit,0.203,35.0,0.58,
+runs/v1_n2,bus GKR,0.0982,16.931,0.58,
+runs/v1_n2,constraint sumcheck,0.0137,2.362,0.58,
+runs/v1_n2,Keccak GKR/reduction,0.0329,5.672,0.58,
+runs/v1_n2,PCS open,0.159,27.414,0.58,
+runs/v1_n2,replay children,0.0205,3.534,0.58,
+runs/v1_n2,other,0.01044,1.8,0.58,Batch deferred claims 1.53 ms; Prove residual (not in a child span) 0.30 ms; Recompute deferred claims 2.92 ms; Statement digest 0.06 ms; untraced gap vs printed pass time 5.63 ms
+runs/v1_n2,commit:NTT,0.202,34.828,0.58,sub-stage of commit (not additive)
+runs/v1_n2,commit:Merkle,1e-06,0.0,0.58,sub-stage of commit (not additive)
+runs/v2_n2,execute,0.0131,4.486,0.292,
+runs/v2_n2,witness build,0.01105,3.784,0.292,
+runs/v2_n2,commit,0.0869,29.76,0.292,
+runs/v2_n2,bus GKR,0.0377,12.911,0.292,
+runs/v2_n2,constraint sumcheck,0.00861,2.949,0.292,
+runs/v2_n2,Keccak GKR/reduction,0.0325,11.13,0.292,
+runs/v2_n2,PCS open,0.0745,25.514,0.292,
+runs/v2_n2,replay children,0.0213,7.295,0.292,
+runs/v2_n2,other,0.00634,2.171,0.292,Batch deferred claims 1.54 ms; Recompute deferred claims 2.54 ms; Statement digest 0.06 ms; untraced gap vs printed pass time 2.20 ms
+runs/v2_n2,commit:NTT,0.0868,29.726,0.292,sub-stage of commit (not additive)
+runs/v2_n2,commit:Merkle,1e-06,0.0,0.292,sub-stage of commit (not additive)
+runs/base_n6,execute,0.167,8.103,2.061,
+runs/base_n6,witness build,0.1507,7.312,2.061,
+runs/base_n6,commit,0.616,29.888,2.061,
+runs/base_n6,bus GKR,0.289,14.022,2.061,
+runs/base_n6,constraint sumcheck,0.0372,1.805,2.061,
+runs/base_n6,Keccak GKR/reduction,0.19,9.219,2.061,
+runs/base_n6,PCS open,0.556,26.977,2.061,
+runs/base_n6,replay children,0.0201,0.975,2.061,
+runs/base_n6,other,0.035,1.698,2.061,Batch deferred claims 2.23 ms; Prove residual (not in a child span) -3.90 ms; Recompute deferred claims 3.39 ms; Statement digest 0.16 ms; untraced gap vs printed pass time 33.12 ms
+runs/base_n6,commit:NTT,0.616,29.888,2.061,sub-stage of commit (not additive)
+runs/base_n6,commit:Merkle,1.9e-05,0.001,2.061,sub-stage of commit (not additive)
+runs/v1_n6,execute,0.0305,3.056,0.998,
+runs/v1_n6,witness build,0.02291,2.296,0.998,
+runs/v1_n6,commit,0.368,36.874,0.998,
+runs/v1_n6,bus GKR,0.14,14.028,0.998,
+runs/v1_n6,constraint sumcheck,0.0328,3.287,0.998,
+runs/v1_n6,Keccak GKR/reduction,0.0545,5.461,0.998,
+runs/v1_n6,PCS open,0.332,33.267,0.998,
+runs/v1_n6,replay children,0.0118,1.182,0.998,
+runs/v1_n6,other,0.00549,0.55,0.998,Batch deferred claims 1.78 ms; Prove residual (not in a child span) -0.90 ms; Recompute deferred claims 2.93 ms; Statement digest 0.16 ms; untraced gap vs printed pass time 1.52 ms
+runs/v1_n6,commit:NTT,0.368,36.874,0.998,sub-stage of commit (not additive)
+runs/v1_n6,commit:Merkle,1e-06,0.0,0.998,sub-stage of commit (not additive)
+runs/v2_n6,execute,0.0254,3.391,0.749,
+runs/v2_n6,witness build,0.01933,2.581,0.749,
+runs/v2_n6,commit,0.248,33.111,0.749,
+runs/v2_n6,bus GKR,0.0852,11.375,0.749,
+runs/v2_n6,constraint sumcheck,0.0207,2.764,0.749,
+runs/v2_n6,Keccak GKR/reduction,0.0546,7.29,0.749,
+runs/v2_n6,PCS open,0.275,36.716,0.749,
+runs/v2_n6,replay children,0.0138,1.842,0.749,
+runs/v2_n6,other,0.00697,0.931,0.749,Batch deferred claims 1.80 ms; Prove residual (not in a child span) 0.67 ms; Recompute deferred claims 2.54 ms; Statement digest 0.18 ms; untraced gap vs printed pass time 1.78 ms
+runs/v2_n6,commit:NTT,0.248,33.111,0.749,sub-stage of commit (not additive)
+runs/v2_n6,commit:Merkle,4e-06,0.001,0.749,sub-stage of commit (not additive)

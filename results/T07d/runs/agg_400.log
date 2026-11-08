@@ -1,0 +1,54 @@
+DBG_TABLES kind=node cycles=340919 mu=26 n_lanes=34 committed_len=35651584 placed=34996224 log_placed=25.060696 log_mem=22 mem_used=2490393 code_len=488806 prog_len=524288
+DBG_TABLES kind=node shared=MEM_LO n_vars=22 contrib=4194304
+DBG_TABLES kind=node shared=MEM_HI n_vars=22 contrib=4194304
+DBG_TABLES kind=node shared=MEM_TOP n_vars=22 contrib=4194304
+DBG_TABLES kind=node shared=MFCNT n_vars=22 contrib=4194304
+DBG_TABLES kind=node shared=BFCNT n_vars=19 contrib=524288
+DBG_TABLES kind=node shared=QKECCAK n_vars=23 contrib=8388608
+DBG_TABLES kind=node table=XOR rows=74988 tau=17 padded=131072 columns=15 width=15 contrib=1966080
+DBG_TABLES kind=node table=MUL rows=68029 tau=17 padded=131072 columns=15 width=15 contrib=1966080
+DBG_TABLES kind=node table=SET rows=60637 tau=16 padded=65536 columns=8 width=8 contrib=524288
+DBG_TABLES kind=node table=DEREF rows=46195 tau=16 padded=65536 columns=15 width=15 contrib=983040
+DBG_TABLES kind=node table=JUMP rows=16474 tau=15 padded=32768 columns=14 width=14 contrib=458752
+DBG_TABLES kind=node table=KECCAK rows=74596 tau=17 padded=131072 columns=90 width=26 contrib=3407872
+DBG_TABLES kind=node sum_contrib=34996224 placed_minus_sum=0
+DBG_TABLES kind=node cycles=340919 mu=26 n_lanes=34 committed_len=35651584 placed=34996224 log_placed=25.060696 log_mem=22 mem_used=2490393 code_len=488806 prog_len=524288
+DBG_TABLES kind=node shared=MEM_LO n_vars=22 contrib=4194304
+DBG_TABLES kind=node shared=MEM_HI n_vars=22 contrib=4194304
+DBG_TABLES kind=node shared=MEM_TOP n_vars=22 contrib=4194304
+DBG_TABLES kind=node shared=MFCNT n_vars=22 contrib=4194304
+DBG_TABLES kind=node shared=BFCNT n_vars=19 contrib=524288
+DBG_TABLES kind=node shared=QKECCAK n_vars=23 contrib=8388608
+DBG_TABLES kind=node table=XOR rows=74988 tau=17 padded=131072 columns=15 width=15 contrib=1966080
+DBG_TABLES kind=node table=MUL rows=68029 tau=17 padded=131072 columns=15 width=15 contrib=1966080
+DBG_TABLES kind=node table=SET rows=60637 tau=16 padded=65536 columns=8 width=8 contrib=524288
+DBG_TABLES kind=node table=DEREF rows=46195 tau=16 padded=65536 columns=15 width=15 contrib=983040
+DBG_TABLES kind=node table=JUMP rows=16474 tau=15 padded=32768 columns=14 width=14 contrib=458752
+DBG_TABLES kind=node table=KECCAK rows=74596 tau=17 padded=131072 columns=90 width=26 contrib=3407872
+DBG_TABLES kind=node sum_contrib=34996224 placed_minus_sum=0
+
+aggregation, 400 leanXMSS signatures
+  cycles (VM steps)           : 340,919 = 2^18.379
+    details                   : XOR 2^16.194 (22.0%)  KECCAK 2^16.187 (21.9%)  MUL 2^16.054 (20.0%)  SET 2^15.888 (17.8%)  DEREF 2^15.495 (13.6%)  JUMP 2^14.008 (4.8%)  MEMORY 2^21.248  BYTECODE 2^18.899  TOTAL_COMMITTED 2^25.061
+  proof size                  : 228.5 KiB
+  proving time                : 2.623 s      peak memory 2.391 GiB
+  per signature               : 152.507 signatures/s
+  verifying                   : 12.135 ms
+        8.78 real        23.18 user         5.36 sys
+          2567012352  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              713284  page reclaims
+                   0  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   6  voluntary context switches
+              114966  involuntary context switches
+        244915746818  instructions retired
+         82616132570  cycles elapsed
+          4029205768  peak memory footprint

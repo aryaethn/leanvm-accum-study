@@ -1,0 +1,221 @@
+log,stage,secs,pct,pass_total_s,note
+T00/aggregate_xmss50_lir2,execute,0.0176,6.241,0.282,
+T00/aggregate_xmss50_lir2,witness build,0.00599,2.124,0.282,
+T00/aggregate_xmss50_lir2,commit,0.0685,24.291,0.282,
+T00/aggregate_xmss50_lir2,bus GKR,0.0268,9.504,0.282,
+T00/aggregate_xmss50_lir2,constraint sumcheck,0.00393,1.394,0.282,
+T00/aggregate_xmss50_lir2,Keccak GKR/reduction,0.0728,25.816,0.282,
+T00/aggregate_xmss50_lir2,PCS open,0.0734,26.028,0.282,
+T00/aggregate_xmss50_lir2,replay children,4e-06,0.001,0.282,
+T00/aggregate_xmss50_lir2,other,0.012976,4.602,0.282,Prove residual (not in a child span) -0.21 ms; Recompute deferred claims 0.00 ms; Statement digest 0.01 ms; untraced gap vs printed pass time 13.18 ms
+T00/aggregate_xmss50_lir2,commit:NTT,0.0684,24.255,0.282,sub-stage of commit (not additive)
+T00/aggregate_xmss50_lir2,commit:Merkle,1e-06,0.0,0.282,sub-stage of commit (not additive)
+T00/aggregate_xmss100_lir2,execute,0.0251,5.071,0.495,
+T00/aggregate_xmss100_lir2,witness build,0.00922,1.863,0.495,
+T00/aggregate_xmss100_lir2,commit,0.129,26.061,0.495,
+T00/aggregate_xmss100_lir2,bus GKR,0.0428,8.646,0.495,
+T00/aggregate_xmss100_lir2,constraint sumcheck,0.00652,1.317,0.495,
+T00/aggregate_xmss100_lir2,Keccak GKR/reduction,0.124,25.051,0.495,
+T00/aggregate_xmss100_lir2,PCS open,0.145,29.293,0.495,
+T00/aggregate_xmss100_lir2,replay children,2e-06,0.0,0.495,
+T00/aggregate_xmss100_lir2,other,0.013358,2.699,0.495,Prove residual (not in a child span) 0.79 ms; Recompute deferred claims 0.00 ms; Statement digest 0.01 ms; untraced gap vs printed pass time 12.55 ms
+T00/aggregate_xmss100_lir2,commit:NTT,0.129,26.061,0.495,sub-stage of commit (not additive)
+T00/aggregate_xmss100_lir2,commit:Merkle,1e-06,0.0,0.495,sub-stage of commit (not additive)
+T00/aggregate_xmss250_lir2,execute,0.0442,4.308,1.026,
+T00/aggregate_xmss250_lir2,witness build,0.02064,2.012,1.026,
+T00/aggregate_xmss250_lir2,commit,0.269,26.218,1.026,
+T00/aggregate_xmss250_lir2,bus GKR,0.123,11.988,1.026,
+T00/aggregate_xmss250_lir2,constraint sumcheck,0.012,1.17,1.026,
+T00/aggregate_xmss250_lir2,Keccak GKR/reduction,0.269,26.218,1.026,
+T00/aggregate_xmss250_lir2,PCS open,0.28,27.29,1.026,
+T00/aggregate_xmss250_lir2,replay children,5e-06,0.0,1.026,
+T00/aggregate_xmss250_lir2,other,0.008155,0.795,1.026,Prove residual (not in a child span) 3.86 ms; Recompute deferred claims 0.00 ms; Statement digest 0.03 ms; untraced gap vs printed pass time 4.26 ms
+T00/aggregate_xmss250_lir2,commit:NTT,0.268,26.121,1.026,sub-stage of commit (not additive)
+T00/aggregate_xmss250_lir2,commit:Merkle,1e-06,0.0,1.026,sub-stage of commit (not additive)
+T00/aggregate_xmss500_lir2,execute,0.139,4.889,2.843,
+T00/aggregate_xmss500_lir2,witness build,0.0521,1.833,2.843,
+T00/aggregate_xmss500_lir2,commit,0.807,28.386,2.843,
+T00/aggregate_xmss500_lir2,bus GKR,0.375,13.19,2.843,
+T00/aggregate_xmss500_lir2,constraint sumcheck,0.0257,0.904,2.843,
+T00/aggregate_xmss500_lir2,Keccak GKR/reduction,0.52,18.291,2.843,
+T00/aggregate_xmss500_lir2,PCS open,0.878,30.883,2.843,
+T00/aggregate_xmss500_lir2,replay children,2e-06,0.0,2.843,
+T00/aggregate_xmss500_lir2,other,0.046198,1.625,2.843,Prove residual (not in a child span) 2.20 ms; Recompute deferred claims 0.00 ms; Statement digest 0.06 ms; untraced gap vs printed pass time 43.94 ms
+T00/aggregate_xmss500_lir2,commit:NTT,0.807,28.386,2.843,sub-stage of commit (not additive)
+T00/aggregate_xmss500_lir2,commit:Merkle,1.9e-05,0.001,2.843,sub-stage of commit (not additive)
+T00/recursion_n2_m50_leaflir2_lir1,execute,0.0172,4.135,0.416,
+T00/recursion_n2_m50_leaflir2_lir1,witness build,0.01197,2.877,0.416,
+T00/recursion_n2_m50_leaflir2_lir1,commit,0.0914,21.971,0.416,
+T00/recursion_n2_m50_leaflir2_lir1,bus GKR,0.0708,17.019,0.416,
+T00/recursion_n2_m50_leaflir2_lir1,constraint sumcheck,0.0166,3.99,0.416,
+T00/recursion_n2_m50_leaflir2_lir1,Keccak GKR/reduction,0.0704,16.923,0.416,
+T00/recursion_n2_m50_leaflir2_lir1,PCS open,0.117,28.125,0.416,
+T00/recursion_n2_m50_leaflir2_lir1,replay children,0.0151,3.63,0.416,
+T00/recursion_n2_m50_leaflir2_lir1,other,0.00553,1.329,0.416,Batch deferred claims 1.27 ms; Prove residual (not in a child span) -0.42 ms; Recompute deferred claims 3.40 ms; Statement digest 0.01 ms; untraced gap vs printed pass time 1.27 ms
+T00/recursion_n2_m50_leaflir2_lir1,commit:NTT,0.0914,21.971,0.416,sub-stage of commit (not additive)
+T00/recursion_n2_m50_leaflir2_lir1,commit:Merkle,1e-06,0.0,0.416,sub-stage of commit (not additive)
+T00/recursion_n2_m250_leaflir2_lir1,execute,0.0228,5.327,0.428,
+T00/recursion_n2_m250_leaflir2_lir1,witness build,0.0144,3.364,0.428,
+T00/recursion_n2_m250_leaflir2_lir1,commit,0.093,21.729,0.428,
+T00/recursion_n2_m250_leaflir2_lir1,bus GKR,0.0678,15.841,0.428,
+T00/recursion_n2_m250_leaflir2_lir1,constraint sumcheck,0.0166,3.879,0.428,
+T00/recursion_n2_m250_leaflir2_lir1,Keccak GKR/reduction,0.0758,17.71,0.428,
+T00/recursion_n2_m250_leaflir2_lir1,PCS open,0.116,27.103,0.428,
+T00/recursion_n2_m250_leaflir2_lir1,replay children,0.0147,3.435,0.428,
+T00/recursion_n2_m250_leaflir2_lir1,other,0.0069,1.612,0.428,Batch deferred claims 1.53 ms; Prove residual (not in a child span) -0.75 ms; Recompute deferred claims 3.39 ms; Statement digest 0.06 ms; untraced gap vs printed pass time 2.67 ms
+T00/recursion_n2_m250_leaflir2_lir1,commit:NTT,0.0929,21.706,0.428,sub-stage of commit (not additive)
+T00/recursion_n2_m250_leaflir2_lir1,commit:Merkle,1e-06,0.0,0.428,sub-stage of commit (not additive)
+T00/recursion_n2_m900_leaflir2_lir1,execute,0.0223,5.222,0.427,
+T00/recursion_n2_m900_leaflir2_lir1,witness build,0.01271,2.977,0.427,
+T00/recursion_n2_m900_leaflir2_lir1,commit,0.0957,22.412,0.427,
+T00/recursion_n2_m900_leaflir2_lir1,bus GKR,0.0702,16.44,0.427,
+T00/recursion_n2_m900_leaflir2_lir1,constraint sumcheck,0.0165,3.864,0.427,
+T00/recursion_n2_m900_leaflir2_lir1,Keccak GKR/reduction,0.0872,20.422,0.427,
+T00/recursion_n2_m900_leaflir2_lir1,PCS open,0.105,24.59,0.427,
+T00/recursion_n2_m900_leaflir2_lir1,replay children,0.0115,2.693,0.427,
+T00/recursion_n2_m900_leaflir2_lir1,other,0.00589,1.379,0.427,Batch deferred claims 1.25 ms; Prove residual (not in a child span) -0.07 ms; Recompute deferred claims 3.38 ms; Statement digest 0.20 ms; untraced gap vs printed pass time 1.13 ms
+T00/recursion_n2_m900_leaflir2_lir1,commit:NTT,0.0956,22.389,0.427,sub-stage of commit (not additive)
+T00/recursion_n2_m900_leaflir2_lir1,commit:Merkle,1e-06,0.0,0.427,sub-stage of commit (not additive)
+T01/recursion_n2_m250_leaflir2_lir1,execute,0.0224,5.126,0.437,
+T01/recursion_n2_m250_leaflir2_lir1,witness build,0.01441,3.297,0.437,
+T01/recursion_n2_m250_leaflir2_lir1,commit,0.0933,21.35,0.437,
+T01/recursion_n2_m250_leaflir2_lir1,bus GKR,0.0695,15.904,0.437,
+T01/recursion_n2_m250_leaflir2_lir1,constraint sumcheck,0.0165,3.776,0.437,
+T01/recursion_n2_m250_leaflir2_lir1,Keccak GKR/reduction,0.0789,18.055,0.437,
+T01/recursion_n2_m250_leaflir2_lir1,PCS open,0.115,26.316,0.437,
+T01/recursion_n2_m250_leaflir2_lir1,replay children,0.0205,4.691,0.437,
+T01/recursion_n2_m250_leaflir2_lir1,other,0.00649,1.485,0.437,Batch deferred claims 1.56 ms; Prove residual (not in a child span) -0.77 ms; Recompute deferred claims 3.34 ms; Statement digest 0.06 ms; untraced gap vs printed pass time 2.30 ms
+T01/recursion_n2_m250_leaflir2_lir1,commit:NTT,0.0931,21.304,0.437,sub-stage of commit (not additive)
+T01/recursion_n2_m250_leaflir2_lir1,commit:Merkle,1e-06,0.0,0.437,sub-stage of commit (not additive)
+T01/recursion_n2_m250_leaflir2_lir2,execute,0.0206,3.62,0.569,
+T01/recursion_n2_m250_leaflir2_lir2,witness build,0.01463,2.571,0.569,
+T01/recursion_n2_m250_leaflir2_lir2,commit,0.187,32.865,0.569,
+T01/recursion_n2_m250_leaflir2_lir2,bus GKR,0.0736,12.935,0.569,
+T01/recursion_n2_m250_leaflir2_lir2,constraint sumcheck,0.018,3.163,0.569,
+T01/recursion_n2_m250_leaflir2_lir2,Keccak GKR/reduction,0.0796,13.989,0.569,
+T01/recursion_n2_m250_leaflir2_lir2,PCS open,0.152,26.714,0.569,
+T01/recursion_n2_m250_leaflir2_lir2,replay children,0.0168,2.953,0.569,
+T01/recursion_n2_m250_leaflir2_lir2,other,0.00677,1.19,0.569,Batch deferred claims 1.40 ms; Prove residual (not in a child span) 0.51 ms; Recompute deferred claims 3.39 ms; Statement digest 0.06 ms; untraced gap vs printed pass time 1.41 ms
+T01/recursion_n2_m250_leaflir2_lir2,commit:NTT,0.187,32.865,0.569,sub-stage of commit (not additive)
+T01/recursion_n2_m250_leaflir2_lir2,commit:Merkle,1e-06,0.0,0.569,sub-stage of commit (not additive)
+T01/recursion_n4_m250_leaflir2_lir1,execute,0.0606,6.756,0.897,
+T01/recursion_n4_m250_leaflir2_lir1,witness build,0.0446,4.972,0.897,
+T01/recursion_n4_m250_leaflir2_lir1,commit,0.191,21.293,0.897,
+T01/recursion_n4_m250_leaflir2_lir1,bus GKR,0.182,20.29,0.897,
+T01/recursion_n4_m250_leaflir2_lir1,constraint sumcheck,0.0323,3.601,0.897,
+T01/recursion_n4_m250_leaflir2_lir1,Keccak GKR/reduction,0.142,15.831,0.897,
+T01/recursion_n4_m250_leaflir2_lir1,PCS open,0.211,23.523,0.897,
+T01/recursion_n4_m250_leaflir2_lir1,replay children,0.00806,0.899,0.897,
+T01/recursion_n4_m250_leaflir2_lir1,other,0.02544,2.836,0.897,Batch deferred claims 1.86 ms; Prove residual (not in a child span) 0.10 ms; Recompute deferred claims 3.40 ms; Statement digest 0.11 ms; untraced gap vs printed pass time 19.97 ms
+T01/recursion_n4_m250_leaflir2_lir1,commit:NTT,0.191,21.293,0.897,sub-stage of commit (not additive)
+T01/recursion_n4_m250_leaflir2_lir1,commit:Merkle,1e-06,0.0,0.897,sub-stage of commit (not additive)
+T01/recursion_n4_m250_leaflir2_lir2,execute,0.0499,3.401,1.467,
+T01/recursion_n4_m250_leaflir2_lir2,witness build,0.1069,7.287,1.467,
+T01/recursion_n4_m250_leaflir2_lir2,commit,0.46,31.357,1.467,
+T01/recursion_n4_m250_leaflir2_lir2,bus GKR,0.258,17.587,1.467,
+T01/recursion_n4_m250_leaflir2_lir2,constraint sumcheck,0.0587,4.001,1.467,
+T01/recursion_n4_m250_leaflir2_lir2,Keccak GKR/reduction,0.141,9.611,1.467,
+T01/recursion_n4_m250_leaflir2_lir2,PCS open,0.35,23.858,1.467,
+T01/recursion_n4_m250_leaflir2_lir2,replay children,0.0146,0.995,1.467,
+T01/recursion_n4_m250_leaflir2_lir2,other,0.0279,1.902,1.467,Batch deferred claims 1.44 ms; Prove residual (not in a child span) 3.00 ms; Recompute deferred claims 3.34 ms; Statement digest 0.11 ms; untraced gap vs printed pass time 20.01 ms
+T01/recursion_n4_m250_leaflir2_lir2,commit:NTT,0.46,31.357,1.467,sub-stage of commit (not additive)
+T01/recursion_n4_m250_leaflir2_lir2,commit:Merkle,1e-06,0.0,1.467,sub-stage of commit (not additive)
+T01/recursion_n6_m250_leaflir2_lir1,execute,0.0691,4.398,1.571,
+T01/recursion_n6_m250_leaflir2_lir1,witness build,0.108,6.875,1.571,
+T01/recursion_n6_m250_leaflir2_lir1,commit,0.33,21.006,1.571,
+T01/recursion_n6_m250_leaflir2_lir1,bus GKR,0.404,25.716,1.571,
+T01/recursion_n6_m250_leaflir2_lir1,constraint sumcheck,0.0405,2.578,1.571,
+T01/recursion_n6_m250_leaflir2_lir1,Keccak GKR/reduction,0.19,12.094,1.571,
+T01/recursion_n6_m250_leaflir2_lir1,PCS open,0.354,22.533,1.571,
+T01/recursion_n6_m250_leaflir2_lir1,replay children,0.0286,1.82,1.571,
+T01/recursion_n6_m250_leaflir2_lir1,other,0.0468,2.979,1.571,Batch deferred claims 1.82 ms; Prove residual (not in a child span) 1.60 ms; Recompute deferred claims 3.38 ms; Statement digest 0.17 ms; untraced gap vs printed pass time 39.84 ms
+T01/recursion_n6_m250_leaflir2_lir1,commit:NTT,0.33,21.006,1.571,sub-stage of commit (not additive)
+T01/recursion_n6_m250_leaflir2_lir1,commit:Merkle,2e-06,0.0,1.571,sub-stage of commit (not additive)
+T01/recursion_n6_m250_leaflir2_lir2,execute,0.0591,2.064,2.863,
+T01/recursion_n6_m250_leaflir2_lir2,witness build,0.0655,2.288,2.863,
+T01/recursion_n6_m250_leaflir2_lir2,commit,1.18,41.216,2.863,
+T01/recursion_n6_m250_leaflir2_lir2,bus GKR,0.536,18.722,2.863,
+T01/recursion_n6_m250_leaflir2_lir2,constraint sumcheck,0.0541,1.89,2.863,
+T01/recursion_n6_m250_leaflir2_lir2,Keccak GKR/reduction,0.21,7.335,2.863,
+T01/recursion_n6_m250_leaflir2_lir2,PCS open,0.707,24.694,2.863,
+T01/recursion_n6_m250_leaflir2_lir2,replay children,0.028,0.978,2.863,
+T01/recursion_n6_m250_leaflir2_lir2,other,0.0233,0.814,2.863,Batch deferred claims 1.80 ms; Prove residual (not in a child span) -0.40 ms; Recompute deferred claims 3.55 ms; Statement digest 0.18 ms; untraced gap vs printed pass time 18.17 ms
+T01/recursion_n6_m250_leaflir2_lir2,commit:NTT,1.18,41.216,2.863,sub-stage of commit (not additive)
+T01/recursion_n6_m250_leaflir2_lir2,commit:Merkle,4.7e-05,0.002,2.863,sub-stage of commit (not additive)
+T01/recursion_n8_m250_leaflir2_lir1,execute,0.0993,3.376,2.941,
+T01/recursion_n8_m250_leaflir2_lir1,witness build,0.182,6.188,2.941,
+T01/recursion_n8_m250_leaflir2_lir1,commit,0.513,17.443,2.941,
+T01/recursion_n8_m250_leaflir2_lir1,bus GKR,1.28,43.523,2.941,
+T01/recursion_n8_m250_leaflir2_lir1,constraint sumcheck,0.0776,2.639,2.941,
+T01/recursion_n8_m250_leaflir2_lir1,Keccak GKR/reduction,0.267,9.079,2.941,
+T01/recursion_n8_m250_leaflir2_lir1,PCS open,0.454,15.437,2.941,
+T01/recursion_n8_m250_leaflir2_lir1,replay children,0.0318,1.081,2.941,
+T01/recursion_n8_m250_leaflir2_lir1,other,0.0363,1.234,2.941,Batch deferred claims 1.99 ms; Prove residual (not in a child span) -1.90 ms; Recompute deferred claims 3.55 ms; Statement digest 0.23 ms; untraced gap vs printed pass time 32.42 ms
+T01/recursion_n8_m250_leaflir2_lir1,commit:NTT,0.513,17.443,2.941,sub-stage of commit (not additive)
+T01/recursion_n8_m250_leaflir2_lir1,commit:Merkle,2e-06,0.0,2.941,sub-stage of commit (not additive)
+T01/recursion_n8_m250_leaflir2_lir2,execute,0.683,3.691,18.506,
+T01/recursion_n8_m250_leaflir2_lir2,witness build,0.434,2.345,18.506,
+T01/recursion_n8_m250_leaflir2_lir2,commit,8.38,45.283,18.506,
+T01/recursion_n8_m250_leaflir2_lir2,bus GKR,4.51,24.37,18.506,
+T01/recursion_n8_m250_leaflir2_lir2,constraint sumcheck,0.158,0.854,18.506,
+T01/recursion_n8_m250_leaflir2_lir2,Keccak GKR/reduction,0.329,1.778,18.506,
+T01/recursion_n8_m250_leaflir2_lir2,PCS open,3.61,19.507,18.506,
+T01/recursion_n8_m250_leaflir2_lir2,replay children,0.0676,0.365,18.506,
+T01/recursion_n8_m250_leaflir2_lir2,other,0.3344,1.807,18.506,Batch deferred claims 2.01 ms; Prove residual (not in a child span) -40.00 ms; Recompute deferred claims 3.33 ms; Statement digest 0.22 ms; untraced gap vs printed pass time 368.84 ms
+T01/recursion_n8_m250_leaflir2_lir2,commit:NTT,8.38,45.283,18.506,sub-stage of commit (not additive)
+T01/recursion_n8_m250_leaflir2_lir2,commit:Merkle,5.7e-05,0.0,18.506,sub-stage of commit (not additive)
+T01/drift_baseline_aggregate_xmss250_lir2,execute,0.0415,4.226,0.982,
+T01/drift_baseline_aggregate_xmss250_lir2,witness build,0.01569,1.598,0.982,
+T01/drift_baseline_aggregate_xmss250_lir2,commit,0.258,26.273,0.982,
+T01/drift_baseline_aggregate_xmss250_lir2,bus GKR,0.0792,8.065,0.982,
+T01/drift_baseline_aggregate_xmss250_lir2,constraint sumcheck,0.0134,1.365,0.982,
+T01/drift_baseline_aggregate_xmss250_lir2,Keccak GKR/reduction,0.278,28.31,0.982,
+T01/drift_baseline_aggregate_xmss250_lir2,PCS open,0.29,29.532,0.982,
+T01/drift_baseline_aggregate_xmss250_lir2,replay children,2e-06,0.0,0.982,
+T01/drift_baseline_aggregate_xmss250_lir2,other,0.006208,0.632,0.982,Prove residual (not in a child span) -0.40 ms; Recompute deferred claims 0.00 ms; Statement digest 0.03 ms; untraced gap vs printed pass time 6.58 ms
+T01/drift_baseline_aggregate_xmss250_lir2,commit:NTT,0.258,26.273,0.982,sub-stage of commit (not additive)
+T01/drift_baseline_aggregate_xmss250_lir2,commit:Merkle,1e-06,0.0,0.982,sub-stage of commit (not additive)
+T01/rebuild_aggregate_xmss250_lir2,execute,0.0429,4.303,0.997,
+T01/rebuild_aggregate_xmss250_lir2,witness build,0.01637,1.642,0.997,
+T01/rebuild_aggregate_xmss250_lir2,commit,0.257,25.777,0.997,
+T01/rebuild_aggregate_xmss250_lir2,bus GKR,0.0765,7.673,0.997,
+T01/rebuild_aggregate_xmss250_lir2,constraint sumcheck,0.0121,1.214,0.997,
+T01/rebuild_aggregate_xmss250_lir2,Keccak GKR/reduction,0.265,26.58,0.997,
+T01/rebuild_aggregate_xmss250_lir2,PCS open,0.319,31.996,0.997,
+T01/rebuild_aggregate_xmss250_lir2,replay children,3e-06,0.0,0.997,
+T01/rebuild_aggregate_xmss250_lir2,other,0.008127,0.815,0.997,Prove residual (not in a child span) 0.58 ms; Recompute deferred claims 0.00 ms; Statement digest 0.03 ms; untraced gap vs printed pass time 7.52 ms
+T01/rebuild_aggregate_xmss250_lir2,commit:NTT,0.257,25.777,0.997,sub-stage of commit (not additive)
+T01/rebuild_aggregate_xmss250_lir2,commit:Merkle,1e-06,0.0,0.997,sub-stage of commit (not additive)
+T01/rebuild_aggregate_xmss500_lir2,execute,0.136,4.976,2.733,
+T01/rebuild_aggregate_xmss500_lir2,witness build,0.0619,2.265,2.733,
+T01/rebuild_aggregate_xmss500_lir2,commit,0.712,26.052,2.733,
+T01/rebuild_aggregate_xmss500_lir2,bus GKR,0.218,7.977,2.733,
+T01/rebuild_aggregate_xmss500_lir2,constraint sumcheck,0.0286,1.046,2.733,
+T01/rebuild_aggregate_xmss500_lir2,Keccak GKR/reduction,0.509,18.624,2.733,
+T01/rebuild_aggregate_xmss500_lir2,PCS open,1.0,36.59,2.733,
+T01/rebuild_aggregate_xmss500_lir2,replay children,3e-06,0.0,2.733,
+T01/rebuild_aggregate_xmss500_lir2,other,0.067497,2.47,2.733,Prove residual (not in a child span) -3.20 ms; Recompute deferred claims 0.00 ms; Statement digest 0.06 ms; untraced gap vs printed pass time 70.64 ms
+T01/rebuild_aggregate_xmss500_lir2,commit:NTT,0.712,26.052,2.733,sub-stage of commit (not additive)
+T01/rebuild_aggregate_xmss500_lir2,commit:Merkle,1e-06,0.0,2.733,sub-stage of commit (not additive)
+T01/rebuild_aggregate_xmss1000_lir2,execute,0.463,4.285,10.806,
+T01/rebuild_aggregate_xmss1000_lir2,witness build,0.4878,4.514,10.806,
+T01/rebuild_aggregate_xmss1000_lir2,commit,1.64,15.177,10.806,
+T01/rebuild_aggregate_xmss1000_lir2,bus GKR,1.14,10.55,10.806,
+T01/rebuild_aggregate_xmss1000_lir2,constraint sumcheck,0.0587,0.543,10.806,
+T01/rebuild_aggregate_xmss1000_lir2,Keccak GKR/reduction,1.14,10.55,10.806,
+T01/rebuild_aggregate_xmss1000_lir2,PCS open,5.8,53.674,10.806,
+T01/rebuild_aggregate_xmss1000_lir2,replay children,1e-06,0.0,10.806,
+T01/rebuild_aggregate_xmss1000_lir2,other,0.076499,0.708,10.806,Prove residual (not in a child span) -8.70 ms; Recompute deferred claims 0.00 ms; Statement digest 0.11 ms; untraced gap vs printed pass time 85.09 ms
+T01/rebuild_aggregate_xmss1000_lir2,commit:NTT,1.64,15.177,10.806,sub-stage of commit (not additive)
+T01/rebuild_aggregate_xmss1000_lir2,commit:Merkle,1e-06,0.0,10.806,sub-stage of commit (not additive)
+T01/rebuild_aggregate_xmss1500_lir2,execute,4.12,6.512,63.265,
+T01/rebuild_aggregate_xmss1500_lir2,witness build,1.0752,1.7,63.265,
+T01/rebuild_aggregate_xmss1500_lir2,commit,8.62,13.625,63.265,
+T01/rebuild_aggregate_xmss1500_lir2,bus GKR,18.0,28.452,63.265,
+T01/rebuild_aggregate_xmss1500_lir2,constraint sumcheck,0.683,1.08,63.265,
+T01/rebuild_aggregate_xmss1500_lir2,Keccak GKR/reduction,4.49,7.097,63.265,
+T01/rebuild_aggregate_xmss1500_lir2,PCS open,25.9,40.939,63.265,
+T01/rebuild_aggregate_xmss1500_lir2,replay children,1e-06,0.0,63.265,
+T01/rebuild_aggregate_xmss1500_lir2,other,0.376799,0.596,63.265,Prove residual (not in a child span) 5.00 ms; Recompute deferred claims 0.00 ms; Statement digest 0.17 ms; untraced gap vs printed pass time 371.63 ms
+T01/rebuild_aggregate_xmss1500_lir2,commit:NTT,8.62,13.625,63.265,sub-stage of commit (not additive)
+T01/rebuild_aggregate_xmss1500_lir2,commit:Merkle,6e-06,0.0,63.265,sub-stage of commit (not additive)

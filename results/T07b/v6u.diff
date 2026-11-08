@@ -1,0 +1,155 @@
+diff --git a/crates/rec_aggregation/guests/lean_ethereum.py b/crates/rec_aggregation/guests/lean_ethereum.py
+index a97557296..f1c5bd352 100644
+--- a/crates/rec_aggregation/guests/lean_ethereum.py
++++ b/crates/rec_aggregation/guests/lean_ethereum.py
+@@ -540,6 +540,8 @@ V6_BETA = 9
+ V6_K = 10
+ V6_TERM = 11
+ 
++B0U_UNROLL_ITERS = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 28, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
++
+ @inline
+ def pack64x2(a, b):
+     assert_in_k(a, b)
+@@ -1440,7 +1442,7 @@ def opening_query(cap, flags, row_eq_weights, wins, base: Const, interleave: Con
+     return row_dot
+ 
+ 
+-def opening_queries(cap, flags, lam, lam_n, query_win_ptrs, row_eq_weights, n_iters_g, odd: Const, base: Const, interleave: Const, leaf_cells: Const, depth: Const, cap_depth: Const):
++def opening_queries(cap, flags, lam, lam_n, query_win_ptrs, row_eq_weights, n_iters_g, odd: Const, base: Const, interleave: Const, leaf_cells: Const, depth: Const, cap_depth: Const, unroll_n: Const):
+     # Specialize by row and path shape so opening configurations share query code.
+     # Base-field rows (level 0) run two queries an iteration, sharing the loop
+     # overhead and the weight reads; an odd count runs its first query alone,
+@@ -1453,15 +1455,21 @@ def opening_queries(cap, flags, lam, lam_n, query_win_ptrs, row_eq_weights, n_it
+         chain[GEN ** 0] = opening_query(cap, flags, row_eq_weights, query_win_ptrs[GEN ** 0], base, interleave, leaf_cells, depth, cap_depth) * mu
+     else:
+         chain[GEN ** 0] = 0
+-    for xi in mul_range(1, n_iters_g):
+-        if base == 1:
+-            bit_ptrs = query_win_ptrs * xi * xi
+-            d0 = opening_query(cap, flags, row_eq_weights, bit_ptrs[GEN ** odd], base, interleave, leaf_cells, depth, cap_depth)
+-            d1 = opening_query(cap, flags, row_eq_weights, bit_ptrs[GEN ** (odd + 1)], base, interleave, leaf_cells, depth, cap_depth)
+-            chain[xi * GEN] = ((chain[xi] + d0) * mu + d1) * mu
+-        else:
+-            d = opening_query(cap, flags, row_eq_weights, query_win_ptrs[xi], base, interleave, leaf_cells, depth, cap_depth)
+-            chain[xi * GEN] = (chain[xi] + d) * mu
++    # T07b V6U (UNSOUND; V6 + B0U unrolling): unroll_n != 0 only for extension-row levels of arm 10's child-0 path.
++    if const(unroll_n != 0):
++        for iq in unroll(0, unroll_n):
++            d = opening_query(cap, flags, row_eq_weights, query_win_ptrs[GEN ** iq], base, interleave, leaf_cells, depth, cap_depth)
++            chain[GEN ** (iq + 1)] = (chain[GEN ** iq] + d) * mu
++    else:
++        for xi in mul_range(1, n_iters_g):
++            if base == 1:
++                bit_ptrs = query_win_ptrs * xi * xi
++                d0 = opening_query(cap, flags, row_eq_weights, bit_ptrs[GEN ** odd], base, interleave, leaf_cells, depth, cap_depth)
++                d1 = opening_query(cap, flags, row_eq_weights, bit_ptrs[GEN ** (odd + 1)], base, interleave, leaf_cells, depth, cap_depth)
++                chain[xi * GEN] = ((chain[xi] + d0) * mu + d1) * mu
++            else:
++                d = opening_query(cap, flags, row_eq_weights, query_win_ptrs[xi], base, interleave, leaf_cells, depth, cap_depth)
++                chain[xi * GEN] = (chain[xi] + d) * mu
+     return chain[n_iters_g] * lam_n
+ 
+ 
+@@ -1705,7 +1713,7 @@ def open_stacked_v5(m_idx: Const, fs0, fs1, fs2, fs3, fs4, target, commit_root_0
+             level_roots[GEN ** (2 * lvl)] = root_0
+             level_roots[GEN ** (2 * lvl + 1)] = root_1
+ 
+-            level_query_sum = opening_queries(cap, flags, lam, lam_pow, query_win_ptrs * GEN ** pos_off, row_eq_weights, GEN ** (n_queries // (1 + 1 // (lvl + 1))), n_queries % 2 * (1 // (lvl + 1)), 1 // (lvl + 1), interleave, LIG_LEAF_CELLS[ml], depth, cap_depth)
++            level_query_sum = opening_queries(cap, flags, lam, lam_pow, query_win_ptrs * GEN ** pos_off, row_eq_weights, GEN ** (n_queries // (1 + 1 // (lvl + 1))), n_queries % 2 * (1 // (lvl + 1)), 1 // (lvl + 1), interleave, LIG_LEAF_CELLS[ml], depth, cap_depth, B0U_UNROLL_ITERS[ml])
+         else:
+             lqs = StackBuf(1)
+             if xc == 1:  # T07@gate
+@@ -1719,7 +1727,7 @@ def open_stacked_v5(m_idx: Const, fs0, fs1, fs2, fs3, fs4, target, commit_root_0
+                 level_roots[GEN ** (2 * lvl)] = root_0
+                 level_roots[GEN ** (2 * lvl + 1)] = root_1
+ 
+-                lqs[0] = opening_queries(cap, flags, lam, lam_pow, query_win_ptrs * GEN ** pos_off, row_eq_weights, GEN ** (n_queries // (1 + 1 // (lvl + 1))), n_queries % 2 * (1 // (lvl + 1)), 1 // (lvl + 1), interleave, LIG_LEAF_CELLS[ml], depth, cap_depth)  # T07@1606
++                lqs[0] = opening_queries(cap, flags, lam, lam_pow, query_win_ptrs * GEN ** pos_off, row_eq_weights, GEN ** (n_queries // (1 + 1 // (lvl + 1))), n_queries % 2 * (1 // (lvl + 1)), 1 // (lvl + 1), interleave, LIG_LEAF_CELLS[ml], depth, cap_depth, B0U_UNROLL_ITERS[ml])  # T07@1606
+             else:
+                 # T07 V5 (UNSOUND, measurement only): the level's rows and paths are popped unread
+                 # (hint_witness costs no cycle), so the next child reads its own entries.
+@@ -3601,11 +3609,12 @@ def v6_opening_queries_free(lam, lam_n, query_win_ptrs, row_eq_weights, n_iters_
+     mu = 1 / lam
+     chain = HeapBuf(n_iters_g * GEN)
+     chain[GEN ** 0] = 0
+-    for xi in mul_range(1, n_iters_g):
++    # T07b V6U (UNSOUND; V6 + B0U unrolling): the 45 level-1 queries unrolled.
++    for iq in unroll(0, 45):
+         cap_q = HeapBuf(GEN ** (2 ** (cap_depth + 2)))
+         flags_q = HeapBuf(GEN ** (2 ** cap_depth))
+-        d = opening_query(cap_q, flags_q, row_eq_weights, query_win_ptrs[xi], 0, interleave, leaf_cells, depth, cap_depth)
+-        chain[xi * GEN] = (chain[xi] + d) * mu
++        d = opening_query(cap_q, flags_q, row_eq_weights, query_win_ptrs[GEN ** iq], 0, interleave, leaf_cells, depth, cap_depth)
++        chain[GEN ** (iq + 1)] = (chain[GEN ** iq] + d) * mu
+     return chain[n_iters_g] * lam_n
+ 
+ 
+@@ -3774,19 +3783,15 @@ def v6_child0(m_idx: Const, fs0, fs1, fs2, fs3, fs4, target, commit_root_0, comm
+         sqz[GEN ** 2] = fs2
+         sqz[GEN ** 3] = fs3
+         sqz[GEN ** 4] = fs4
+-        for xs in mul_range(1, GEN ** LIG_SQUEEZES[ml]):
+-            # a loop body captures free names BY VALUE, so the compile-time aliases
+-            # are rebound here (m_idx and lvl are substituted literals)
+-            depth = LIG_TREE_DEPTH[m_idx * LIG_MAX_LEVELS + lvl]
+-            pos_off = LIG_POSITIONS_OFF[m_idx * LIG_MAX_LEVELS + lvl]
+-            row = sqz * xs ** FS_CELLS
++        # T07b V6U (UNSOUND; V6 + B0U unrolling): position squeezes (arm 10 functions only).
++        for sq_i in unroll(0, LIG_SQUEEZES[ml]):
++            row = sqz * GEN ** (sq_i * FS_CELLS)
+             row_cap = fs_load(row, 0, 1)
+             no_rate = StackBuf(8)
+             row_sp, packed_word = squeeze(row_cap, no_rate, 0)
+             fs_store(row * GEN ** FS_CELLS, 0, 1, row_sp)
+-            query_ptr = xs ** (FIELD_BITS // depth)
+-            cap_depth = LIG_CAP_DEPTH[m_idx * LIG_MAX_LEVELS + lvl]
+-            decode_query_windows(packed_word, query_positions * GEN ** pos_off * query_ptr, query_win_ptrs * GEN ** pos_off * query_ptr, win_tabs, depth, cap_depth)
++            sq_ptr = GEN ** (sq_i * (FIELD_BITS // LIG_TREE_DEPTH[ml]))
++            decode_query_windows(packed_word, query_positions * GEN ** LIG_POSITIONS_OFF[ml] * sq_ptr, query_win_ptrs * GEN ** LIG_POSITIONS_OFF[ml] * sq_ptr, win_tabs, LIG_TREE_DEPTH[ml], LIG_CAP_DEPTH[ml])
+         sqz_end = sqz * (GEN ** LIG_SQUEEZES[ml]) ** FS_CELLS
+         sp = fs_load(sqz_end, 0, 1)
+ 
+@@ -3817,7 +3822,7 @@ def v6_child0(m_idx: Const, fs0, fs1, fs2, fs3, fs4, target, commit_root_0, comm
+         level_roots[GEN ** (2 * lvl)] = root_0
+         level_roots[GEN ** (2 * lvl + 1)] = root_1
+ 
+-        level_query_sum = opening_queries(cap, flags, lam, lam_pow, query_win_ptrs * GEN ** pos_off, row_eq_weights, GEN ** (n_queries // (1 + 1 // (lvl + 1))), n_queries % 2 * (1 // (lvl + 1)), 1 // (lvl + 1), interleave, LIG_LEAF_CELLS[ml], depth, cap_depth)
++        level_query_sum = opening_queries(cap, flags, lam, lam_pow, query_win_ptrs * GEN ** pos_off, row_eq_weights, GEN ** (n_queries // (1 + 1 // (lvl + 1))), n_queries % 2 * (1 // (lvl + 1)), 1 // (lvl + 1), interleave, LIG_LEAF_CELLS[ml], depth, cap_depth, B0U_UNROLL_ITERS[ml])
+         if const(lvl == 1):
+             share[GEN ** V6_LQS] = level_query_sum  # T07b@v6pub
+ 
+@@ -4117,19 +4122,15 @@ def v6_child_rest(m_idx: Const, fs0, fs1, fs2, fs3, fs4, target, commit_root_0,
+         sqz[GEN ** 2] = fs2
+         sqz[GEN ** 3] = fs3
+         sqz[GEN ** 4] = fs4
+-        for xs in mul_range(1, GEN ** LIG_SQUEEZES[ml]):
+-            # a loop body captures free names BY VALUE, so the compile-time aliases
+-            # are rebound here (m_idx and lvl are substituted literals)
+-            depth = LIG_TREE_DEPTH[m_idx * LIG_MAX_LEVELS + lvl]
+-            pos_off = LIG_POSITIONS_OFF[m_idx * LIG_MAX_LEVELS + lvl]
+-            row = sqz * xs ** FS_CELLS
++        # T07b V6U (UNSOUND; V6 + B0U unrolling): position squeezes (arm 10 functions only).
++        for sq_i in unroll(0, LIG_SQUEEZES[ml]):
++            row = sqz * GEN ** (sq_i * FS_CELLS)
+             row_cap = fs_load(row, 0, 1)
+             no_rate = StackBuf(8)
+             row_sp, packed_word = squeeze(row_cap, no_rate, 0)
+             fs_store(row * GEN ** FS_CELLS, 0, 1, row_sp)
+-            query_ptr = xs ** (FIELD_BITS // depth)
+-            cap_depth = LIG_CAP_DEPTH[m_idx * LIG_MAX_LEVELS + lvl]
+-            decode_query_windows(packed_word, query_positions * GEN ** pos_off * query_ptr, query_win_ptrs * GEN ** pos_off * query_ptr, win_tabs, depth, cap_depth)
++            sq_ptr = GEN ** (sq_i * (FIELD_BITS // LIG_TREE_DEPTH[ml]))
++            decode_query_windows(packed_word, query_positions * GEN ** LIG_POSITIONS_OFF[ml] * sq_ptr, query_win_ptrs * GEN ** LIG_POSITIONS_OFF[ml] * sq_ptr, win_tabs, LIG_TREE_DEPTH[ml], LIG_CAP_DEPTH[ml])
+         sqz_end = sqz * (GEN ** LIG_SQUEEZES[ml]) ** FS_CELLS
+         sp = fs_load(sqz_end, 0, 1)
+ 
+@@ -4157,7 +4158,7 @@ def v6_child_rest(m_idx: Const, fs0, fs1, fs2, fs3, fs4, target, commit_root_0,
+         level_roots[GEN ** (2 * lvl)] = root_0
+         level_roots[GEN ** (2 * lvl + 1)] = root_1
+ 
+-        level_query_sum = opening_queries(cap, flags, lam, lam_pow, query_win_ptrs * GEN ** pos_off, row_eq_weights, GEN ** (n_queries // (1 + 1 // (lvl + 1))), n_queries % 2 * (1 // (lvl + 1)), 1 // (lvl + 1), interleave, LIG_LEAF_CELLS[ml], depth, cap_depth)
++        level_query_sum = opening_queries(cap, flags, lam, lam_pow, query_win_ptrs * GEN ** pos_off, row_eq_weights, GEN ** (n_queries // (1 + 1 // (lvl + 1))), n_queries % 2 * (1 // (lvl + 1)), 1 // (lvl + 1), interleave, LIG_LEAF_CELLS[ml], depth, cap_depth, B0U_UNROLL_ITERS[ml])
+ 
+         # Every level, including the last, ties its commitment in through an intro
+         # message. The level's claims then enter the running one with powers of

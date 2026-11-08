@@ -1,0 +1,16 @@
+[package]
+name = "whir-params"
+version = "0.0.1"
+edition = "2024"
+publish = false
+
+# T06: evaluates leanVM's own WHIR per-level parameter search on widened-first-fold
+# ladders. Depends on the LOCAL branch research/t06-params (worktree
+# upstream/leanMultisig-t06), whose only change is the probe module
+# crates/pcs/src/whir_config/t06_probe.rs (+ one `pub mod` line), which re-exposes
+# the unchanged private search and term functions. Standalone (own workspace, own
+# target dir). Cargo.lock seeded from upstream/leanMultisig/Cargo.lock.
+[workspace]
+
+[dependencies]
+pcs = { path = "../../upstream/leanMultisig-t06/crates/pcs" }

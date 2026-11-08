@@ -1,0 +1,53 @@
+diff --git a/crates/leanvm_core/src/cpu/mod.rs b/crates/leanvm_core/src/cpu/mod.rs
+index 5a894ace2..fed298e0d 100644
+--- a/crates/leanvm_core/src/cpu/mod.rs
++++ b/crates/leanvm_core/src/cpu/mod.rs
+@@ -423,6 +423,38 @@ impl Stats {
+     }
+ }
+ 
++/// `DBG_TABLES=1`: per-table rows, padded sizes and their contribution to the committed
++/// size, read off the layout `prove` is about to commit. Diagnostic only; touches nothing
++/// the proof depends on.
++fn dbg_tables(program: &Program, w: &layout::Witness, cycles: usize, mem_used: usize) {
++    let l = &w.layout;
++    let sch = schema();
++    let placed: usize = l.placements.iter().filter(|p| !p.is_virtual()).map(|p| 1usize << p.n_vars).sum();
++    let kind = if std::env::var_os("LEANVM_LEAVES_OUT").is_some() { "leaf" } else { "node" };
++    let mut sum = 0usize;
++    eprintln!(
++        "DBG_TABLES kind={kind} cycles={cycles} mu={} n_lanes={} committed_len={} placed={placed} log_placed={:.6} log_mem={} mem_used={mem_used} code_len={} prog_len={}",
++        l.shape.mu, l.shape.n_lanes, l.shape.committed_len(), (placed as f64).log2(), w.log_mem, program.code_len(), program.prog.len()
++    );
++    for (name, col) in [("MEM_LO", MEM_LO), ("MEM_HI", MEM_HI), ("MEM_TOP", MEM_TOP), ("MFCNT", layout::MFCNT), ("BFCNT", layout::BFCNT), ("QKECCAK", QKECCAK)] {
++        let p = &l.placements[col];
++        let contrib = 1usize << p.n_vars;
++        sum += contrib;
++        eprintln!("DBG_TABLES kind={kind} shared={name} n_vars={} contrib={contrib}", p.n_vars);
++    }
++    for (t, name) in Stats::TABLES.iter().enumerate() {
++        let cols = sch.base[t]..sch.base[t] + tables::tables()[t].n_committed_columns();
++        let width = cols.clone().filter(|&c| !l.placements[c].is_virtual()).count();
++        let contrib = width << l.taus[t];
++        sum += contrib;
++        eprintln!(
++            "DBG_TABLES kind={kind} table={name} rows={} tau={} padded={} columns={} width={width} contrib={contrib}",
++            l.rows[t], l.taus[t], 1usize << l.taus[t], cols.len()
++        );
++    }
++    eprintln!("DBG_TABLES kind={kind} sum_contrib={sum} placed_minus_sum={}", placed as i128 - sum as i128);
++}
++
+ /// Prove the program on the given public input: run it (witness generation),
+ /// then emit everything the verifier needs through the returned [`Proof`]
+ /// (scalar stream + PCS commitment / opening hints). Returns the proof and the
+@@ -454,6 +486,9 @@ pub fn prove(program: &Program, public_input: [F192; 2], log_inv_rate: usize) ->
+         });
+     }
+     let committed_size = w.committed_size();
++    if std::env::var_os("DBG_TABLES").is_some() {
++        dbg_tables(program, &w, cycles, mem_used);
++    }
+     // The public statement (program digest + input) seeds the transcript, so
+     // every challenge depends on the exact program and public input.
+     debug_assert!(

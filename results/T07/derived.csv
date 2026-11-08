@@ -1,0 +1,32 @@
+quantity (DERIVED),value
+"cycles per child, baseline slope n=2,4,6",186814.8
+"cycles per child, V5 slope n=2,4,6 (children >= 1)",156651.0
+cycles saved per child (slope difference),30163.8
+"cycles saved per child, share of baseline slope",0.1615
+"cycles saved per child, profiled n=2 (child 1, exact)",30063
+KECCAK saved per child (slope of printed 2^x; about +-0.04% each),1134.0
+"KECCAK saved per child, profiled n=2 (exact)",1158
+"pooled median prove s, baseline n=2",0.5485
+"pooled median prove s, V5 n=2",0.529
+"prove s saved (baseline - V5), n=2",0.0195
+"prove s saved share, n=2",0.0356
+"pooled median prove s, baseline n=4",1.3095
+"pooled median prove s, V5 n=4",0.8995
+"prove s saved (baseline - V5), n=4",0.41
+"prove s saved share, n=4",0.3131
+"pooled median prove s, baseline n=6",2.114
+"pooled median prove s, V5 n=6",1.203
+"prove s saved (baseline - V5), n=6",0.911
+"prove s saved share, n=6",0.4309
+"prove ms per child, baseline slope n=2,4,6",391.4
+"prove ms per child, V5 slope n=2,4,6",168.5
+prove ms saved per child (slope difference),222.9
+node mu base n=2/4/6,24 / 25 / 26
+node mu v5 n=2/4/6,24 / 25 / 25
+V5 n=6 node mu,25
+projection: leaf s = 1.026 - 0.103,0.923
+projection: merge s = V5 n=6 pooled median (measured),1.203
+projection: deadline s = leaf + batched native opening + merge = (1.026 - 0.103) + 0.11 + M,2.236
+projection: CPU s per slot = 6 x leaf + batched native opening + merge = 6 x (1.026 - 0.103) + 0.11 + M,6.851
+context: baseline deadline s = 1.026 + baseline n=6 median,3.14
+context: baseline CPU s per slot = 6 x 1.026 + baseline n=6 median,8.27

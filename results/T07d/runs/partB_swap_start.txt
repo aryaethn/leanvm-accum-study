@@ -1,0 +1,2 @@
+### swap_start_partB: vm.swapusage: total = 3072.00M  used = 1523.56M  free = 1548.44M  (encrypted)
+### memory_pressure: System-wide memory free percentage: 73%

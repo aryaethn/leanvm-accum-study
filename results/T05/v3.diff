@@ -1,0 +1,204 @@
+diff --git a/crates/rec_aggregation/guests/lean_ethereum.py b/crates/rec_aggregation/guests/lean_ethereum.py
+index 5f8cb982c..4ce1c93dd 100644
+--- a/crates/rec_aggregation/guests/lean_ethereum.py
++++ b/crates/rec_aggregation/guests/lean_ethereum.py
+@@ -1552,10 +1552,13 @@ def open_stacked(m_idx: Const, fs0, fs1, fs2, fs3, fs4, target, commit_root_0, c
+             fs3 = sp[11]
+             fs4 = sp[12]
+         # The nonce, a raw transport word, is bound by its DS_POW_NONCE absorb above.
+-        if LIG_QUERY_GRIND_BITS[ml] != 0:
+-            grind_check(word0, LIG_QUERY_GRIND_BITS[ml])
+-        else:
+-            assert q_nonce == 0
++        # T05 V3 (UNSOUND, measurement only): the query PoW is checked only at levels < 1.
++        # The nonce is still absorbed above, so the transcript is unchanged.
++        if const(lvl // 1 == 0):
++            if LIG_QUERY_GRIND_BITS[ml] != 0:
++                grind_check(word0, LIG_QUERY_GRIND_BITS[ml])
++            else:
++                assert q_nonce == 0
+ 
+         sqz = HeapBuf((GEN ** (LIG_MAX_SQUEEZES[m_idx] + 1)) ** FS_CELLS)
+         sqz[GEN ** 0] = fs0
+@@ -1563,19 +1566,29 @@ def open_stacked(m_idx: Const, fs0, fs1, fs2, fs3, fs4, target, commit_root_0, c
+         sqz[GEN ** 2] = fs2
+         sqz[GEN ** 3] = fs3
+         sqz[GEN ** 4] = fs4
+-        for xs in mul_range(1, GEN ** LIG_SQUEEZES[ml]):
+-            # a loop body captures free names BY VALUE, so the compile-time aliases
+-            # are rebound here (m_idx and lvl are substituted literals)
+-            depth = LIG_TREE_DEPTH[m_idx * LIG_MAX_LEVELS + lvl]
+-            pos_off = LIG_POSITIONS_OFF[m_idx * LIG_MAX_LEVELS + lvl]
+-            row = sqz * xs ** FS_CELLS
+-            row_cap = fs_load(row, 0, 1)
+-            no_rate = StackBuf(8)
+-            row_sp, packed_word = squeeze(row_cap, no_rate, 0)
+-            fs_store(row * GEN ** FS_CELLS, 0, 1, row_sp)
+-            query_ptr = xs ** (FIELD_BITS // depth)
+-            cap_depth = LIG_CAP_DEPTH[m_idx * LIG_MAX_LEVELS + lvl]
+-            decode_query_windows(packed_word, query_positions * GEN ** pos_off * query_ptr, query_win_ptrs * GEN ** pos_off * query_ptr, win_tabs, depth, cap_depth)
++        # T05 V3 (UNSOUND, measurement only): every query-position challenge is still squeezed; the
++        # squeezed words are decoded into positions and windows only at levels < 1.
++        if const(lvl // 1 == 0):
++            for xs in mul_range(1, GEN ** LIG_SQUEEZES[ml]):
++                # a loop body captures free names BY VALUE, so the compile-time aliases
++                # are rebound here (m_idx and lvl are substituted literals)
++                depth = LIG_TREE_DEPTH[m_idx * LIG_MAX_LEVELS + lvl]
++                pos_off = LIG_POSITIONS_OFF[m_idx * LIG_MAX_LEVELS + lvl]
++                row = sqz * xs ** FS_CELLS
++                row_cap = fs_load(row, 0, 1)
++                no_rate = StackBuf(8)
++                row_sp, packed_word = squeeze(row_cap, no_rate, 0)
++                fs_store(row * GEN ** FS_CELLS, 0, 1, row_sp)
++                query_ptr = xs ** (FIELD_BITS // depth)
++                cap_depth = LIG_CAP_DEPTH[m_idx * LIG_MAX_LEVELS + lvl]
++                decode_query_windows(packed_word, query_positions * GEN ** pos_off * query_ptr, query_win_ptrs * GEN ** pos_off * query_ptr, win_tabs, depth, cap_depth)
++        else:
++            for xs in mul_range(1, GEN ** LIG_SQUEEZES[ml]):
++                row = sqz * xs ** FS_CELLS
++                row_cap = fs_load(row, 0, 1)
++                no_rate = StackBuf(8)
++                row_sp, packed_word = squeeze(row_cap, no_rate, 0)
++                fs_store(row * GEN ** FS_CELLS, 0, 1, row_sp)
+         sqz_end = sqz * (GEN ** LIG_SQUEEZES[ml]) ** FS_CELLS
+         sp = fs_load(sqz_end, 0, 1)
+ 
+@@ -1593,17 +1606,30 @@ def open_stacked(m_idx: Const, fs0, fs1, fs2, fs3, fs4, target, commit_root_0, c
+         # leaves out are its LEADING words, whose whole blocks the committer hashes
+         # once for all leaves. The flip is a compile-time index and the guest still
+         # hashes the full image. Deeper levels commit every lane, ascending.
+-        row_eq_weights = HeapBuf(GEN ** (LIG_MAX_INTERLEAVE[m_idx]))
+-        opening_row_weights(fold_challenges * GEN ** folds_off, row_eq_weights, LIG_FOLDS[ml], 1 // (lvl + 1))
+-
+-        cap_depth = LIG_CAP_DEPTH[ml]
+-        cap = merkle_caps * GEN ** (4 * LIG_CAP_OFF[ml])
+-        flags = cap_flags * GEN ** LIG_CAP_OFF[ml]
+-        root_0, root_1 = verify_merkle_cap(cap, flags, cap_depth)
+-        level_roots[GEN ** (2 * lvl)] = root_0
+-        level_roots[GEN ** (2 * lvl + 1)] = root_1
+-
+-        level_query_sum = opening_queries(cap, flags, lam, lam_pow, query_win_ptrs * GEN ** pos_off, row_eq_weights, GEN ** (n_queries // (1 + 1 // (lvl + 1))), n_queries % 2 * (1 // (lvl + 1)), 1 // (lvl + 1), interleave, LIG_LEAF_CELLS[ml], depth, cap_depth)
++        # T05 V3 (UNSOUND, measurement only): row eq weights, the Merkle cap check and the query
++        # openings (rows, lane packing, leaf + path hashing, row folds) run only at levels < 1.
++        if const(lvl // 1 == 0):
++            row_eq_weights = HeapBuf(GEN ** (LIG_MAX_INTERLEAVE[m_idx]))
++            opening_row_weights(fold_challenges * GEN ** folds_off, row_eq_weights, LIG_FOLDS[ml], 1 // (lvl + 1))
++
++            cap_depth = LIG_CAP_DEPTH[ml]
++            cap = merkle_caps * GEN ** (4 * LIG_CAP_OFF[ml])
++            flags = cap_flags * GEN ** LIG_CAP_OFF[ml]
++            root_0, root_1 = verify_merkle_cap(cap, flags, cap_depth)
++            level_roots[GEN ** (2 * lvl)] = root_0
++            level_roots[GEN ** (2 * lvl + 1)] = root_1
++
++            level_query_sum = opening_queries(cap, flags, lam, lam_pow, query_win_ptrs * GEN ** pos_off, row_eq_weights, GEN ** (n_queries // (1 + 1 // (lvl + 1))), n_queries % 2 * (1 // (lvl + 1)), 1 // (lvl + 1), interleave, LIG_LEAF_CELLS[ml], depth, cap_depth)
++        else:
++            # T05 V3 (UNSOUND, measurement only): the level's rows and paths are popped unread (hint_witness costs no
++            # cycle), so the next child's opening reads its own entries of the global streams.
++            cap_depth = LIG_CAP_DEPTH[ml]
++            for q in unroll(0, n_queries):
++                skip_row = StackBuf(LIG_ROW_CAP)
++                hint_witness(skip_row[0:3 * interleave], "merkle_leaf_rows")
++                skip_path = StackBuf(LIG_PATH_CAP)
++                hint_witness(skip_path[0:4 * (depth - cap_depth)], "merkle_children")
++            level_query_sum = 0
+ 
+         # Every level, including the last, ties its commitment in through an intro
+         # message. The level's claims then enter the running one with powers of
+@@ -1659,7 +1685,9 @@ def open_stacked(m_idx: Const, fs0, fs1, fs2, fs3, fs4, target, commit_root_0, c
+     for j in unroll(yr_log, YR_LOG_CAP):
+         tail_challenges[GEN ** j] = 0
+ 
+-    yr_at_tail = fold_final_msg(final_msg, tail_challenges, yr_log)
++    # T05 V3 (UNSOUND, measurement only): the final message is not evaluated (e4). It is
++    # still read and absorbed above, so the transcript and every later challenge are unchanged.
++    yr_at_tail = 0
+ 
+     # ---- the same point, indexed by committed-witness coordinate ----
+     # The folds bind coordinates in ROUND order, and level 0's folds are the lane
+@@ -1688,64 +1716,8 @@ def open_stacked(m_idx: Const, fs0, fs1, fs2, fs3, fs4, target, commit_root_0, c
+         point[GEN ** j] = 0
+         point1[GEN ** j] = 1
+ 
+-    # ---- per-level induced bases at the single terminal point ----
+-    # Every query of a level runs the SAME product shape over its message-column
+-    # coordinates; only the novel-basis chain (the query position's
+-    # subspace-vanishing walk) differs. Since
+-    #     1 + c_t * (1 + chain_t * inv_t) == (1 + c_t) + (c_t * inv_t) * chain_t
+-    # a coordinate's two coefficients depend on the challenge and the baked
+-    # vanishing inverse alone, so they hoist out of the query loop (one row a level,
+-    # fold coords then tail coords). Factoring b_t = c_t * inv_t out of every
+-    # coordinate leaves (a_t / b_t) + chain_t per query, so a query is one add and
+-    # one multiply a coordinate, and the level's product of the b_t scales its sum
+-    # once. A zero challenge makes b_t zero and the division unsatisfiable, which
+-    # rejects rather than accepts.
+-    basis_d = HeapBuf(GEN ** (n_levels * LIG_LOG_MSG_COLS_CAP))
+-    level_scale = HeapBuf(GEN ** n_levels)
+-    for lvl in unroll(0, n_levels):
+-        ml = m_idx * LIG_MAX_LEVELS + lvl
+-        prefix_len = LIG_RESIDUAL_PREFIX_LEN[ml]
+-        vanish = m_idx * LIG_MAX_VANISH_LEN + LIG_VANISH_OFF[ml]
+-        scale = level_betas[GEN ** lvl]
+-        for t in unroll(0, prefix_len):
+-            fold_c = fold_challenges[GEN ** (LIG_RESIDUAL_FOLD_OFF[ml] + t)]
+-            coef_b = fold_c * LIG_VANISH_INVS[vanish + t]
+-            basis_d[GEN ** (lvl * LIG_LOG_MSG_COLS_CAP + t)] = (1 + fold_c) / coef_b
+-            scale *= coef_b
+-        for j in unroll(0, yr_log):
+-            tail_c = tail_challenges[GEN ** j]
+-            coef_b = tail_c * LIG_VANISH_INVS[vanish + prefix_len + j]
+-            basis_d[GEN ** (lvl * LIG_LOG_MSG_COLS_CAP + prefix_len + j)] = (1 + tail_c) / coef_b
+-            scale *= coef_b
+-        level_scale[GEN ** lvl] = scale
+-    inner_chain = HeapBuf(GEN ** (n_levels + 1))
+-    inner_chain[GEN ** 0] = 0
+-    for lvl in unroll(0, n_levels):
+-        ml = m_idx * LIG_MAX_LEVELS + lvl
+-        n_queries = LIG_QUERIES[ml]
+-        vanish = m_idx * LIG_MAX_VANISH_LEN + LIG_VANISH_OFF[ml]
+-        basis_row = lvl * LIG_LOG_MSG_COLS_CAP
+-        # Query q is weighted lam^q: the chain runs h <- (h + eq_q) * mu with mu = 1/lam,
+-        # ending at lam^-n * sum_q lam^q eq_q, and level_betas carries lam^n.
+-        mu = level_mus[GEN ** lvl]
+-        residual_chain = HeapBuf(GEN ** (n_queries // RES_BATCH + 1))
+-        residual_chain[GEN ** 0] = 0
+-        # RES_BATCH queries an iteration share the row's reads and constants.
+-        for xr in mul_range(1, GEN ** (LIG_QUERIES[ml] // RES_BATCH)):
+-            ml = m_idx * LIG_MAX_LEVELS + lvl  # rebound: the body captures by value
+-            vanish = m_idx * LIG_MAX_VANISH_LEN + LIG_VANISH_OFF[ml]
+-            basis_row = lvl * LIG_LOG_MSG_COLS_CAP
+-            positions = query_positions * GEN ** LIG_POSITIONS_OFF[ml] * xr ** RES_BATCH
+-            row_d = basis_d * GEN ** basis_row
+-            h = residual_chain[xr]
+-            for k in unroll(0, RES_BATCH):
+-                h = (h + residual_query(positions[GEN ** k], row_d, vanish, LIG_LOG_MSG_COLS[ml])) * mu
+-            residual_chain[xr * GEN] = h
+-        h = residual_chain[GEN ** (n_queries // RES_BATCH)]
+-        for q in unroll(n_queries - n_queries % RES_BATCH, n_queries):
+-            h = (h + residual_query(query_positions[GEN ** (LIG_POSITIONS_OFF[ml] + q)], basis_d * GEN ** basis_row, vanish, LIG_LOG_MSG_COLS[ml])) * mu
+-        # accumulate beta_lvl * lam^n * prod_t b_t * (per-level residual chain) into the grand residual
+-        inner_chain[GEN ** (lvl + 1)] = inner_chain[GEN ** lvl] + level_scale[GEN ** lvl] * h
++    # T05 V3 (UNSOUND, measurement only): the per-level induced bases at the query
++    # positions (the residual, e2) are not computed at any level.
+ 
+     # Explicit OOD eq bases at the same terminal point.
+     ood_inner = 0
+@@ -1761,7 +1733,7 @@ def open_stacked(m_idx: Const, fs0, fs1, fs2, fs3, fs4, target, commit_root_0, c
+             for t in unroll(0, yr_log):
+                 scalar *= (1 + oz[GEN ** (z_folded + t)] + tail_challenges[GEN ** t])
+             ood_inner += scalar
+-    return sumcheck_target, point, point1, inner_chain[GEN ** n_levels] + ood_inner, yr_at_tail
++    return sumcheck_target, point, point1, ood_inner, yr_at_tail
+ 
+ 
+ # ============================== inner-proof verification ============================
+@@ -3319,7 +3291,8 @@ def check_opening_terminal(g_squares, zeta, chi, rm, g_bus_mu, g_zc_n, g_log_mem
+     eq_prefix_chain(out_eq_chain, 1, z_vals, point1, qkeccakv_g)
+     rs_weight = ring_switch_weight(z_vals * GEN ** QKECCAK_VARS_CAP, point1, c_table, qkeccakv_g)
+     inner_sum += (rs_weight + lam_out * out_eq_chain[qkeccakv_g]) * selectors[QKECCAK_COMMITTED_COL]
+-    assert inner_sum * yr_at_tail == sumcheck_target
++    # T05 V3 (UNSOUND, measurement only): no final-polynomial check (it needs the skipped residual and e4).
++    # assert inner_sum * yr_at_tail == sumcheck_target
+ 
+ 
+ def verify_sub(pi_0, pi_1, seed_0, seed_1, g_squares, defer_out):

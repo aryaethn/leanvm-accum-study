@@ -1,0 +1,4 @@
+-rwxr-xr-x@ 1 <USER>  staff  4717792 Nov  8 11:05 upstream/leanMultisig/target-d3v6/release/leanvm
+-rwxr-xr-x@ 1 <USER>  staff  4668256 Nov  8 10:44 upstream/leanMultisig/target-dbg/release/leanvm
+f699df544bb93029aaecc6e14cb5f510bb9cec21bd40a407317476d89c728fd3  upstream/leanMultisig/target-dbg/release/leanvm
+a0a73b38590c38355d95a7954a2b2dd247eca638684d3d663b442b224cf3f222  upstream/leanMultisig/target-d3v6/release/leanvm

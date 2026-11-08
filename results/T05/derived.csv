@@ -1,0 +1,3 @@
+variant,label,cycles_slope_base,cycles_slope_variant,cycles_saved_per_child,cycles_saved_frac_of_base_slope,keccak_saved_per_child_from_log2_slope,keccak_saved_per_child_exact_profile_n2,prove_slope_base_ms,prove_slope_variant_ms,prove_saved_per_child_ms,prove_saved_frac,prove_saved_per_child_ms_n2_n4,prove_saved_frac_n2_n4,n6_prove_base_s,n6_prove_variant_s,n6_prove_saved_s,n6_prove_saved_frac,mu_base_n2_4_6,mu_variant_n2_4_6,n6_mu_step_vs_base
+v3,V3 UNSOUND (L0 only),186814.8,134557.5,52257.2,0.2797,1953.3,1957.0,347.9,140.7,207.1,0.5954,155.0,0.4297,1.945,1.026,0.919,0.4725,24 25 26,24 25 25,yes
+v4,V4 UNSOUND (L0+L1),186814.8,149450.0,37364.8,0.2,1131.7,1144.0,347.9,139.6,208.2,0.5986,154.7,0.429,1.945,1.0335,0.9115,0.4686,24 25 26,24 25 25,yes

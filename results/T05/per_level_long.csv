@@ -1,0 +1,87 @@
+bucket,level,cycles_per_child,keccak_per_child
+a:bus challenges,-,76.0,4.0
+a:commit root,-,46.0,2.0
+a:export deferred,-,44.0,0.0
+a:layout announce+certify,-,418.0,1.0
+a:seed,-,6.0,1.0
+b:bus GKR,-,9551.0,179.0
+c:tables (leaves+table sumcheck+PI),-,12134.25,58.0
+d:Keccak GKR,-,35839.0,482.0
+e1:Merkle cap,L0,1050.0,115.0
+e1:Merkle cap,L1,540.0,52.0
+e1:Merkle cap,L2,276.0,27.0
+e1:Merkle cap,L3,276.0,27.0
+e1:Merkle cap,L4,142.5,14.5
+e1:Merkle leaf+path,L0,10952.5,2016.0
+e1:Merkle leaf+path,L1,4084.5,765.0
+e1:Merkle leaf+path,L2,2542.5,476.0
+e1:Merkle leaf+path,L3,1879.5,336.0
+e1:Merkle leaf+path,L4,1431.0,256.0
+e1e2:lane packing,L0,10864.0,0.0
+e1e2:lane packing,L1,3330.0,0.0
+e1e2:lane packing,L2,2072.0,0.0
+e1e2:lane packing,L3,1554.0,0.0
+e1e2:lane packing,L4,1184.0,0.0
+e2:query rows,L0,17678.0,0.0
+e2:query rows,L1,4585.0,0.0
+e2:query rows,L2,2867.0,0.0
+e2:query rows,L3,2161.0,0.0
+e2:query rows,L4,1656.0,0.0
+e2:residual (query weights),L0,9466.0,0.0
+e2:residual (query weights),L1,3059.0,0.0
+e2:residual (query weights),L2,1431.0,0.0
+e2:residual (query weights),L3,709.0,0.0
+e2:residual (query weights),L4,281.0,0.0
+e2:row eq weights,L0,60.0,0.0
+e2:row eq weights,L1,39.0,0.0
+e2:row eq weights,L2,39.0,0.0
+e2:row eq weights,L3,39.0,0.0
+e2:row eq weights,L4,39.0,0.0
+e3:OOD,L0,195.0,19.0
+e3:OOD,L1,243.0,15.0
+e3:OOD,L2,200.0,11.0
+e3:OOD,L3,156.0,7.0
+e3:OOD,L4,29.0,0.0
+e3:OOD,tail,6.0,0.0
+e3:level batching,L0,33.0,0.0
+e3:level batching,L1,33.0,0.0
+e3:level batching,L2,31.0,0.0
+e3:level batching,L3,31.0,0.0
+e3:level batching,L4,19.0,0.0
+e3:open dispatch,-,19.0,0.0
+e3:placement+config certify,-,664.0,0.0
+e3:point rotation,tail,105.0,0.0
+e3:ring-switch front+claim batch,-,6116.0,6.0
+e3:sumcheck rounds,L0,445.0,6.0
+e3:sumcheck rounds,L1,297.0,4.0
+e3:sumcheck rounds,L2,297.0,4.0
+e3:sumcheck rounds,L3,297.0,4.0
+e3:sumcheck rounds,L4,297.0,4.0
+e3:sumcheck rounds,tail,176.0,3.0
+e3:terminal weights,-,11334.75,0.0
+e4:final check,-,3.0,0.0
+e4:final message,L4,110.0,3.0
+e4:final message,tail,48.0,0.0
+e:level roots,L0,55.0,0.0
+e:level roots,L1,53.0,0.0
+e:level roots,L2,53.0,0.0
+e:level roots,L3,53.0,0.0
+e:setup,setup,14.0,0.0
+eq:query decode,L0,5369.0,0.0
+eq:query decode,L1,2140.0,0.0
+eq:query decode,L2,1326.0,0.0
+eq:query decode,L3,1395.0,0.0
+eq:query decode,L4,976.0,0.0
+eq:query decode,setup,256.0,0.0
+eq:query grinding,L0,167.0,1.0
+eq:query grinding,L1,166.0,1.0
+eq:query grinding,L2,166.0,1.0
+eq:query grinding,L3,166.0,1.0
+eq:query grinding,L4,155.0,0.0
+eq:query sampling,L0,597.0,14.0
+eq:query sampling,L1,246.0,6.0
+eq:query sampling,L2,160.0,4.0
+eq:query sampling,L3,158.0,4.0
+eq:query sampling,L4,116.0,3.0
+outside verify_sub: __jump_tables,-,0.0,0.0
+outside verify_sub: main,-,7434.0,255.5

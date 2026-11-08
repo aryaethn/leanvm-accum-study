@@ -1,0 +1,830 @@
+[
+ {
+  "name": "base_n4",
+  "passno": 1,
+  "swap0": 1468.19,
+  "dswap": 0.0,
+  "therm": "none",
+  "exit": "0",
+  "cycles": 766603,
+  "leanvm_peak_GiB": 2.348,
+  "footprint_GiB": 2.401,
+  "verify": "ok (15.77 ms, exit 0)",
+  "proof_KiB": 239.9,
+  "node_cycle_set": [
+   766603
+  ],
+  "mu": 25,
+  "lanes": 56,
+  "tc": 29032448,
+  "node_distinct": [
+   [
+    "25",
+    "56",
+    "29360128",
+    "29032448"
+   ]
+  ],
+  "leaf_mu_lanes": [
+   [
+    25,
+    35
+   ]
+  ],
+  "leaf_cycles_range": [
+   219991,
+   219998
+  ],
+  "leaf_tc": [
+   18022400
+  ],
+  "times": [
+   1.142,
+   1.189,
+   1.16
+  ],
+  "median": 1.16
+ },
+ {
+  "name": "base_n4",
+  "passno": 2,
+  "swap0": 1707.62,
+  "dswap": 0.0,
+  "therm": "none",
+  "exit": "0",
+  "cycles": 766603,
+  "leanvm_peak_GiB": 2.326,
+  "footprint_GiB": 2.402,
+  "verify": "ok (13.549 ms, exit 0)",
+  "proof_KiB": 239.9,
+  "node_cycle_set": [
+   766603
+  ],
+  "mu": 25,
+  "lanes": 56,
+  "tc": 29032448,
+  "node_distinct": [
+   [
+    "25",
+    "56",
+    "29360128",
+    "29032448"
+   ]
+  ],
+  "leaf_mu_lanes": [
+   [
+    25,
+    35
+   ]
+  ],
+  "leaf_cycles_range": [
+   219991,
+   219998
+  ],
+  "leaf_tc": [
+   18022400
+  ],
+  "times": [
+   1.173,
+   1.142,
+   1.06
+  ],
+  "median": 1.142
+ },
+ {
+  "name": "base_n5_300",
+  "passno": 1,
+  "swap0": 1771.5,
+  "dswap": 0.0,
+  "therm": "none",
+  "exit": "0",
+  "cycles": 957159,
+  "leanvm_peak_GiB": 2.606,
+  "footprint_GiB": 2.634,
+  "verify": "ok (13.851 ms, exit 0)",
+  "proof_KiB": 246.5,
+  "node_cycle_set": [
+   957159
+  ],
+  "mu": 25,
+  "lanes": 64,
+  "tc": 33488896,
+  "node_distinct": [
+   [
+    "25",
+    "64",
+    "33554432",
+    "33488896"
+   ]
+  ],
+  "leaf_mu_lanes": [
+   [
+    25,
+    36
+   ]
+  ],
+  "leaf_cycles_range": [
+   260038,
+   260058
+  ],
+  "leaf_tc": [
+   18513920
+  ],
+  "times": [
+   1.255,
+   1.13,
+   1.129
+  ],
+  "median": 1.13
+ },
+ {
+  "name": "base_n5_300",
+  "passno": 2,
+  "swap0": 1747.5,
+  "dswap": 0.0,
+  "therm": "none",
+  "exit": "0",
+  "cycles": 957159,
+  "leanvm_peak_GiB": 2.571,
+  "footprint_GiB": 2.634,
+  "verify": "ok (19.224 ms, exit 0)",
+  "proof_KiB": 246.5,
+  "node_cycle_set": [
+   957159
+  ],
+  "mu": 25,
+  "lanes": 64,
+  "tc": 33488896,
+  "node_distinct": [
+   [
+    "25",
+    "64",
+    "33554432",
+    "33488896"
+   ]
+  ],
+  "leaf_mu_lanes": [
+   [
+    25,
+    36
+   ]
+  ],
+  "leaf_cycles_range": [
+   260038,
+   260058
+  ],
+  "leaf_tc": [
+   18513920
+  ],
+  "times": [
+   1.218,
+   1.142,
+   1.21
+  ],
+  "median": 1.21
+ },
+ {
+  "name": "base_n5",
+  "passno": 1,
+  "swap0": 1468.19,
+  "dswap": 0.0,
+  "therm": "none",
+  "exit": "0",
+  "cycles": 953421,
+  "leanvm_peak_GiB": 2.411,
+  "footprint_GiB": 2.555,
+  "verify": "ok (14.421 ms, exit 0)",
+  "proof_KiB": 238.9,
+  "node_cycle_set": [
+   953421
+  ],
+  "mu": 25,
+  "lanes": 57,
+  "tc": 29556736,
+  "node_distinct": [
+   [
+    "25",
+    "57",
+    "29884416",
+    "29556736"
+   ]
+  ],
+  "leaf_mu_lanes": [
+   [
+    25,
+    35
+   ]
+  ],
+  "leaf_cycles_range": [
+   219991,
+   219998
+  ],
+  "leaf_tc": [
+   18022400
+  ],
+  "times": [
+   1.411,
+   1.535,
+   1.243
+  ],
+  "median": 1.411
+ },
+ {
+  "name": "base_n5",
+  "passno": 2,
+  "swap0": 1731.62,
+  "dswap": -24.0,
+  "therm": "none",
+  "exit": "0",
+  "cycles": 953421,
+  "leanvm_peak_GiB": 2.492,
+  "footprint_GiB": 2.554,
+  "verify": "ok (13.951 ms, exit 0)",
+  "proof_KiB": 238.9,
+  "node_cycle_set": [
+   953421
+  ],
+  "mu": 25,
+  "lanes": 57,
+  "tc": 29556736,
+  "node_distinct": [
+   [
+    "25",
+    "57",
+    "29884416",
+    "29556736"
+   ]
+  ],
+  "leaf_mu_lanes": [
+   [
+    25,
+    35
+   ]
+  ],
+  "leaf_cycles_range": [
+   219991,
+   219998
+  ],
+  "leaf_tc": [
+   18022400
+  ],
+  "times": [
+   1.43,
+   1.191,
+   1.212
+  ],
+  "median": 1.212
+ },
+ {
+  "name": "base_n6",
+  "passno": 1,
+  "swap0": 1452.19,
+  "dswap": 327.37,
+  "therm": "none",
+  "exit": "0",
+  "cycles": 1140247,
+  "leanvm_peak_GiB": 3.019,
+  "footprint_GiB": 3.093,
+  "verify": "ok (14.304 ms, exit 0)",
+  "proof_KiB": 227.4,
+  "node_cycle_set": [
+   1140247
+  ],
+  "mu": 26,
+  "lanes": 33,
+  "tc": 34406400,
+  "node_distinct": [
+   [
+    "26",
+    "33",
+    "34603008",
+    "34406400"
+   ]
+  ],
+  "leaf_mu_lanes": [
+   [
+    25,
+    35
+   ]
+  ],
+  "leaf_cycles_range": [
+   219985,
+   219998
+  ],
+  "leaf_tc": [
+   18022400
+  ],
+  "times": [
+   2.015,
+   1.962,
+   2.183
+  ],
+  "median": 2.015
+ },
+ {
+  "name": "base_n6",
+  "passno": 2,
+  "swap0": 1731.5,
+  "dswap": 40.12,
+  "therm": "none",
+  "exit": "0",
+  "cycles": 1140247,
+  "leanvm_peak_GiB": 2.965,
+  "footprint_GiB": 3.093,
+  "verify": "ok (14.635 ms, exit 0)",
+  "proof_KiB": 227.4,
+  "node_cycle_set": [
+   1140247
+  ],
+  "mu": 26,
+  "lanes": 33,
+  "tc": 34406400,
+  "node_distinct": [
+   [
+    "26",
+    "33",
+    "34603008",
+    "34406400"
+   ]
+  ],
+  "leaf_mu_lanes": [
+   [
+    25,
+    35
+   ]
+  ],
+  "leaf_cycles_range": [
+   219985,
+   219998
+  ],
+  "leaf_tc": [
+   18022400
+  ],
+  "times": [
+   2.188,
+   2.207,
+   2.081
+  ],
+  "median": 2.188
+ },
+ {
+  "name": "leaf_250",
+  "passno": 1,
+  "swap0": 1468.19,
+  "dswap": 0.0,
+  "therm": "none",
+  "exit": "0",
+  "cycles": 219994,
+  "leanvm_peak_GiB": 1.822,
+  "footprint_GiB": 2.036,
+  "verify": "ok (11.752 ms, exit 0)",
+  "proof_KiB": 220.0,
+  "tc_log2": 24.103,
+  "mu": "25 (=ceil log2 TC, derived)",
+  "tc": "",
+  "lanes": "",
+  "times": [
+   1.012,
+   1.026,
+   0.976
+  ],
+  "median": 1.012
+ },
+ {
+  "name": "leaf_250",
+  "passno": 2,
+  "swap0": 1707.62,
+  "dswap": 0.0,
+  "therm": "none",
+  "exit": "0",
+  "cycles": 219994,
+  "leanvm_peak_GiB": 2.032,
+  "footprint_GiB": 2.03,
+  "verify": "ok (10.314 ms, exit 0)",
+  "proof_KiB": 220.0,
+  "tc_log2": 24.103,
+  "mu": "25 (=ceil log2 TC, derived)",
+  "tc": "",
+  "lanes": "",
+  "times": [
+   0.975,
+   0.963,
+   0.964
+  ],
+  "median": 0.964
+ },
+ {
+  "name": "leaf_300",
+  "passno": 1,
+  "swap0": 1468.19,
+  "dswap": 0.0,
+  "therm": "none",
+  "exit": "0",
+  "cycles": 260052,
+  "leanvm_peak_GiB": 1.68,
+  "footprint_GiB": 2.061,
+  "verify": "ok (10.167 ms, exit 0)",
+  "proof_KiB": 220.5,
+  "tc_log2": 24.142,
+  "mu": "25 (=ceil log2 TC, derived)",
+  "tc": "",
+  "lanes": "",
+  "times": [
+   1.172,
+   1.075,
+   1.017
+  ],
+  "median": 1.075
+ },
+ {
+  "name": "leaf_300",
+  "passno": 2,
+  "swap0": 1707.62,
+  "dswap": 0.0,
+  "therm": "none",
+  "exit": "0",
+  "cycles": 260052,
+  "leanvm_peak_GiB": 1.966,
+  "footprint_GiB": 2.062,
+  "verify": "ok (10.927 ms, exit 0)",
+  "proof_KiB": 220.5,
+  "tc_log2": 24.142,
+  "mu": "25 (=ceil log2 TC, derived)",
+  "tc": "",
+  "lanes": "",
+  "times": [
+   1.198,
+   1.043,
+   1.012
+  ],
+  "median": 1.043
+ },
+ {
+  "name": "v6_n4",
+  "passno": 1,
+  "swap0": 1468.19,
+  "dswap": 0.0,
+  "therm": "none",
+  "exit": "0",
+  "cycles": 668803,
+  "leanvm_peak_GiB": 1.999,
+  "footprint_GiB": 2.026,
+  "verify": "ok (14.315 ms, exit 0)",
+  "proof_KiB": 228.4,
+  "node_cycle_set": [
+   668803
+  ],
+  "mu": 25,
+  "lanes": 45,
+  "tc": 23134208,
+  "node_distinct": [
+   [
+    "25",
+    "45",
+    "23592960",
+    "23134208"
+   ]
+  ],
+  "leaf_mu_lanes": [
+   [
+    25,
+    35
+   ]
+  ],
+  "leaf_cycles_range": [
+   220097,
+   220104
+  ],
+  "leaf_tc": [
+   18022400
+  ],
+  "times": [
+   0.947,
+   0.936,
+   0.915
+  ],
+  "median": 0.936
+ },
+ {
+  "name": "v6_n4",
+  "passno": 2,
+  "swap0": 1707.62,
+  "dswap": 0.0,
+  "therm": "none",
+  "exit": "0",
+  "cycles": 668803,
+  "leanvm_peak_GiB": 2.008,
+  "footprint_GiB": 2.03,
+  "verify": "ok (15.196 ms, exit 0)",
+  "proof_KiB": 228.4,
+  "node_cycle_set": [
+   668803
+  ],
+  "mu": 25,
+  "lanes": 45,
+  "tc": 23134208,
+  "node_distinct": [
+   [
+    "25",
+    "45",
+    "23592960",
+    "23134208"
+   ]
+  ],
+  "leaf_mu_lanes": [
+   [
+    25,
+    35
+   ]
+  ],
+  "leaf_cycles_range": [
+   220097,
+   220104
+  ],
+  "leaf_tc": [
+   18022400
+  ],
+  "times": [
+   0.937,
+   0.919,
+   0.93
+  ],
+  "median": 0.93
+ },
+ {
+  "name": "v6_n5_300",
+  "passno": 1,
+  "swap0": 1755.5,
+  "dswap": 0.0,
+  "therm": "none",
+  "exit": "0",
+  "cycles": 826791,
+  "leanvm_peak_GiB": 2.284,
+  "footprint_GiB": 2.407,
+  "verify": "ok (14.86 ms, exit 0)",
+  "proof_KiB": 238.8,
+  "node_cycle_set": [
+   826791
+  ],
+  "mu": 25,
+  "lanes": 56,
+  "tc": 29032448,
+  "node_distinct": [
+   [
+    "25",
+    "56",
+    "29360128",
+    "29032448"
+   ]
+  ],
+  "leaf_mu_lanes": [
+   [
+    25,
+    36
+   ]
+  ],
+  "leaf_cycles_range": [
+   260144,
+   260164
+  ],
+  "leaf_tc": [
+   18513920
+  ],
+  "times": [
+   1.341,
+   1.263,
+   1.274
+  ],
+  "median": 1.274
+ },
+ {
+  "name": "v6_n5_300",
+  "passno": 2,
+  "swap0": 1747.5,
+  "dswap": 0.0,
+  "therm": "none",
+  "exit": "0",
+  "cycles": 826791,
+  "leanvm_peak_GiB": 2.346,
+  "footprint_GiB": 2.406,
+  "verify": "ok (15.645 ms, exit 0)",
+  "proof_KiB": 238.8,
+  "node_cycle_set": [
+   826791
+  ],
+  "mu": 25,
+  "lanes": 56,
+  "tc": 29032448,
+  "node_distinct": [
+   [
+    "25",
+    "56",
+    "29360128",
+    "29032448"
+   ]
+  ],
+  "leaf_mu_lanes": [
+   [
+    25,
+    36
+   ]
+  ],
+  "leaf_cycles_range": [
+   260144,
+   260164
+  ],
+  "leaf_tc": [
+   18513920
+  ],
+  "times": [
+   1.207,
+   1.106,
+   1.063
+  ],
+  "median": 1.106
+ },
+ {
+  "name": "v6_n5",
+  "passno": 1,
+  "swap0": 1468.19,
+  "dswap": 0.0,
+  "therm": "none",
+  "exit": "0",
+  "cycles": 822968,
+  "leanvm_peak_GiB": 2.335,
+  "footprint_GiB": 2.407,
+  "verify": "ok (14.178 ms, exit 0)",
+  "proof_KiB": 239.4,
+  "node_cycle_set": [
+   822968
+  ],
+  "mu": 25,
+  "lanes": 56,
+  "tc": 29032448,
+  "node_distinct": [
+   [
+    "25",
+    "56",
+    "29360128",
+    "29032448"
+   ]
+  ],
+  "leaf_mu_lanes": [
+   [
+    25,
+    35
+   ]
+  ],
+  "leaf_cycles_range": [
+   220097,
+   220104
+  ],
+  "leaf_tc": [
+   18022400
+  ],
+  "times": [
+   1.126,
+   1.173,
+   1.218
+  ],
+  "median": 1.173
+ },
+ {
+  "name": "v6_n5",
+  "passno": 2,
+  "swap0": 1771.62,
+  "dswap": 0.0,
+  "therm": "none",
+  "exit": "0",
+  "cycles": 822968,
+  "leanvm_peak_GiB": 2.38,
+  "footprint_GiB": 2.401,
+  "verify": "ok (14.609 ms, exit 0)",
+  "proof_KiB": 239.4,
+  "node_cycle_set": [
+   822968
+  ],
+  "mu": 25,
+  "lanes": 56,
+  "tc": 29032448,
+  "node_distinct": [
+   [
+    "25",
+    "56",
+    "29360128",
+    "29032448"
+   ]
+  ],
+  "leaf_mu_lanes": [
+   [
+    25,
+    35
+   ]
+  ],
+  "leaf_cycles_range": [
+   220097,
+   220104
+  ],
+  "leaf_tc": [
+   18022400
+  ],
+  "times": [
+   1.061,
+   1.054,
+   1.068
+  ],
+  "median": 1.061
+ },
+ {
+  "name": "v6_n6",
+  "passno": 1,
+  "swap0": 1771.5,
+  "dswap": 0.0,
+  "therm": "none",
+  "exit": "0",
+  "cycles": 976882,
+  "leanvm_peak_GiB": 2.624,
+  "footprint_GiB": 2.643,
+  "verify": "ok (14.847 ms, exit 0)",
+  "proof_KiB": 247.1,
+  "node_cycle_set": [
+   976882
+  ],
+  "mu": 25,
+  "lanes": 64,
+  "tc": 33488896,
+  "node_distinct": [
+   [
+    "25",
+    "64",
+    "33554432",
+    "33488896"
+   ]
+  ],
+  "leaf_mu_lanes": [
+   [
+    25,
+    35
+   ]
+  ],
+  "leaf_cycles_range": [
+   220091,
+   220104
+  ],
+  "leaf_tc": [
+   18022400
+  ],
+  "times": [
+   1.32,
+   1.154,
+   1.123
+  ],
+  "median": 1.154
+ },
+ {
+  "name": "v6_n6",
+  "passno": 2,
+  "swap0": 1747.5,
+  "dswap": 0.0,
+  "therm": "none",
+  "exit": "0",
+  "cycles": 976882,
+  "leanvm_peak_GiB": 2.58,
+  "footprint_GiB": 2.644,
+  "verify": "ok (14.354 ms, exit 0)",
+  "proof_KiB": 247.1,
+  "node_cycle_set": [
+   976882
+  ],
+  "mu": 25,
+  "lanes": 64,
+  "tc": 33488896,
+  "node_distinct": [
+   [
+    "25",
+    "64",
+    "33554432",
+    "33488896"
+   ]
+  ],
+  "leaf_mu_lanes": [
+   [
+    25,
+    35
+   ]
+  ],
+  "leaf_cycles_range": [
+   220091,
+   220104
+  ],
+  "leaf_tc": [
+   18022400
+  ],
+  "times": [
+   1.31,
+   1.301,
+   1.353
+  ],
+  "median": 1.31
+ }
+]

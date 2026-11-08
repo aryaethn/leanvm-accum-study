@@ -1,0 +1,123 @@
+diff --git a/crates/rec_aggregation/guests/lean_ethereum.py b/crates/rec_aggregation/guests/lean_ethereum.py
+index 5f8cb982c..a8689f2dd 100644
+--- a/crates/rec_aggregation/guests/lean_ethereum.py
++++ b/crates/rec_aggregation/guests/lean_ethereum.py
+@@ -1593,17 +1593,10 @@ def open_stacked(m_idx: Const, fs0, fs1, fs2, fs3, fs4, target, commit_root_0, c
+         # leaves out are its LEADING words, whose whole blocks the committer hashes
+         # once for all leaves. The flip is a compile-time index and the guest still
+         # hashes the full image. Deeper levels commit every lane, ascending.
+-        row_eq_weights = HeapBuf(GEN ** (LIG_MAX_INTERLEAVE[m_idx]))
+-        opening_row_weights(fold_challenges * GEN ** folds_off, row_eq_weights, LIG_FOLDS[ml], 1 // (lvl + 1))
+-
+-        cap_depth = LIG_CAP_DEPTH[ml]
+-        cap = merkle_caps * GEN ** (4 * LIG_CAP_OFF[ml])
+-        flags = cap_flags * GEN ** LIG_CAP_OFF[ml]
+-        root_0, root_1 = verify_merkle_cap(cap, flags, cap_depth)
+-        level_roots[GEN ** (2 * lvl)] = root_0
+-        level_roots[GEN ** (2 * lvl + 1)] = root_1
+-
+-        level_query_sum = opening_queries(cap, flags, lam, lam_pow, query_win_ptrs * GEN ** pos_off, row_eq_weights, GEN ** (n_queries // (1 + 1 // (lvl + 1))), n_queries % 2 * (1 // (lvl + 1)), 1 // (lvl + 1), interleave, LIG_LEAF_CELLS[ml], depth, cap_depth)
++        # T03 V2 (UNSOUND, measurement only): no row eq weights, no Merkle cap check, and no
++        # query openings at all (e1 + e2: rows, lane packing, leaf/path hashing, row folds).
++        # The query rows and paths are not popped; no other phase reads those streams.
++        level_query_sum = 0
+ 
+         # Every level, including the last, ties its commitment in through an intro
+         # message. The level's claims then enter the running one with powers of
+@@ -1659,7 +1652,9 @@ def open_stacked(m_idx: Const, fs0, fs1, fs2, fs3, fs4, target, commit_root_0, c
+     for j in unroll(yr_log, YR_LOG_CAP):
+         tail_challenges[GEN ** j] = 0
+ 
+-    yr_at_tail = fold_final_msg(final_msg, tail_challenges, yr_log)
++    # T03 V2 (UNSOUND, measurement only): the final message is not evaluated (e4). It is
++    # still read and absorbed above, so the transcript and every later challenge are unchanged.
++    yr_at_tail = 0
+ 
+     # ---- the same point, indexed by committed-witness coordinate ----
+     # The folds bind coordinates in ROUND order, and level 0's folds are the lane
+@@ -1688,64 +1683,8 @@ def open_stacked(m_idx: Const, fs0, fs1, fs2, fs3, fs4, target, commit_root_0, c
+         point[GEN ** j] = 0
+         point1[GEN ** j] = 1
+ 
+-    # ---- per-level induced bases at the single terminal point ----
+-    # Every query of a level runs the SAME product shape over its message-column
+-    # coordinates; only the novel-basis chain (the query position's
+-    # subspace-vanishing walk) differs. Since
+-    #     1 + c_t * (1 + chain_t * inv_t) == (1 + c_t) + (c_t * inv_t) * chain_t
+-    # a coordinate's two coefficients depend on the challenge and the baked
+-    # vanishing inverse alone, so they hoist out of the query loop (one row a level,
+-    # fold coords then tail coords). Factoring b_t = c_t * inv_t out of every
+-    # coordinate leaves (a_t / b_t) + chain_t per query, so a query is one add and
+-    # one multiply a coordinate, and the level's product of the b_t scales its sum
+-    # once. A zero challenge makes b_t zero and the division unsatisfiable, which
+-    # rejects rather than accepts.
+-    basis_d = HeapBuf(GEN ** (n_levels * LIG_LOG_MSG_COLS_CAP))
+-    level_scale = HeapBuf(GEN ** n_levels)
+-    for lvl in unroll(0, n_levels):
+-        ml = m_idx * LIG_MAX_LEVELS + lvl
+-        prefix_len = LIG_RESIDUAL_PREFIX_LEN[ml]
+-        vanish = m_idx * LIG_MAX_VANISH_LEN + LIG_VANISH_OFF[ml]
+-        scale = level_betas[GEN ** lvl]
+-        for t in unroll(0, prefix_len):
+-            fold_c = fold_challenges[GEN ** (LIG_RESIDUAL_FOLD_OFF[ml] + t)]
+-            coef_b = fold_c * LIG_VANISH_INVS[vanish + t]
+-            basis_d[GEN ** (lvl * LIG_LOG_MSG_COLS_CAP + t)] = (1 + fold_c) / coef_b
+-            scale *= coef_b
+-        for j in unroll(0, yr_log):
+-            tail_c = tail_challenges[GEN ** j]
+-            coef_b = tail_c * LIG_VANISH_INVS[vanish + prefix_len + j]
+-            basis_d[GEN ** (lvl * LIG_LOG_MSG_COLS_CAP + prefix_len + j)] = (1 + tail_c) / coef_b
+-            scale *= coef_b
+-        level_scale[GEN ** lvl] = scale
+-    inner_chain = HeapBuf(GEN ** (n_levels + 1))
+-    inner_chain[GEN ** 0] = 0
+-    for lvl in unroll(0, n_levels):
+-        ml = m_idx * LIG_MAX_LEVELS + lvl
+-        n_queries = LIG_QUERIES[ml]
+-        vanish = m_idx * LIG_MAX_VANISH_LEN + LIG_VANISH_OFF[ml]
+-        basis_row = lvl * LIG_LOG_MSG_COLS_CAP
+-        # Query q is weighted lam^q: the chain runs h <- (h + eq_q) * mu with mu = 1/lam,
+-        # ending at lam^-n * sum_q lam^q eq_q, and level_betas carries lam^n.
+-        mu = level_mus[GEN ** lvl]
+-        residual_chain = HeapBuf(GEN ** (n_queries // RES_BATCH + 1))
+-        residual_chain[GEN ** 0] = 0
+-        # RES_BATCH queries an iteration share the row's reads and constants.
+-        for xr in mul_range(1, GEN ** (LIG_QUERIES[ml] // RES_BATCH)):
+-            ml = m_idx * LIG_MAX_LEVELS + lvl  # rebound: the body captures by value
+-            vanish = m_idx * LIG_MAX_VANISH_LEN + LIG_VANISH_OFF[ml]
+-            basis_row = lvl * LIG_LOG_MSG_COLS_CAP
+-            positions = query_positions * GEN ** LIG_POSITIONS_OFF[ml] * xr ** RES_BATCH
+-            row_d = basis_d * GEN ** basis_row
+-            h = residual_chain[xr]
+-            for k in unroll(0, RES_BATCH):
+-                h = (h + residual_query(positions[GEN ** k], row_d, vanish, LIG_LOG_MSG_COLS[ml])) * mu
+-            residual_chain[xr * GEN] = h
+-        h = residual_chain[GEN ** (n_queries // RES_BATCH)]
+-        for q in unroll(n_queries - n_queries % RES_BATCH, n_queries):
+-            h = (h + residual_query(query_positions[GEN ** (LIG_POSITIONS_OFF[ml] + q)], basis_d * GEN ** basis_row, vanish, LIG_LOG_MSG_COLS[ml])) * mu
+-        # accumulate beta_lvl * lam^n * prod_t b_t * (per-level residual chain) into the grand residual
+-        inner_chain[GEN ** (lvl + 1)] = inner_chain[GEN ** lvl] + level_scale[GEN ** lvl] * h
++    # T03 V2 (UNSOUND, measurement only): the per-level induced bases at the query
++    # positions (the residual, e2) are not computed.
+ 
+     # Explicit OOD eq bases at the same terminal point.
+     ood_inner = 0
+@@ -1761,7 +1700,7 @@ def open_stacked(m_idx: Const, fs0, fs1, fs2, fs3, fs4, target, commit_root_0, c
+             for t in unroll(0, yr_log):
+                 scalar *= (1 + oz[GEN ** (z_folded + t)] + tail_challenges[GEN ** t])
+             ood_inner += scalar
+-    return sumcheck_target, point, point1, inner_chain[GEN ** n_levels] + ood_inner, yr_at_tail
++    return sumcheck_target, point, point1, ood_inner, yr_at_tail
+ 
+ 
+ # ============================== inner-proof verification ============================
+@@ -3319,7 +3258,8 @@ def check_opening_terminal(g_squares, zeta, chi, rm, g_bus_mu, g_zc_n, g_log_mem
+     eq_prefix_chain(out_eq_chain, 1, z_vals, point1, qkeccakv_g)
+     rs_weight = ring_switch_weight(z_vals * GEN ** QKECCAK_VARS_CAP, point1, c_table, qkeccakv_g)
+     inner_sum += (rs_weight + lam_out * out_eq_chain[qkeccakv_g]) * selectors[QKECCAK_COMMITTED_COL]
+-    assert inner_sum * yr_at_tail == sumcheck_target
++    # T03 V2 (UNSOUND, measurement only): no final-polynomial check (e4).
++    # assert inner_sum * yr_at_tail == sumcheck_target
+ 
+ 
+ def verify_sub(pi_0, pi_1, seed_0, seed_1, g_squares, defer_out):

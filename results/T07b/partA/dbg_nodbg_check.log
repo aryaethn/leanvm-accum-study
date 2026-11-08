@@ -1,0 +1,27 @@
+aggregation bytecode: 488,806 instructions (2^19 padded), compiled in 0.769 s
+
+recursion 2→1, over leaves of 250 leanXMSS signatures
+  cycles (VM steps)           : 392,988 = 2^18.584
+    details                   : MUL 2^17.132 (36.5%)  XOR 2^16.681 (26.7%)  DEREF 2^16.105 (17.9%)  SET 2^15.213 (9.7%)  JUMP 2^14.637 (6.5%)  KECCAK 2^13.347 (2.7%)  MEMORY 2^19.379  BYTECODE 2^18.899  TOTAL_COMMITTED 2^23.842
+  proof size                  : 232.6 KiB
+  proving time                : 0.668 s      peak memory 1.389 GiB
+  verifying                   : 14.601 ms
+        9.20 real        20.86 user         3.25 sys
+          1653194752  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              525287  page reclaims
+                   0  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   4  voluntary context switches
+               91560  involuntary context switches
+         77638831928  instructions retired
+         23397534734  cycles elapsed
+          1531758128  peak memory footprint
+/usr/bin/time -l $B recursion --n 2 --xmss-per-leaf 250 --leaf-log-inv-rate 2  20.86s user 3.26s system 261% cpu 9.209 total

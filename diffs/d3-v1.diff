@@ -1,0 +1,30 @@
+diff --git a/crates/rec_aggregation/guests/lean_ethereum.py b/crates/rec_aggregation/guests/lean_ethereum.py
+index 5f8cb982c..b273b9361 100644
+--- a/crates/rec_aggregation/guests/lean_ethereum.py
++++ b/crates/rec_aggregation/guests/lean_ethereum.py
+@@ -1388,9 +1388,10 @@ def opening_query(cap, flags, row_eq_weights, wins, base: Const, interleave: Con
+             part += row_word * row_eq_weights[GEN ** l]
+         row_dot += row_eq_weights[GEN ** (lo_len + h)] * part
+     # Hash the packed row.
+-    leaf_hash_state = StackBuf(KECCAK_STATE)
+-    keccak_cells(packed_row[0:leaf_cells], leaf_hash_state)
+-    walk_path(leaf_hash_state[0], leaf_hash_state[1], wins, cap, flags, depth - cap_depth, cap_depth)
++    # T03 V1 (UNSOUND, measurement only): no leaf hash and no Merkle path hashing (e1). The
++    # path is still hinted, so every witness stream is popped in the baseline order.
++    path = StackBuf(LIG_PATH_CAP)
++    hint_witness(path[0:4 * (depth - cap_depth)], "merkle_children")
+     return row_dot
+ 
+ 
+@@ -1599,9 +1600,8 @@ def open_stacked(m_idx: Const, fs0, fs1, fs2, fs3, fs4, target, commit_root_0, c
+         cap_depth = LIG_CAP_DEPTH[ml]
+         cap = merkle_caps * GEN ** (4 * LIG_CAP_OFF[ml])
+         flags = cap_flags * GEN ** LIG_CAP_OFF[ml]
+-        root_0, root_1 = verify_merkle_cap(cap, flags, cap_depth)
+-        level_roots[GEN ** (2 * lvl)] = root_0
+-        level_roots[GEN ** (2 * lvl + 1)] = root_1
++        # T03 V1 (UNSOUND, measurement only): the cap is not hashed and its root is not
++        # checked against the transcript-bound level root (e1).
+ 
+         level_query_sum = opening_queries(cap, flags, lam, lam_pow, query_win_ptrs * GEN ** pos_off, row_eq_weights, GEN ** (n_queries // (1 + 1 // (lvl + 1))), n_queries % 2 * (1 // (lvl + 1)), 1 // (lvl + 1), interleave, LIG_LEAF_CELLS[ml], depth, cap_depth)
+ 

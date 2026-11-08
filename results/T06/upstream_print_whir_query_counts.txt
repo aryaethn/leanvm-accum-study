@@ -1,0 +1,392 @@
+### cmd: WHIR_LOG_INV_RATE=2 WHIR_NUM_VARS=15 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=15, rate=1/4
+L0: rate=1/4, queries=111, eta=4.882810167139e-4, m=1,023
+L1: rate=1/32, queries=45, eta=6.692024474555e-3, m=26
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=2 WHIR_NUM_VARS=16 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=16, rate=1/4
+L0: rate=1/4, queries=112, eta=3.331705331608e-3, m=150
+L1: rate=1/32, queries=45, eta=5.480943437657e-3, m=32
+L2: rate=1/256, queries=27, eta=3.608439182435e-3, m=15
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=2 WHIR_NUM_VARS=17 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=17, rate=1/4
+L0: rate=1/4, queries=112, eta=3.225018805050e-3, m=155
+L1: rate=1/32, queries=45, eta=4.759048846953e-3, m=37
+L2: rate=1/256, queries=28, eta=5.314854242577e-3, m=11
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=2 WHIR_NUM_VARS=18 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=18, rate=1/4
+L0: rate=1/4, queries=112, eta=3.164170639987e-3, m=158
+L1: rate=1/32, queries=45, eta=4.410777261967e-3, m=40
+L2: rate=1/256, queries=28, eta=3.361964710249e-3, m=18
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=2 WHIR_NUM_VARS=19 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=19, rate=1/4
+L0: rate=1/4, queries=112, eta=3.124809259316e-3, m=160
+L1: rate=1/32, queries=45, eta=4.204856605453e-3, m=42
+L2: rate=1/256, queries=28, eta=2.460627460629e-3, m=25
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=2 WHIR_NUM_VARS=20 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=20, rate=1/4
+L0: rate=1/4, queries=112, eta=3.105495285578e-3, m=161
+L1: rate=1/32, queries=45, eta=4.206913273028e-3, m=42
+L2: rate=1/256, queries=28, eta=2.000316011390e-3, m=31
+L3: rate=1/2,048, queries=20, eta=2.126293179499e-3, m=9
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=2 WHIR_NUM_VARS=21 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=21, rate=1/4
+L0: rate=1/4, queries=112, eta=3.105542674207e-3, m=161
+L1: rate=1/32, queries=45, eta=4.110082131491e-3, m=43
+L2: rate=1/256, queries=28, eta=1.778725161887e-3, m=35
+L3: rate=1/2,048, queries=20, eta=6.667720037965e-4, m=31
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=2 WHIR_NUM_VARS=22 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=22, rate=1/4
+L0: rate=1/4, queries=112, eta=3.105566368250e-3, m=161
+L1: rate=1/32, queries=45, eta=4.110584064952e-3, m=43
+L2: rate=1/256, queries=28, eta=1.685886763373e-3, m=37
+L3: rate=1/2,048, queries=21, eta=3.565902067091e-3, m=6
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=2 WHIR_NUM_VARS=23 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=23, rate=1/4
+L0: rate=1/4, queries=112, eta=3.105578215203e-3, m=161
+L1: rate=1/32, queries=45, eta=4.110835008701e-3, m=43
+L2: rate=1/256, queries=28, eta=1.600998333648e-3, m=39
+L3: rate=1/2,048, queries=21, eta=3.624846590384e-3, m=6
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=2 WHIR_NUM_VARS=24 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=24, rate=1/4
+L0: rate=1/4, queries=112, eta=3.086413866202e-3, m=162
+L1: rate=1/32, queries=45, eta=4.110960474830e-3, m=43
+L2: rate=1/256, queries=28, eta=1.561736874191e-3, m=40
+L3: rate=1/2,048, queries=21, eta=3.653962291771e-3, m=6
+L4: rate=1/16,384, queries=16, eta=1.353164693413e-3, m=5
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=2 WHIR_NUM_VARS=25 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=25, rate=1/4
+L0: rate=1/4, queries=112, eta=3.086416809646e-3, m=162
+L1: rate=1/32, queries=45, eta=4.111023206459e-3, m=43
+L2: rate=1/256, queries=28, eta=1.562118483696e-3, m=40
+L3: rate=1/2,048, queries=21, eta=3.144371559594e-3, m=7
+L4: rate=1/16,384, queries=16, eta=8.119916203937e-4, m=9
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=2 WHIR_NUM_VARS=26 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=26, rate=1/4
+L0: rate=1/4, queries=112, eta=3.086418281366e-3, m=162
+L1: rate=1/32, queries=45, eta=4.111054571915e-3, m=43
+L2: rate=1/256, queries=28, eta=1.562309253494e-3, m=40
+L3: rate=1/2,048, queries=21, eta=3.150555187119e-3, m=7
+L4: rate=1/16,384, queries=16, eta=5.818785075432e-4, m=13
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=2 WHIR_NUM_VARS=27 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=27, rate=1/4
+L0: rate=1/4, queries=112, eta=3.086419017227e-3, m=162
+L1: rate=1/32, queries=45, eta=4.111070254553e-3, m=43
+L2: rate=1/256, queries=28, eta=1.562404629658e-3, m=40
+L3: rate=1/2,048, queries=21, eta=3.153642454090e-3, m=7
+L4: rate=1/16,384, queries=16, eta=4.523212243803e-4, m=17
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=2 WHIR_NUM_VARS=28 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=28, rate=1/4
+L0: rate=1/4, queries=112, eta=3.086419385156e-3, m=162
+L1: rate=1/32, queries=45, eta=4.111078095849e-3, m=43
+L2: rate=1/256, queries=28, eta=1.562452315557e-3, m=40
+L3: rate=1/2,048, queries=21, eta=3.155184954771e-3, m=7
+L4: rate=1/16,384, queries=16, eta=3.875612272067e-4, m=20
+L5: rate=1/131,072, queries=13, eta=2.657866474374e-4, m=9
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=1 WHIR_NUM_VARS=15 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=15, rate=1/2
+L0: rate=1/2, queries=222, eta=6.905336360861e-4, m=1,023
+L1: rate=1/16, queries=55, eta=8.041266211205e-4, m=306
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=1 WHIR_NUM_VARS=16 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=16, rate=1/2
+L0: rate=1/2, queries=223, eta=1.442370265038e-3, m=490
+L1: rate=1/16, queries=56, eta=5.062024192088e-3, m=49
+L2: rate=1/128, queries=30, eta=3.986799711561e-4, m=192
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=1 WHIR_NUM_VARS=17 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=17, rate=1/2
+L0: rate=1/2, queries=223, eta=1.271464256504e-3, m=556
+L1: rate=1/16, queries=56, eta=4.082320043676e-3, m=61
+L2: rate=1/128, queries=31, eta=8.986927007692e-4, m=92
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=1 WHIR_NUM_VARS=18 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=18, rate=1/2
+L0: rate=1/2, queries=223, eta=1.184288876335e-3, m=597
+L1: rate=1/16, queries=56, eta=3.564446299703e-3, m=70
+L2: rate=1/128, queries=32, eta=4.504297347904e-3, m=19
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=1 WHIR_NUM_VARS=19 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=19, rate=1/2
+L0: rate=1/2, queries=223, eta=1.142267562999e-3, m=619
+L1: rate=1/16, queries=56, eta=3.330076533989e-3, m=75
+L2: rate=1/128, queries=32, eta=3.222085858119e-3, m=27
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=1 WHIR_NUM_VARS=20 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=20, rate=1/2
+L0: rate=1/2, queries=223, eta=1.120578766515e-3, m=631
+L1: rate=1/16, queries=56, eta=3.203562818854e-3, m=78
+L2: rate=1/128, queries=32, eta=2.579267500074e-3, m=34
+L3: rate=1/1,024, queries=22, eta=3.007032652029e-3, m=9
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=1 WHIR_NUM_VARS=21 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=21, rate=1/2
+L0: rate=1/2, queries=223, eta=1.110040803000e-3, m=637
+L1: rate=1/16, queries=56, eta=3.163784270777e-3, m=79
+L2: rate=1/128, queries=32, eta=2.257497529965e-3, m=39
+L3: rate=1/1,024, queries=22, eta=1.043989226220e-3, m=28
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=1 WHIR_NUM_VARS=22 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=22, rate=1/2
+L0: rate=1/2, queries=224, eta=2.195967038414e-3, m=322
+L1: rate=1/16, queries=56, eta=3.124618506988e-3, m=80
+L2: rate=1/128, queries=32, eta=2.100370124746e-3, m=42
+L3: rate=1/1,024, queries=23, eta=4.322526056035e-3, m=7
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=1 WHIR_NUM_VARS=23 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=23, rate=1/2
+L0: rate=1/2, queries=224, eta=2.189176729979e-3, m=323
+L1: rate=1/16, queries=56, eta=3.124809259316e-3, m=80
+L2: rate=1/128, queries=32, eta=2.006863379875e-3, m=44
+L3: rate=1/1,024, queries=23, eta=4.393977608266e-3, m=7
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=1 WHIR_NUM_VARS=24 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=24, rate=1/2
+L0: rate=1/2, queries=224, eta=2.189180905530e-3, m=323
+L1: rate=1/16, queries=56, eta=3.086325561593e-3, m=81
+L2: rate=1/128, queries=32, eta=1.963226194080e-3, m=45
+L3: rate=1/1,024, queries=23, eta=3.875612272067e-3, m=8
+L4: rate=1/8,192, queries=17, eta=1.196039913468e-3, m=8
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=1 WHIR_NUM_VARS=25 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=25, rate=1/2
+L0: rate=1/2, queries=224, eta=2.189182993302e-3, m=323
+L1: rate=1/16, queries=56, eta=3.086372657699e-3, m=81
+L2: rate=1/128, queries=32, eta=1.921016648414e-3, m=46
+L3: rate=1/1,024, queries=23, eta=3.890961291628e-3, m=8
+L4: rate=1/8,192, queries=17, eta=4.697711844930e-4, m=22
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=1 WHIR_NUM_VARS=26 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=26, rate=1/2
+L0: rate=1/2, queries=224, eta=2.189184037188e-3, m=323
+L1: rate=1/16, queries=56, eta=3.086396205483e-3, m=81
+L2: rate=1/128, queries=32, eta=1.921251247749e-3, m=46
+L3: rate=1/1,024, queries=23, eta=3.898613140301e-3, m=8
+L4: rate=1/8,192, queries=18, eta=2.674426550318e-3, m=4
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=1 WHIR_NUM_VARS=27 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=27, rate=1/2
+L0: rate=1/2, queries=225, eta=3.273641724996e-3, m=216
+L1: rate=1/16, queries=56, eta=3.086407979307e-3, m=81
+L2: rate=1/128, queries=32, eta=1.921368536675e-3, m=46
+L3: rate=1/1,024, queries=23, eta=3.902433438268e-3, m=8
+L4: rate=1/8,192, queries=18, eta=2.718634942788e-3, m=4
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=1 WHIR_NUM_VARS=28 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=28, rate=1/2
+L0: rate=1/2, queries=225, eta=3.273642115245e-3, m=216
+L1: rate=1/16, queries=56, eta=3.086413866202e-3, m=81
+L2: rate=1/128, queries=32, eta=1.921427178453e-3, m=46
+L3: rate=1/1,024, queries=23, eta=3.904342185478e-3, m=8
+L4: rate=1/8,192, queries=18, eta=2.740471718829e-3, m=4
+L5: rate=1/65,536, queries=14, eta=6.765823467066e-4, m=5
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=3 WHIR_NUM_VARS=15 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=15, rate=1/8
+L0: rate=1/8, queries=75, eta=5.271760520269e-3, m=67
+L1: rate=1/64, queries=37, eta=1.952878937007e-3, m=63
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=3 WHIR_NUM_VARS=16 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=16, rate=1/8
+L0: rate=1/8, queries=75, eta=5.048295927633e-3, m=70
+L1: rate=1/64, queries=37, eta=9.765322260327e-4, m=127
+L2: rate=1/512, queries=24, eta=2.251369248882e-3, m=17
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=3 WHIR_NUM_VARS=17 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=17, rate=1/8
+L0: rate=1/8, queries=75, eta=4.978409342370e-3, m=71
+L1: rate=1/64, queries=37, eta=4.882774954200e-4, m=255
+L2: rate=1/512, queries=25, eta=4.593318248376e-3, m=9
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=3 WHIR_NUM_VARS=18 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=18, rate=1/8
+L0: rate=1/8, queries=75, eta=4.909864299804e-3, m=72
+L1: rate=1/64, queries=38, eta=6.930867804979e-3, m=18
+L2: rate=1/512, queries=25, eta=3.056487486078e-3, m=14
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=3 WHIR_NUM_VARS=19 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=19, rate=1/8
+L0: rate=1/8, queries=75, eta=4.910164038170e-3, m=72
+L1: rate=1/64, queries=38, eta=6.937659445810e-3, m=18
+L2: rate=1/512, queries=25, eta=2.558715240271e-3, m=17
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=3 WHIR_NUM_VARS=20 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=20, rate=1/8
+L0: rate=1/8, queries=75, eta=4.910313900492e-3, m=72
+L1: rate=1/64, queries=38, eta=6.941052774184e-3, m=18
+L2: rate=1/512, queries=25, eta=2.192377375063e-3, m=20
+L3: rate=1/4,096, queries=18, eta=3.866184838323e-4, m=35
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=3 WHIR_NUM_VARS=21 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=21, rate=1/8
+L0: rate=1/8, queries=75, eta=4.910388829938e-3, m=72
+L1: rate=1/64, queries=38, eta=6.942748816426e-3, m=18
+L2: rate=1/512, queries=25, eta=2.000963719742e-3, m=22
+L3: rate=1/4,096, queries=19, eta=2.435974861181e-3, m=6
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=3 WHIR_NUM_VARS=22 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=22, rate=1/8
+L0: rate=1/8, queries=75, eta=4.910426294232e-3, m=72
+L1: rate=1/64, queries=38, eta=6.943596682195e-3, m=18
+L2: rate=1/512, queries=25, eta=1.917729244334e-3, m=23
+L3: rate=1/4,096, queries=19, eta=2.161263028018e-3, m=7
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=3 WHIR_NUM_VARS=23 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=23, rate=1/8
+L0: rate=1/8, queries=75, eta=4.910445026272e-3, m=72
+L1: rate=1/64, queries=38, eta=6.944020576257e-3, m=18
+L2: rate=1/512, queries=25, eta=1.919608450315e-3, m=23
+L3: rate=1/4,096, queries=19, eta=1.922365203616e-3, m=8
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=3 WHIR_NUM_VARS=24 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=24, rate=1/8
+L0: rate=1/8, queries=75, eta=4.910454392265e-3, m=72
+L1: rate=1/64, queries=38, eta=6.944232513585e-3, m=18
+L2: rate=1/512, queries=25, eta=1.840524556950e-3, m=24
+L3: rate=1/4,096, queries=19, eta=1.722494343141e-3, m=9
+L4: rate=1/32,768, queries=15, eta=9.568319307747e-4, m=5
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=3 WHIR_NUM_VARS=25 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=25, rate=1/8
+L0: rate=1/8, queries=75, eta=4.910459075255e-3, m=72
+L1: rate=1/64, queries=38, eta=6.944338479823e-3, m=18
+L2: rate=1/512, queries=25, eta=1.840974288064e-3, m=24
+L3: rate=1/4,096, queries=19, eta=1.729316129613e-3, m=9
+L4: rate=1/32,768, queries=15, eta=7.382118613461e-4, m=7
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=3 WHIR_NUM_VARS=26 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=26, rate=1/8
+L0: rate=1/8, queries=75, eta=4.910461416748e-3, m=72
+L1: rate=1/64, queries=38, eta=6.944391462336e-3, m=18
+L2: rate=1/512, queries=25, eta=1.841199112427e-3, m=24
+L3: rate=1/4,096, queries=19, eta=1.732716951245e-3, m=9
+L4: rate=1/32,768, queries=15, eta=5.348853100636e-4, m=10
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=3 WHIR_NUM_VARS=27 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=27, rate=1/8
+L0: rate=1/8, queries=75, eta=4.910462587494e-3, m=72
+L1: rate=1/64, queries=38, eta=6.944417953441e-3, m=18
+L2: rate=1/512, queries=25, eta=1.841311514314e-3, m=24
+L3: rate=1/4,096, queries=19, eta=1.734414861452e-3, m=9
+L4: rate=1/32,768, queries=15, eta=4.531058237980e-4, m=12
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=3 WHIR_NUM_VARS=28 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=28, rate=1/8
+L0: rate=1/8, queries=75, eta=4.910463172867e-3, m=72
+L1: rate=1/64, queries=38, eta=6.944431198955e-3, m=18
+L2: rate=1/512, queries=25, eta=1.841367712684e-3, m=24
+L3: rate=1/4,096, queries=19, eta=1.735263193546e-3, m=9
+L4: rate=1/32,768, queries=15, eta=4.216110336659e-4, m=13
+L5: rate=1/262,144, queries=13, eta=5.638186222555e-4, m=3
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=4 WHIR_NUM_VARS=15 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=15, rate=1/16
+L0: rate=1/16, queries=56, eta=3.330076533989e-3, m=75
+L1: rate=1/128, queries=32, eta=3.222085858119e-3, m=27
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=4 WHIR_NUM_VARS=16 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=16, rate=1/16
+L0: rate=1/16, queries=56, eta=3.203562818854e-3, m=78
+L1: rate=1/128, queries=32, eta=2.579267500074e-3, m=34
+L2: rate=1/1,024, queries=22, eta=3.007032652029e-3, m=9
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=4 WHIR_NUM_VARS=17 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=17, rate=1/16
+L0: rate=1/16, queries=56, eta=3.163784270777e-3, m=79
+L1: rate=1/128, queries=32, eta=2.257497529965e-3, m=39
+L2: rate=1/1,024, queries=22, eta=1.043989226220e-3, m=28
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=4 WHIR_NUM_VARS=18 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=18, rate=1/16
+L0: rate=1/16, queries=56, eta=3.124618506988e-3, m=80
+L1: rate=1/128, queries=32, eta=2.100370124746e-3, m=42
+L2: rate=1/1,024, queries=23, eta=4.322526056035e-3, m=7
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=4 WHIR_NUM_VARS=19 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=19, rate=1/16
+L0: rate=1/16, queries=56, eta=3.124809259316e-3, m=80
+L1: rate=1/128, queries=32, eta=2.006863379875e-3, m=44
+L2: rate=1/1,024, queries=23, eta=4.393977608266e-3, m=7
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=4 WHIR_NUM_VARS=20 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=20, rate=1/16
+L0: rate=1/16, queries=56, eta=3.086325561593e-3, m=81
+L1: rate=1/128, queries=32, eta=1.963226194080e-3, m=45
+L2: rate=1/1,024, queries=23, eta=3.875612272067e-3, m=8
+L3: rate=1/8,192, queries=17, eta=1.196039913468e-3, m=8
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=4 WHIR_NUM_VARS=21 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=21, rate=1/16
+L0: rate=1/16, queries=56, eta=3.086372657699e-3, m=81
+L1: rate=1/128, queries=32, eta=1.921016648414e-3, m=46
+L2: rate=1/1,024, queries=23, eta=3.890961291628e-3, m=8
+L3: rate=1/8,192, queries=17, eta=4.697711844930e-4, m=22
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=4 WHIR_NUM_VARS=22 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=22, rate=1/16
+L0: rate=1/16, queries=56, eta=3.086396205483e-3, m=81
+L1: rate=1/128, queries=32, eta=1.921251247749e-3, m=46
+L2: rate=1/1,024, queries=23, eta=3.898613140301e-3, m=8
+L3: rate=1/8,192, queries=18, eta=2.674426550318e-3, m=4
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=4 WHIR_NUM_VARS=23 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=23, rate=1/16
+L0: rate=1/16, queries=56, eta=3.086407979307e-3, m=81
+L1: rate=1/128, queries=32, eta=1.921368536675e-3, m=46
+L2: rate=1/1,024, queries=23, eta=3.902433438268e-3, m=8
+L3: rate=1/8,192, queries=18, eta=2.718634942788e-3, m=4
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=4 WHIR_NUM_VARS=24 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=24, rate=1/16
+L0: rate=1/16, queries=56, eta=3.086413866202e-3, m=81
+L1: rate=1/128, queries=32, eta=1.921427178453e-3, m=46
+L2: rate=1/1,024, queries=23, eta=3.904342185478e-3, m=8
+L3: rate=1/8,192, queries=18, eta=2.740471718829e-3, m=4
+L4: rate=1/65,536, queries=14, eta=6.765823467066e-4, m=5
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=4 WHIR_NUM_VARS=25 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=25, rate=1/16
+L0: rate=1/16, queries=56, eta=3.086416809646e-3, m=81
+L1: rate=1/128, queries=32, eta=1.921456498671e-3, m=46
+L2: rate=1/1,024, queries=23, eta=3.905296209240e-3, m=8
+L3: rate=1/8,192, queries=18, eta=2.751325114645e-3, m=4
+L4: rate=1/65,536, queries=14, eta=4.059958101968e-4, m=9
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=4 WHIR_NUM_VARS=26 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=26, rate=1/16
+L0: rate=1/16, queries=56, eta=3.086418281366e-3, m=81
+L1: rate=1/128, queries=32, eta=1.921471158612e-3, m=46
+L2: rate=1/1,024, queries=23, eta=3.905773133734e-3, m=8
+L3: rate=1/8,192, queries=18, eta=2.756735788730e-3, m=4
+L4: rate=1/65,536, queries=14, eta=3.151841915859e-4, m=12
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=4 WHIR_NUM_VARS=27 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=27, rate=1/16
+L0: rate=1/16, queries=56, eta=3.086419017227e-3, m=81
+L1: rate=1/128, queries=32, eta=1.921478488541e-3, m=46
+L2: rate=1/1,024, queries=23, eta=3.906011574144e-3, m=8
+L3: rate=1/8,192, queries=18, eta=2.759437147328e-3, m=4
+L4: rate=1/65,536, queries=15, eta=1.281576802411e-3, m=3
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s
+### cmd: WHIR_LOG_INV_RATE=4 WHIR_NUM_VARS=28 cargo +1.99.0 test --release -p pcs print_whir_query_counts -- --ignored --nocapture
+num_vars=28, rate=1/16
+L0: rate=1/16, queries=56, eta=3.086419385156e-3, m=81
+L1: rate=1/128, queries=32, eta=1.921482153495e-3, m=46
+L2: rate=1/1,024, queries=23, eta=3.906130788891e-3, m=8
+L3: rate=1/8,192, queries=18, eta=2.760786835424e-3, m=4
+L4: rate=1/65,536, queries=15, eta=1.291870757356e-3, m=3
+L5: rate=1/524,288, queries=12, eta=3.986799711561e-4, m=3
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.00s

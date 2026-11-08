@@ -1,0 +1,35 @@
+Sun Nov  8 10:02:50 +03 2026
+vm.swapusage: total = 3072.00M  used = 1572.81M  free = 1499.19M  (encrypted)
+The system has 8589934592 (524288 pages with a page size of 16384).
+
+Stats: 
+Pages free: 3921 
+Pages purgeable: 0 
+Pages purged: 714968832 
+
+Swap I/O:
+Swapins: 680709599 
+Swapouts: 719776986 
+
+Page Q counts:
+Pages active: 77984 
+Pages inactive: 74704 
+Pages speculative: 2618 
+Pages throttled: 0 
+Pages wired down: 118805 
+
+Compressor Stats:
+Pages used by compressor: 209336 
+Pages decompressed: 18213627261 
+Pages compressed: 19880723086 
+
+File I/O:
+Pageins: 3209333299 
+Pageouts: 18960459 
+
+System-wide memory free percentage: 32%
+
+Finder, Cursor, Claude
+10:02  up 45 days, 18:24, 1 user, load averages: 2.01 1.73 1.52
+Now drawing from 'AC Power'
+ -InternalBattery-0 (id=22544483)	100%; charged; 0:00 remaining present: true

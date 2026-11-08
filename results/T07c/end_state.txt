@@ -1,0 +1,2 @@
+vm.swapusage: total = 3072.00M  used = 1707.62M  free = 1364.38M  (encrypted)
+System-wide memory free percentage: 64%

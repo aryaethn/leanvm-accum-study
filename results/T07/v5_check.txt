@@ -1,0 +1,65 @@
+node steps: baseline 392988, V5 362925; measured saving 30063 (child 1)
+fixed prologue (__jump_tables) change: 0.0; measured saving excl. prologue: 30063.0
+expected E (1 x per-child T05 slope cells): 33381.5 cycles, KECCAK 1211.5
+measured / expected: 90.059%   measured - expected: -3318.5
+KECCAK saved: measured 1158.0
+
+cells of E with work kept in child 1 (expected per child, delta at n=2, kept = expected - delta, KECCAK kept):
+   e2:residual (query weights)@L1             expected    3059.0  delta    3058.0  kept      +1.0  K   +0.0
+   e2:row eq weights@L1                       expected      39.0  delta       0.0  kept     +39.0  K   +0.0
+   e3:OOD@L1                                  expected     243.0  delta      76.0  kept    +167.0  K  +15.0
+   e3:level batching@L1                       expected      33.0  delta       0.0  kept     +33.0  K   +0.0
+   e3:sumcheck rounds@L1                      expected     297.0  delta       0.0  kept    +297.0  K   +4.0
+   e:level roots@L1                           expected      53.0  delta       0.0  kept     +53.0  K   +0.0
+   eq:query decode@L1                         expected    2140.0  delta    1930.0  kept    +210.0  K   +0.0
+   eq:query grinding@L1                       expected     166.0  delta     155.0  kept     +11.0  K   +1.0
+   eq:query sampling@L1                       expected     246.0  delta      10.0  kept    +236.0  K   +6.0
+   v5:gating@L1                               expected       0.0  delta     -14.0  kept     +14.0  K   +0.0
+   e1:Merkle cap@L2                           expected     276.0  delta     272.5  kept      +3.5  K   -3.5
+   e1:Merkle leaf+path@L2                     expected    2542.5  delta    2544.0  kept      -1.5  K   +0.0
+   e2:query rows@L2                           expected    2867.0  delta    2865.0  kept      +2.0  K   +0.0
+   e2:residual (query weights)@L2             expected    1431.0  delta    1430.0  kept      +1.0  K   +0.0
+   e3:OOD@L2                                  expected     200.0  delta      61.0  kept    +139.0  K  +11.0
+   e3:level batching@L2                       expected      31.0  delta       0.0  kept     +31.0  K   +0.0
+   e3:sumcheck rounds@L2                      expected     297.0  delta       0.0  kept    +297.0  K   +4.0
+   e:level roots@L2                           expected      53.0  delta       0.0  kept     +53.0  K   +0.0
+   eq:query grinding@L2                       expected     166.0  delta     155.0  kept     +11.0  K   +1.0
+   eq:query sampling@L2                       expected     160.0  delta      10.0  kept    +150.0  K   +4.0
+   v5:gating@L2                               expected       0.0  delta     -13.0  kept     +13.0  K   +0.0
+   e1:Merkle cap@L3                           expected     276.0  delta     271.5  kept      +4.5  K   -3.5
+   e1:Merkle leaf+path@L3                     expected    1879.5  delta    1876.0  kept      +3.5  K   +0.0
+   e2:query rows@L3                           expected    2161.0  delta    2159.0  kept      +2.0  K   +0.0
+   e2:residual (query weights)@L3             expected     709.0  delta     708.0  kept      +1.0  K   +0.0
+   e3:OOD@L3                                  expected     156.0  delta      45.0  kept    +111.0  K   +7.0
+   e3:level batching@L3                       expected      31.0  delta       0.0  kept     +31.0  K   +0.0
+   e3:sumcheck rounds@L3                      expected     297.0  delta       0.0  kept    +297.0  K   +4.0
+   e:level roots@L3                           expected      53.0  delta       0.0  kept     +53.0  K   +0.0
+   eq:query grinding@L3                       expected     166.0  delta     155.0  kept     +11.0  K   +1.0
+   eq:query sampling@L3                       expected     158.0  delta       8.0  kept    +150.0  K   +4.0
+   v5:gating@L3                               expected       0.0  delta     -13.0  kept     +13.0  K   +0.0
+   e1:Merkle cap@L4                           expected     142.5  delta     143.0  kept      -0.5  K   +0.5
+   e1:Merkle leaf+path@L4                     expected    1431.0  delta    1433.0  kept      -2.0  K   +0.0
+   e2:query rows@L4                           expected    1656.0  delta    1654.0  kept      +2.0  K   +0.0
+   e2:row eq weights@L4                       expected      39.0  delta      38.0  kept      +1.0  K   +0.0
+   e3:level batching@L4                       expected      19.0  delta       0.0  kept     +19.0  K   +0.0
+   e3:sumcheck rounds@L4                      expected     297.0  delta       0.0  kept    +297.0  K   +4.0
+   e4:final message@L4                        expected     110.0  delta       0.0  kept    +110.0  K   +3.0
+   eq:query sampling@L4                       expected     116.0  delta       7.0  kept    +109.0  K   +3.0
+   v5:gating@L4                               expected       0.0  delta     -13.0  kept     +13.0  K   +0.0
+   e3:OOD@tail                                expected       6.0  delta      -3.0  kept      +9.0  K   +0.0
+   e3:point rotation@tail                     expected     105.0  delta       0.0  kept    +105.0  K   +0.0
+   e3:sumcheck rounds@tail                    expected     176.0  delta       0.0  kept    +176.0  K   +3.0
+   v5:gating@tail                             expected       0.0  delta      -8.0  kept      +8.0  K   +0.0
+   sum kept: +3283.5
+
+cells outside E that moved (delta = base - V5; negative = V5 costs more):
+   e3:placement+config certify@-              delta     -40.0  K   +0.0
+   e1:Merkle cap@L0                           delta     -18.0  K  +12.0
+   e1:Merkle leaf+path@L0                     delta     -10.0  K   +0.0
+   e1:Merkle cap@L1                           delta      -5.0  K   +3.0
+   outside verify_sub: main@-                 delta      -2.0  K   +0.0
+   e1:Merkle leaf+path@L1                     delta      +2.0  K   +0.0
+   e3:open dispatch@-                         delta     +38.0  K   +0.0
+   sum: -35.0
+
+check: expected 33381.5 - kept 3283.5 + outside -35.0 = 30063.0 vs measured excl. prologue 30063.0

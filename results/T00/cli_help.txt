@@ -1,0 +1,84 @@
+$ target/release/leanvm --help
+Usage: leanvm [OPTIONS] <COMMAND>
+
+Commands:
+  aggregate  Prove signatures and blobs, then verify the proof. At least one count must be nonzero
+  recursion  Aggregate n child proofs into one proof
+  hash       Prove and verify a batch of Keccak-f permutations with the VM's GKR, outside the VM
+  fibonacci  Prove and verify Fibonacci in the exponent (demo)
+  help       Print this message or the help of the given subcommand(s)
+
+Options:
+      --log-inv-rate <LOG_INV_RATE>  WHIR inverse-rate logarithm (1 through 4) [default: 1]
+      --tracing                      Enable hierarchical timing traces. Use RUST_LOG to adjust verbosity
+      --repeat <REPEAT>              Measured proving passes after warmup [default: 1]
+      --cooldown <COOLDOWN>          Idle seconds before each measured pass [default: 2]
+  -h, --help                         Print help
+
+$ target/release/leanvm aggregate --help
+Prove signatures and blobs, then verify the proof. At least one count must be nonzero
+
+Usage: leanvm aggregate [OPTIONS]
+
+Options:
+      --log-inv-rate <LOG_INV_RATE>  WHIR inverse-rate logarithm (1 through 4) [default: 1]
+      --xmss <XMSS>                  leanXMSS signatures to aggregate [default: 0]
+      --sphincs <SPHINCS>            leanSPHINCS signatures to aggregate [default: 0]
+      --tracing                      Enable hierarchical timing traces. Use RUST_LOG to adjust verbosity
+      --blobs <BLOBS>                Blobs in one LeanDA commitment (128 KiB each) [default: 0]
+      --repeat <REPEAT>              Measured proving passes after warmup [default: 1]
+      --cooldown <COOLDOWN>          Idle seconds before each measured pass [default: 2]
+  -h, --help                         Print help
+
+$ target/release/leanvm recursion --help
+Aggregate n child proofs into one proof
+
+Usage: leanvm recursion [OPTIONS]
+
+Options:
+      --log-inv-rate <LOG_INV_RATE>
+          WHIR inverse-rate logarithm (1 through 4) [default: 1]
+      --n <N>
+          Number of child aggregates [default: 2]
+      --tracing
+          Enable hierarchical timing traces. Use RUST_LOG to adjust verbosity
+      --xmss-per-leaf <XMSS_PER_LEAF>
+          leanXMSS signatures in each child. Sets the child proof's committed size, which is what the recursion cost should be quoted against [default: 900]
+      --repeat <REPEAT>
+          Measured proving passes after warmup [default: 1]
+      --sphincs-per-leaf <SPHINCS_PER_LEAF>
+          leanSPHINCS signatures in each child, on top of the leanXMSS ones [default: 0]
+      --blobs-per-leaf <BLOBS_PER_LEAF>
+          Blobs in each child's LeanDA commitment. Use --xmss-per-leaf 0 for blobs alone [default: 0]
+      --cooldown <COOLDOWN>
+          Idle seconds before each measured pass [default: 2]
+      --leaf-log-inv-rate <LEAF_LOG_INV_RATE>
+          WHIR inverse-rate logarithm of the leaves (1 through 4)
+  -h, --help
+          Print help
+
+$ target/release/leanvm fibonacci --help
+Prove and verify Fibonacci in the exponent (demo)
+
+Usage: leanvm fibonacci [OPTIONS]
+
+Options:
+      --log-inv-rate <LOG_INV_RATE>  WHIR inverse-rate logarithm (1 through 4) [default: 1]
+      --n <N>                        Number of recurrence steps [default: 2000000]
+      --tracing                      Enable hierarchical timing traces. Use RUST_LOG to adjust verbosity
+      --repeat <REPEAT>              Measured proving passes after warmup [default: 1]
+      --cooldown <COOLDOWN>          Idle seconds before each measured pass [default: 2]
+  -h, --help                         Print help
+
+$ target/release/leanvm hash --help
+Prove and verify a batch of Keccak-f permutations with the VM's GKR, outside the VM
+
+Usage: leanvm hash [OPTIONS]
+
+Options:
+      --log-inv-rate <LOG_INV_RATE>  WHIR inverse-rate logarithm (1 through 4) [default: 1]
+      --log-n <LOG_N>                Log2 of the number of permutations, from the reduction's fewest steps up to the largest batch whose committed block the verifiers accept [default: 17]
+      --tracing                      Enable hierarchical timing traces. Use RUST_LOG to adjust verbosity
+      --repeat <REPEAT>              Measured proving passes after warmup [default: 1]
+      --cooldown <COOLDOWN>          Idle seconds before each measured pass [default: 2]
+  -h, --help                         Print help

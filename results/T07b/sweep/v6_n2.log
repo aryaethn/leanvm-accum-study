@@ -1,0 +1,87 @@
+# cmd: DBG_TABLES=1 /usr/bin/time -l ~/Desktop/accum-research/upstream/leanMultisig/target-d3v6/release/leanvm recursion --n 2 --xmss-per-leaf 250 --leaf-log-inv-rate 2 --log-inv-rate 2 --repeat 1
+# date: Sun Nov  8 11:09:48 +03 2026
+# swap_before: total = 3072.00M  used = 1688.31M  free = 1383.69M  (encrypted)
+# power:  -InternalBattery-0 (id=22544483)	100%; charged; 0:00 remaining present: true
+DBG_TABLES kind=leaf cycles=220100 mu=25 n_lanes=35 committed_len=18350080 placed=18022400 log_placed=24.103288 log_mem=21 mem_used=1563717 code_len=499653 prog_len=524288
+DBG_TABLES kind=leaf shared=MEM_LO n_vars=21 contrib=2097152
+DBG_TABLES kind=leaf shared=MEM_HI n_vars=21 contrib=2097152
+DBG_TABLES kind=leaf shared=MEM_TOP n_vars=21 contrib=2097152
+DBG_TABLES kind=leaf shared=MFCNT n_vars=21 contrib=2097152
+DBG_TABLES kind=leaf shared=BFCNT n_vars=19 contrib=524288
+DBG_TABLES kind=leaf shared=QKECCAK n_vars=22 contrib=4194304
+DBG_TABLES kind=leaf table=XOR rows=46920 tau=16 padded=65536 columns=15 width=15 contrib=983040
+DBG_TABLES kind=leaf table=MUL rows=42664 tau=16 padded=65536 columns=15 width=15 contrib=983040
+DBG_TABLES kind=leaf table=SET rows=44321 tau=16 padded=65536 columns=8 width=8 contrib=524288
+DBG_TABLES kind=leaf table=DEREF rows=29242 tau=15 padded=32768 columns=15 width=15 contrib=491520
+DBG_TABLES kind=leaf table=JUMP rows=10328 tau=14 padded=16384 columns=14 width=14 contrib=229376
+DBG_TABLES kind=leaf table=KECCAK rows=46625 tau=16 padded=65536 columns=90 width=26 contrib=1703936
+DBG_TABLES kind=leaf sum_contrib=18022400 placed_minus_sum=0
+DBG_TABLES kind=leaf cycles=220097 mu=25 n_lanes=35 committed_len=18350080 placed=18022400 log_placed=24.103288 log_mem=21 mem_used=1563717 code_len=499653 prog_len=524288
+DBG_TABLES kind=leaf shared=MEM_LO n_vars=21 contrib=2097152
+DBG_TABLES kind=leaf shared=MEM_HI n_vars=21 contrib=2097152
+DBG_TABLES kind=leaf shared=MEM_TOP n_vars=21 contrib=2097152
+DBG_TABLES kind=leaf shared=MFCNT n_vars=21 contrib=2097152
+DBG_TABLES kind=leaf shared=BFCNT n_vars=19 contrib=524288
+DBG_TABLES kind=leaf shared=QKECCAK n_vars=22 contrib=4194304
+DBG_TABLES kind=leaf table=XOR rows=46924 tau=16 padded=65536 columns=15 width=15 contrib=983040
+DBG_TABLES kind=leaf table=MUL rows=42660 tau=16 padded=65536 columns=15 width=15 contrib=983040
+DBG_TABLES kind=leaf table=SET rows=44318 tau=16 padded=65536 columns=8 width=8 contrib=524288
+DBG_TABLES kind=leaf table=DEREF rows=29242 tau=15 padded=32768 columns=15 width=15 contrib=491520
+DBG_TABLES kind=leaf table=JUMP rows=10328 tau=14 padded=16384 columns=14 width=14 contrib=229376
+DBG_TABLES kind=leaf table=KECCAK rows=46625 tau=16 padded=65536 columns=90 width=26 contrib=1703936
+DBG_TABLES kind=leaf sum_contrib=18022400 placed_minus_sum=0
+DBG_TABLES kind=node cycles=360847 mu=24 n_lanes=54 committed_len=14155776 placed=14057472 log_placed=23.744834 log_mem=20 mem_used=647996 code_len=499653 prog_len=524288
+DBG_TABLES kind=node shared=MEM_LO n_vars=20 contrib=1048576
+DBG_TABLES kind=node shared=MEM_HI n_vars=20 contrib=1048576
+DBG_TABLES kind=node shared=MEM_TOP n_vars=20 contrib=1048576
+DBG_TABLES kind=node shared=MFCNT n_vars=20 contrib=1048576
+DBG_TABLES kind=node shared=BFCNT n_vars=19 contrib=524288
+DBG_TABLES kind=node shared=QKECCAK n_vars=20 contrib=1048576
+DBG_TABLES kind=node table=XOR rows=96566 tau=17 padded=131072 columns=15 width=15 contrib=1966080
+DBG_TABLES kind=node table=MUL rows=131878 tau=18 padded=262144 columns=15 width=15 contrib=3932160
+DBG_TABLES kind=node table=SET rows=35589 tau=16 padded=65536 columns=8 width=8 contrib=524288
+DBG_TABLES kind=node table=DEREF rows=64557 tau=16 padded=65536 columns=15 width=15 contrib=983040
+DBG_TABLES kind=node table=JUMP rows=23041 tau=15 padded=32768 columns=14 width=14 contrib=458752
+DBG_TABLES kind=node table=KECCAK rows=9216 tau=14 padded=16384 columns=90 width=26 contrib=425984
+DBG_TABLES kind=node sum_contrib=14057472 placed_minus_sum=0
+DBG_TABLES kind=node cycles=360847 mu=24 n_lanes=54 committed_len=14155776 placed=14057472 log_placed=23.744834 log_mem=20 mem_used=647996 code_len=499653 prog_len=524288
+DBG_TABLES kind=node shared=MEM_LO n_vars=20 contrib=1048576
+DBG_TABLES kind=node shared=MEM_HI n_vars=20 contrib=1048576
+DBG_TABLES kind=node shared=MEM_TOP n_vars=20 contrib=1048576
+DBG_TABLES kind=node shared=MFCNT n_vars=20 contrib=1048576
+DBG_TABLES kind=node shared=BFCNT n_vars=19 contrib=524288
+DBG_TABLES kind=node shared=QKECCAK n_vars=20 contrib=1048576
+DBG_TABLES kind=node table=XOR rows=96566 tau=17 padded=131072 columns=15 width=15 contrib=1966080
+DBG_TABLES kind=node table=MUL rows=131878 tau=18 padded=262144 columns=15 width=15 contrib=3932160
+DBG_TABLES kind=node table=SET rows=35589 tau=16 padded=65536 columns=8 width=8 contrib=524288
+DBG_TABLES kind=node table=DEREF rows=64557 tau=16 padded=65536 columns=15 width=15 contrib=983040
+DBG_TABLES kind=node table=JUMP rows=23041 tau=15 padded=32768 columns=14 width=14 contrib=458752
+DBG_TABLES kind=node table=KECCAK rows=9216 tau=14 padded=16384 columns=90 width=26 contrib=425984
+DBG_TABLES kind=node sum_contrib=14057472 placed_minus_sum=0
+aggregation bytecode: 499,653 instructions (2^19 padded), compiled in 0.75 s
+
+recursion 2→1, over leaves of 250 leanXMSS signatures
+  cycles (VM steps)           : 360,847 = 2^18.461
+    details                   : MUL 2^17.009 (36.5%)  XOR 2^16.559 (26.8%)  DEREF 2^15.978 (17.9%)  SET 2^15.119 (9.9%)  JUMP 2^14.492 (6.4%)  KECCAK 2^13.17 (2.6%)  MEMORY 2^19.306  BYTECODE 2^18.931  TOTAL_COMMITTED 2^23.745
+  proof size                  : 229.1 KiB
+  proving time                : 0.533 s      peak memory 1.294 GiB
+  verifying                   : 14.46 ms
+        7.62 real        20.71 user         1.47 sys
+          2099347456  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              337505  page reclaims
+                 187  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   2  voluntary context switches
+               30823  involuntary context switches
+         74161056460  instructions retired
+         21887723703  cycles elapsed
+          1419576760  peak memory footprint
+# swap_after: total = 3072.00M  used = 1688.31M  free = 1383.69M  (encrypted)

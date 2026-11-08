@@ -1,0 +1,24 @@
+K=2: node steps base 392988 variant 316793  measured saving 76195
+  fixed prologue (__jump_tables) change: 1528.0
+  measured saving excl. prologue: 74667.0  (per child 37333.5)
+  predicted, exact baseline n=2 cells in R(K): 74672.0  (KECCAK 2284.0)
+  predicted, 2 x step-1 per-child slope cells in R(K): 74679.0  (KECCAK 2277.0)
+  measured / step-1 prediction: 99.984%   measured - step1: -12.0
+  KECCAK removed: measured 2288.0
+  cells outside R(K) that changed (base - variant), and removed cells left non-empty:
+        +1528.0  outside verify_sub: __jump_tables@-
+          +24.0  eq:query sampling@L2
+          +24.0  eq:query sampling@L3
+          +22.0  removed cell not empty in variant: eq:query grinding@L2
+          +22.0  removed cell not empty in variant: eq:query grinding@L3
+          +18.0  eq:query sampling@L4
+          -12.0  e3:OOD@L4
+          +12.0  e3:OOD@tail
+          -11.0  e1:Merkle cap@L0
+          -11.0  e1:Merkle leaf+path@L1
+           -8.0  e1:Merkle leaf+path@L0
+           -7.0  e1:Merkle cap@L1
+           +4.0  e3:level batching@L2
+           +4.0  e3:level batching@L3
+           +4.0  e3:level batching@L4
+           -2.0  e3:terminal weights@-

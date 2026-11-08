@@ -1,0 +1,15 @@
+[package]
+name = "guest-lines"
+version = "0.0.1"
+edition = "2024"
+publish = false
+
+# T03 diagnostic: dumps the compiled recursion guest's pc -> (function, source line)
+# table, using only the PUBLIC API of leanMultisig (rec_aggregation::unified_guest).
+# Standalone (own workspace, own target dir). Cargo.lock is seeded from
+# upstream/leanMultisig/Cargo.lock so shared dependencies resolve to the same versions.
+[workspace]
+
+[dependencies]
+rec_aggregation = { path = "../../upstream/leanMultisig/crates/rec_aggregation" }
+leanvm_core = { path = "../../upstream/leanMultisig/crates/leanvm_core" }

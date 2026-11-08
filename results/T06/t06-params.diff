@@ -1,0 +1,194 @@
+diff --git a/crates/pcs/src/whir_config.rs b/crates/pcs/src/whir_config.rs
+index 002fe9e88..c50966332 100644
+--- a/crates/pcs/src/whir_config.rs
++++ b/crates/pcs/src/whir_config.rs
+@@ -1036,3 +1036,6 @@ mod tests {
+         }
+     }
+ }
++
++/// T06 research probe (local branch research/t06-params only).
++pub mod t06_probe;
+diff --git a/crates/pcs/src/whir_config/t06_probe.rs b/crates/pcs/src/whir_config/t06_probe.rs
+new file mode 100644
+index 000000000..36b7853d5
+--- /dev/null
++++ b/crates/pcs/src/whir_config/t06_probe.rs
+@@ -0,0 +1,177 @@
++//! T06 research probe. LOCAL BRANCH `research/t06-params` ONLY, not upstream code.
++//!
++//! Exposes the unchanged private per-level search (`optimize_johnson_level`) and the
++//! soundness-term functions of the parent module for arbitrary ladder shapes, so that
++//! a wider first fold (children stacked as extra interleaving rows) can be evaluated
++//! by exactly the same code that derives the production parameters. Nothing here
++//! changes how production configurations are derived; the only edit to the parent
++//! module is the `pub mod t06_probe;` declaration.
++
++use super::*;
++
++/// Shape of one level, as the parent's search sees it.
++#[derive(Clone, Debug)]
++pub struct LevelSpec {
++    /// Inverse-rate logarithm of this level's code.
++    pub log_inv_rate: usize,
++    /// Code dimension exponent (`kappa_i` in the PCS annex; message columns).
++    pub log_msg_cols: usize,
++    /// Interleaving exponent = number of variables folded at this level (`ell_i`).
++    pub log_num_interleaved: usize,
++    /// Claim count from the previous query phase fed to the algebraic term.
++    /// `None` = the production rule (`levels[i-1].queries`, 0 at L0).
++    pub prev_queries_override: Option<usize>,
++}
++
++/// Everything the parent's search and term functions say about one level.
++#[derive(Clone, Debug)]
++pub struct LevelReport {
++    pub level: usize,
++    pub fold: usize,
++    pub log_inv_rate: usize,
++    pub log_msg_cols: usize,
++    pub log_num_interleaved: usize,
++    /// `log_msg_cols + log_num_interleaved` (variables of the level's multilinear).
++    pub mu_vars: usize,
++    pub log_block_len: usize,
++    pub prev_queries: usize,
++    pub reduced_rate: f64,
++    pub eta: f64,
++    pub m_param: usize,
++    pub gamma: f64,
++    pub queries: usize,
++    pub ood_samples: usize,
++    pub grinding_bits: usize,
++    pub per_query_bits: f64,
++    pub log2_list: f64,
++    pub log2_a: f64,
++    /// MCA part of the fold row: `192 - log2 a` (what `validate` checks as proximity gap).
++    pub pg_bits: f64,
++    /// Full fold row of `thm:rbr`: `-log2((2L + a)/|E|)`.
++    pub fold_row_bits: f64,
++    /// `Q * log2(1/(1-gamma))`.
++    pub query_bits: f64,
++    pub query_plus_grind_bits: f64,
++    pub ood_bits: f64,
++    /// Parent's `johnson_algebraic_bits_for` (degree = max(ring-switch, prev_q + ood, 2)).
++    pub algebraic_bits: f64,
++    pub algebraic_degree: usize,
++    /// Batch row of `thm:rbr` literally, `(J-1) L / |E|` with `J-1 = prev_q + ood`
++    /// (no ring-switch degree); informational only.
++    pub batch_row_doc_bits: f64,
++}
++
++/// The production ladder (fixed initial domain reduction 3, then 1) for an
++/// arbitrary initial fold, via the parent's `derive_ladder_shape`.
++pub fn production_ladder(log_n: usize, initial_k: usize, log_inv_rate: usize) -> Result<Vec<LevelSpec>, String> {
++    let shape = derive_ladder_shape(log_n, initial_k, log_inv_rate)?;
++    Ok((0..shape.log_inv_rates.len())
++        .map(|i| LevelSpec {
++            log_inv_rate: shape.log_inv_rates[i],
++            log_msg_cols: shape.log_msg_cols[i],
++            log_num_interleaved: shape.k_levels[i],
++            prev_queries_override: None,
++        })
++        .collect())
++}
++
++/// Run the parent's per-level search on every level of `specs`, in order.
++pub fn probe_levels(specs: &[LevelSpec]) -> Result<Vec<LevelReport>, String> {
++    let mut out: Vec<LevelReport> = Vec::with_capacity(specs.len());
++    for (i, s) in specs.iter().enumerate() {
++        let prev_queries = s
++            .prev_queries_override
++            .unwrap_or(if i == 0 { 0 } else { out[i - 1].queries });
++        let opt = optimize_johnson_level(
++            i,
++            s.log_inv_rate,
++            s.log_msg_cols,
++            s.log_num_interleaved,
++            SECURITY_BITS,
++            QUERY_GRINDING_BITS,
++            prev_queries,
++        )?;
++        let rho = reduced_rate(s.log_inv_rate, s.log_msg_cols);
++        let mu_vars = s.log_msg_cols + s.log_num_interleaved;
++        let log2_l = johnson_interleaved_list_log2(s.log_inv_rate, s.log_msg_cols, opt.eta);
++        let log2_a = paper_thm_ca_johnson_log_a(s.log_inv_rate, opt.eta, s.log_msg_cols);
++        let per_q = paper_per_query_bits(s.log_inv_rate, s.log_msg_cols, opt.eta);
++        let degree = crate::ring_switch::RING_SWITCH_SOUNDNESS_DEGREE
++            .max(prev_queries + opt.ood_samples)
++            .max(2);
++        let j_minus_1 = (prev_queries + opt.ood_samples).max(1) as f64;
++        out.push(LevelReport {
++            level: i,
++            fold: s.log_num_interleaved,
++            log_inv_rate: s.log_inv_rate,
++            log_msg_cols: s.log_msg_cols,
++            log_num_interleaved: s.log_num_interleaved,
++            mu_vars,
++            log_block_len: s.log_msg_cols + s.log_inv_rate,
++            prev_queries,
++            reduced_rate: rho,
++            eta: opt.eta,
++            m_param: johnson_m_param(s.log_inv_rate, s.log_msg_cols, opt.eta) as usize,
++            gamma: 1.0 - rho.sqrt() - opt.eta,
++            queries: opt.queries,
++            ood_samples: opt.ood_samples,
++            grinding_bits: QUERY_GRINDING_BITS,
++            per_query_bits: per_q,
++            log2_list: log2_l,
++            log2_a,
++            pg_bits: ANALYSIS_LOG_Q - log2_a,
++            fold_row_bits: ANALYSIS_LOG_Q - (2.0 * log2_l.exp2() + log2_a.exp2()).log2(),
++            query_bits: opt.queries as f64 * per_q,
++            query_plus_grind_bits: opt.queries as f64 * per_q + QUERY_GRINDING_BITS as f64,
++            ood_bits: paper_ood_bits(s.log_inv_rate, s.log_msg_cols, opt.eta, mu_vars, opt.ood_samples),
++            algebraic_bits: johnson_algebraic_bits_for(
++                s.log_inv_rate,
++                s.log_msg_cols,
++                opt.eta,
++                prev_queries,
++                opt.ood_samples,
++            ),
++            algebraic_degree: degree,
++            batch_row_doc_bits: ANALYSIS_LOG_Q - j_minus_1.log2() - log2_l,
++        });
++    }
++    Ok(out)
++}
++
++/// Assemble a `WhirSecurityConfig` from probed levels and run the parent's
++/// unchanged `validate()` on it. Only meaningful for a single-commitment ladder
++/// (`log_n` = total variables of L0).
++pub fn validate_probed(log_n: usize, specs: &[LevelSpec], reports: &[LevelReport]) -> Result<(), String> {
++    let levels: Vec<WhirLevelConfig> = specs
++        .iter()
++        .zip(reports)
++        .map(|(s, r)| WhirLevelConfig {
++            log_inv_rate: s.log_inv_rate,
++            log_msg_cols: s.log_msg_cols,
++            log_num_interleaved: s.log_num_interleaved,
++            k: s.log_num_interleaved,
++            eta: r.eta,
++            queries: r.queries,
++            grinding_bits: r.grinding_bits,
++            ood_samples: r.ood_samples,
++            target_security_bits: SECURITY_BITS,
++        })
++        .collect();
++    let yr_log_n = specs.last().map(|s| s.log_msg_cols).unwrap_or(0);
++    let cfg = WhirSecurityConfig {
++        m: log_n + crate::LOG_PACKING,
++        log_n,
++        initial_k: specs[0].log_num_interleaved,
++        target_security_bits: SECURITY_BITS,
++        analysis_version: "t06_probe".into(),
++        levels,
++        final_block: FinalBlockConfig { yr_log_n },
++    };
++    cfg.validate()
++}
++
++/// Per-level `(queries, eta)` of the production derivation, for cross-checking.
++pub fn production_queries_eta(log_n: usize, log_inv_rate: usize) -> Result<Vec<(usize, f64)>, String> {
++    let cfg = WhirSecurityConfig::derive_config_with_log_inv_rate(log_n + crate::LOG_PACKING, log_inv_rate)?;
++    Ok(cfg.levels.iter().map(|lv| (lv.queries, lv.eta)).collect())
++}

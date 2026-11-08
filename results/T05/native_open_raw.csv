@@ -1,0 +1,197 @@
+run,log,level,component,ms
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L0,basis,38.2
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L0,sumcheck rounds 0-6,7.76
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L0,open,0.771
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L0,induce,4.14
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L0,introduce,1.31
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L0,"commit (base encode, outside PCS open)",269.0
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L1,commit,124.0
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L1,sumcheck rounds 7-10,1.29
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L1,open,0.265
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L1,induce,0.215
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L1,introduce,0.0838
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L2,commit,54.4
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L2,sumcheck rounds 11-14,0.105
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L2,open,0.169
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L2,induce,0.0425
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L2,introduce,0.0143
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L3,commit,24.0
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L3,sumcheck rounds 15-18,0.0218
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L3,open,0.131
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L3,induce,0.0189
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L3,introduce,0.0029
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L4,commit,10.0
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L4,sumcheck rounds 19-22,0.0055
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L4,"final level (L4 open+induce+introduce, tail rounds)",0.124
+leaf_T00,../T00/aggregate_xmss250_lir2.log,-,Ring switch,0.107
+leaf_T00,../T00/aggregate_xmss250_lir2.log,-,"untraced remainder (PoW x5, query sampling, OOD)",12.8232
+leaf_T00,../T00/aggregate_xmss250_lir2.log,PCS open total,,280.0
+leaf_T00,../T00/aggregate_xmss250_lir2.log,L0 commit (base encode),"kind: ""base encode"" | log_domain: 21 | lanes: 40",269.0
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L0,basis,38.6
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L0,sumcheck rounds 0-6,7.25
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L0,open,0.695
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L0,induce,4.18
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L0,introduce,1.35
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L0,"commit (base encode, outside PCS open)",258.0
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L1,commit,130.0
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L1,sumcheck rounds 7-10,1.25
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L1,open,0.361
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L1,induce,0.234
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L1,introduce,0.0772
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L2,commit,57.9
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L2,sumcheck rounds 11-14,0.105
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L2,open,0.184
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L2,induce,0.0428
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L2,introduce,0.0149
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L3,commit,24.0
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L3,sumcheck rounds 15-18,0.0208
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L3,open,0.14
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L3,induce,0.0213
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L3,introduce,0.0037
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L4,commit,10.5
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L4,sumcheck rounds 19-22,0.0066
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L4,"final level (L4 open+induce+introduce, tail rounds)",0.121
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,-,Ring switch,0.0966
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,-,"untraced remainder (PoW x5, query sampling, OOD)",12.8462
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,PCS open total,,290.0
+leaf_T01drift,../T01/drift_baseline_aggregate_xmss250_lir2.log,L0 commit (base encode),"kind: ""base encode"" | log_domain: 21 | lanes: 40",258.0
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L0,basis,30.6
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L0,sumcheck rounds 0-6,5.89
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L0,open,0.788
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L0,induce,2.18
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L0,introduce,0.572
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L0,"commit (base encode, outside PCS open)",187.0
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L1,commit,56.6
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L1,sumcheck rounds 7-10,0.604
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L1,open,0.266
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L1,induce,0.118
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L1,introduce,0.0435
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L2,commit,25.2
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L2,sumcheck rounds 11-14,0.063
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L2,open,0.173
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L2,induce,0.0298
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L2,introduce,0.0077
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L3,commit,11.2
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L3,sumcheck rounds 15-18,0.0119
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L3,open,0.128
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L3,induce,0.0198
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L3,introduce,0.0016
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L4,commit,5.35
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L4,sumcheck rounds 19-22,0.0047
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L4,"final level (L4 open+induce+introduce, tail rounds)",0.12
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,-,Ring switch,0.101
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,-,"untraced remainder (PoW x5, query sampling, OOD)",11.928
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,PCS open total,,152.0
+node2_T01,../T01/recursion_n2_m250_leaflir2_lir2.log,L0 commit (base encode),"kind: ""base encode"" | log_domain: 20 | lanes: 64",187.0
+node2_T03r1,../T03/runs/base_n2.log,L0,basis,31.3
+node2_T03r1,../T03/runs/base_n2.log,L0,sumcheck rounds 0-6,6.34
+node2_T03r1,../T03/runs/base_n2.log,L0,open,0.964
+node2_T03r1,../T03/runs/base_n2.log,L0,induce,3.26
+node2_T03r1,../T03/runs/base_n2.log,L0,introduce,0.805
+node2_T03r1,../T03/runs/base_n2.log,L0,"commit (base encode, outside PCS open)",233.0
+node2_T03r1,../T03/runs/base_n2.log,L1,commit,65.6
+node2_T03r1,../T03/runs/base_n2.log,L1,sumcheck rounds 7-10,0.684
+node2_T03r1,../T03/runs/base_n2.log,L1,open,0.268
+node2_T03r1,../T03/runs/base_n2.log,L1,induce,0.132
+node2_T03r1,../T03/runs/base_n2.log,L1,introduce,0.0438
+node2_T03r1,../T03/runs/base_n2.log,L2,commit,26.9
+node2_T03r1,../T03/runs/base_n2.log,L2,sumcheck rounds 11-14,0.0888
+node2_T03r1,../T03/runs/base_n2.log,L2,open,0.183
+node2_T03r1,../T03/runs/base_n2.log,L2,induce,0.0877
+node2_T03r1,../T03/runs/base_n2.log,L2,introduce,0.0214
+node2_T03r1,../T03/runs/base_n2.log,L3,commit,11.2
+node2_T03r1,../T03/runs/base_n2.log,L3,sumcheck rounds 15-18,0.0119
+node2_T03r1,../T03/runs/base_n2.log,L3,open,0.127
+node2_T03r1,../T03/runs/base_n2.log,L3,induce,0.0242
+node2_T03r1,../T03/runs/base_n2.log,L3,introduce,0.0013
+node2_T03r1,../T03/runs/base_n2.log,L4,commit,5.03
+node2_T03r1,../T03/runs/base_n2.log,L4,sumcheck rounds 19-22,0.0047
+node2_T03r1,../T03/runs/base_n2.log,L4,"final level (L4 open+induce+introduce, tail rounds)",0.13
+node2_T03r1,../T03/runs/base_n2.log,-,Ring switch,0.0926
+node2_T03r1,../T03/runs/base_n2.log,-,"untraced remainder (PoW x5, query sampling, OOD)",11.7005
+node2_T03r1,../T03/runs/base_n2.log,PCS open total,,165.0
+node2_T03r1,../T03/runs/base_n2.log,L0 commit (base encode),"kind: ""base encode"" | log_domain: 20 | lanes: 64",233.0
+node2_T03r2,../T03/runs2/base_n2.log,L0,basis,30.3
+node2_T03r2,../T03/runs2/base_n2.log,L0,sumcheck rounds 0-6,5.82
+node2_T03r2,../T03/runs2/base_n2.log,L0,open,0.797
+node2_T03r2,../T03/runs2/base_n2.log,L0,induce,2.09
+node2_T03r2,../T03/runs2/base_n2.log,L0,introduce,0.588
+node2_T03r2,../T03/runs2/base_n2.log,L0,"commit (base encode, outside PCS open)",176.0
+node2_T03r2,../T03/runs2/base_n2.log,L1,commit,58.9
+node2_T03r2,../T03/runs2/base_n2.log,L1,sumcheck rounds 7-10,0.606
+node2_T03r2,../T03/runs2/base_n2.log,L1,open,0.269
+node2_T03r2,../T03/runs2/base_n2.log,L1,induce,0.125
+node2_T03r2,../T03/runs2/base_n2.log,L1,introduce,0.0421
+node2_T03r2,../T03/runs2/base_n2.log,L2,commit,25.8
+node2_T03r2,../T03/runs2/base_n2.log,L2,sumcheck rounds 11-14,0.089
+node2_T03r2,../T03/runs2/base_n2.log,L2,open,0.165
+node2_T03r2,../T03/runs2/base_n2.log,L2,induce,0.0359
+node2_T03r2,../T03/runs2/base_n2.log,L2,introduce,0.0065
+node2_T03r2,../T03/runs2/base_n2.log,L3,commit,11.0
+node2_T03r2,../T03/runs2/base_n2.log,L3,sumcheck rounds 15-18,0.0114
+node2_T03r2,../T03/runs2/base_n2.log,L3,open,0.129
+node2_T03r2,../T03/runs2/base_n2.log,L3,induce,0.0194
+node2_T03r2,../T03/runs2/base_n2.log,L3,introduce,0.0014
+node2_T03r2,../T03/runs2/base_n2.log,L4,commit,4.87
+node2_T03r2,../T03/runs2/base_n2.log,L4,sumcheck rounds 19-22,0.0045
+node2_T03r2,../T03/runs2/base_n2.log,L4,"final level (L4 open+induce+introduce, tail rounds)",0.116
+node2_T03r2,../T03/runs2/base_n2.log,-,Ring switch,0.0962
+node2_T03r2,../T03/runs2/base_n2.log,-,"untraced remainder (PoW x5, query sampling, OOD)",12.1186
+node2_T03r2,../T03/runs2/base_n2.log,PCS open total,,154.0
+node2_T03r2,../T03/runs2/base_n2.log,L0 commit (base encode),"kind: ""base encode"" | log_domain: 20 | lanes: 64",176.0
+node2_T05r1,runs/base_n2.log,L0,basis,30.2
+node2_T05r1,runs/base_n2.log,L0,sumcheck rounds 0-6,5.64
+node2_T05r1,runs/base_n2.log,L0,open,0.824
+node2_T05r1,runs/base_n2.log,L0,induce,2.19
+node2_T05r1,runs/base_n2.log,L0,introduce,0.571
+node2_T05r1,runs/base_n2.log,L0,"commit (base encode, outside PCS open)",278.0
+node2_T05r1,runs/base_n2.log,L1,commit,57.6
+node2_T05r1,runs/base_n2.log,L1,sumcheck rounds 7-10,0.587
+node2_T05r1,runs/base_n2.log,L1,open,0.274
+node2_T05r1,runs/base_n2.log,L1,induce,0.133
+node2_T05r1,runs/base_n2.log,L1,introduce,0.0435
+node2_T05r1,runs/base_n2.log,L2,commit,25.7
+node2_T05r1,runs/base_n2.log,L2,sumcheck rounds 11-14,0.0637
+node2_T05r1,runs/base_n2.log,L2,open,0.169
+node2_T05r1,runs/base_n2.log,L2,induce,0.0276
+node2_T05r1,runs/base_n2.log,L2,introduce,0.0077
+node2_T05r1,runs/base_n2.log,L3,commit,11.2
+node2_T05r1,runs/base_n2.log,L3,sumcheck rounds 15-18,0.0115
+node2_T05r1,runs/base_n2.log,L3,open,0.121
+node2_T05r1,runs/base_n2.log,L3,induce,0.0186
+node2_T05r1,runs/base_n2.log,L3,introduce,0.0009
+node2_T05r1,runs/base_n2.log,L4,commit,4.86
+node2_T05r1,runs/base_n2.log,L4,sumcheck rounds 19-22,0.011
+node2_T05r1,runs/base_n2.log,L4,"final level (L4 open+induce+introduce, tail rounds)",0.115
+node2_T05r1,runs/base_n2.log,-,Ring switch,0.0992
+node2_T05r1,runs/base_n2.log,-,"untraced remainder (PoW x5, query sampling, OOD)",12.5323
+node2_T05r1,runs/base_n2.log,PCS open total,,153.0
+node2_T05r1,runs/base_n2.log,L0 commit (base encode),"kind: ""base encode"" | log_domain: 20 | lanes: 64",278.0
+node2_T05r2,runs2/base_n2.log,L0,basis,30.3
+node2_T05r2,runs2/base_n2.log,L0,sumcheck rounds 0-6,5.46
+node2_T05r2,runs2/base_n2.log,L0,open,0.826
+node2_T05r2,runs2/base_n2.log,L0,induce,2.08
+node2_T05r2,runs2/base_n2.log,L0,introduce,0.558
+node2_T05r2,runs2/base_n2.log,L0,"commit (base encode, outside PCS open)",177.0
+node2_T05r2,runs2/base_n2.log,L1,commit,57.5
+node2_T05r2,runs2/base_n2.log,L1,sumcheck rounds 7-10,0.569
+node2_T05r2,runs2/base_n2.log,L1,open,0.276
+node2_T05r2,runs2/base_n2.log,L1,induce,0.116
+node2_T05r2,runs2/base_n2.log,L1,introduce,0.0438
+node2_T05r2,runs2/base_n2.log,L2,commit,25.9
+node2_T05r2,runs2/base_n2.log,L2,sumcheck rounds 11-14,0.0633
+node2_T05r2,runs2/base_n2.log,L2,open,0.173
+node2_T05r2,runs2/base_n2.log,L2,induce,0.04
+node2_T05r2,runs2/base_n2.log,L2,introduce,0.0062
+node2_T05r2,runs2/base_n2.log,L3,commit,11.1
+node2_T05r2,runs2/base_n2.log,L3,sumcheck rounds 15-18,0.0112
+node2_T05r2,runs2/base_n2.log,L3,open,0.128
+node2_T05r2,runs2/base_n2.log,L3,induce,0.0258
+node2_T05r2,runs2/base_n2.log,L3,introduce,0.0012
+node2_T05r2,runs2/base_n2.log,L4,commit,4.84
+node2_T05r2,runs2/base_n2.log,L4,sumcheck rounds 19-22,0.0037
+node2_T05r2,runs2/base_n2.log,L4,"final level (L4 open+induce+introduce, tail rounds)",0.126
+node2_T05r2,runs2/base_n2.log,-,Ring switch,0.107
+node2_T05r2,runs2/base_n2.log,-,"untraced remainder (PoW x5, query sampling, OOD)",11.7458
+node2_T05r2,runs2/base_n2.log,PCS open total,,152.0
+node2_T05r2,runs2/base_n2.log,L0 commit (base encode),"kind: ""base encode"" | log_domain: 20 | lanes: 64",177.0

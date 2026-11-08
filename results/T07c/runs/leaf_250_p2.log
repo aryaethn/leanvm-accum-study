@@ -1,0 +1,34 @@
+### swap_start: vm.swapusage: total = 3072.00M  used = 1707.62M  free = 1364.38M  (encrypted)
+### therm_start: Note: No thermal warning level has been recorded | Note: No performance warning level has been recorded | Note: No CPU power status has been recorded
+### cmd: upstream/leanMultisig/target-dbg/release/leanvm aggregate --xmss 250 --log-inv-rate 2 --repeat 3
+  passes                      : 0.975 s  0.963 s  0.964 s
+
+aggregation, 250 leanXMSS signatures
+  cycles (VM steps)           : 219,994 = 2^17.747
+    details                   : XOR 2^15.518 (21.3%)  KECCAK 2^15.509 (21.2%)  SET 2^15.435 (20.1%)  MUL 2^15.379 (19.4%)  DEREF 2^14.833 (13.3%)  JUMP 2^13.333 (4.7%)  MEMORY 2^20.576  BYTECODE 2^18.899  TOTAL_COMMITTED 2^24.103
+  proof size                  : 220.0 KiB
+  proving time                : 0.967 s ± 1.6%      peak memory 2.032 GiB
+  per signature               : 258.424 signatures/s
+  verifying                   : 10.314 ms
+       11.09 real        25.11 user         0.55 sys
+          2182086656  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              142837  page reclaims
+                   0  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   5  voluntary context switches
+               21562  involuntary context switches
+        255364993362  instructions retired
+         73853230884  cycles elapsed
+          2180188176  peak memory footprint
+
+### exit: 0 wall: 11.1s
+### swap_end: vm.swapusage: total = 3072.00M  used = 1707.62M  free = 1364.38M  (encrypted)
+### therm_end: Note: No thermal warning level has been recorded | Note: No performance warning level has been recorded | Note: No CPU power status has been recorded
